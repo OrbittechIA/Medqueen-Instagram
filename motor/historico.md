@@ -3,6 +3,16 @@
 Tudo que saiu pelo motor, para não repetir tema nem gancho, e os números de cada semana.
 Antes do motor (até 15/10/2026) os posts eram feitos no Best Content; ver `brain-instagram.md` §8 no projeto.
 
+## Antes do motor: 14/10 a 20/10/2026 (medido em 20/10, TryPost)
+
+| Post | Formato | Alcance | Visualizações | Curtidas | Salvamentos | Compartilhamentos | Visitas ao perfil |
+|---|---|---|---|---|---|---|---|
+| Qui 15/10 Dia do Professor (Best Content) | Carrossel | 7 | 22 | 1 | 0 | 0 | 0 |
+| Qui 15/10 story | Story | 22 | 27 | sem dado | sem dado | 0 | 0 |
+
+Conta em 7 dias: 2 publicações, alcance 29, 49 visualizações, 0 salvamentos, 0 compartilhamentos, 0 visitas ao perfil, 509 seguidores (menos 1). Alcance de não seguidores: sem dado.
+Rodada de 20/10 (terça, fora do horário normal): a semana de 26/10 já estava com 24 agendados e sem horário repetido, então nada foi produzido. De 21/10 a 25/10 não há nada agendado.
+
 ## Semana de 26/10/2026 (feita à mão, em 20/10, para estrear o motor)
 
 | Quando (Brasília) | Formato | Linha | Gancho | Pasta |
