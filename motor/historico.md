@@ -13,14 +13,15 @@ Antes do motor (até 15/10/2026) os posts eram feitos no Best Content; ver `brai
 Conta em 7 dias: 2 publicações, alcance 29, 49 visualizações, 0 salvamentos, 0 compartilhamentos, 0 visitas ao perfil, 509 seguidores (menos 1). Alcance de não seguidores: sem dado.
 Rodada de 20/10 (terça, fora do horário normal): a semana de 26/10 já estava com 24 agendados e sem horário repetido, então nada foi produzido. De 21/10 a 25/10 não há nada agendado.
 
-## Semana de 26/10/2026 (feita à mão, em 20/10, para estrear o motor)
+## Estreia: 20/10 a 25/10/2026 (feita à mão em 20/10; adiantada a pedido do Matheus porque o perfil estava parado)
 
 | Quando (Brasília) | Formato | Linha | Gancho | Pasta |
 |---|---|---|---|---|
-| Seg 26/10 18:50 | Carrossel 8 cards | Estudo | Ciclo de Krebs: o que cai na prova em 8 cards | posts/2026-10-26-s01-krebs |
-| Qua 28/10 18:50 | Carrossel 6 cards | Produto | Errou a questão? Ela volta como treino | posts/2026-10-28-p01-erro-vira-treino |
-| Sex 30/10 18:50 | Reel 17 s | Produto | Pedi o ciclo de Krebs pra prova (Queen IA no tablet) | posts/2026-10-30-r01-krebs-queen |
-| Seg a dom | 21 stories | Story | Tela Hoje, 4 testes rápidos de Krebs com resposta, 4 dicas da Queen IA, flashcards, caderno de erros, simulados, criar material, 3 anúncios de post novo, 2 frases | stories/2026-10-26 |
+| Ter 20/10 18:50 | Carrossel 8 cards | Estudo | Ciclo de Krebs: o que cai na prova em 8 cards | posts/2026-10-20-s01-krebs |
+| Qui 22/10 18:50 | Carrossel 6 cards | Produto | Errou a questão? Ela volta como treino | posts/2026-10-22-p01-erro-vira-treino |
+| Sáb 24/10 18:50 | Reel 17 s | Produto | Pedi o ciclo de Krebs pra prova (Queen IA no tablet) | posts/2026-10-24-r01-krebs-queen |
+| Ter 20/10 a dom 25/10 | 18 stories | Story | stories 01 a 18 de stories/2026-10-20 | stories/2026-10-20 |
+| **Dom 01/11** 11:50, 15:50, 21:20 | 3 stories | Story | stories 19 a 21 (frase de domingo, teste do GTP e resposta). Já agendados: a rodada de 26/10 produz só os 21 horários que faltam na semana de 26/10 | stories/2026-10-20 |
 
 Temas de story já usados: principal ponto de controle do Krebs; voltas por glicose; localização da succinato desidrogenase; etapa que gera GTP; "reler x testar"; "entende o distrator"; "fim de semana revisa o que errou"; "semana de prova não começa na véspera"; "domingo é dia de planejar".
 
@@ -31,3 +32,4 @@ Temas de story já usados: principal ponto de controle do Krebs; voltas por glic
 - 20/10/2026: cadência 3 feed (pelo menos 2 carrosséis) + 3 stories por dia. Matheus revisa segunda de manhã; primeiro post segunda à tarde.
 - 20/10/2026: print nunca solto; sempre em tablet ou celular com destaque ou lupa.
 - 20/10/2026: sem pessoa gerada por IA; só a Queen IA oficial (ilustração).
+- 20/10/2026: CTA único "Aproveite os 7 dias de teste grátis. Link na bio." em todos os posts. Logo com selo IA (MedQueen IA). Best Content cancelado.
