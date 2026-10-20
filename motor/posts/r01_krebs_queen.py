@@ -1,0 +1,16 @@
+"""Reel: a Queen IA explica o ciclo de Krebs (print real da conversa, rolando no tablet). Rodar: python3 posts/r01_krebs_queen.py"""
+import os as _os; RAIZ = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+import sys; sys.path.insert(0, RAIZ)
+from reel import Reel
+r = Reel('saida/r01-krebs-queen', img='desk-ia-krebs-longo.png', crop_x=(30, 600))
+r.trecho(0, 3.2, 'Bioquímica', 'Pedi o ciclo de Krebs <em>pra prova.</em>')
+r.trecho(3.2, 7.0, 'As 8 etapas', 'Etapa, enzima e o que cada uma produz.')
+r.trecho(7.0, 10.6, 'O saldo', 'Cerca de 10 ATP por acetil‑CoA.')
+r.trecho(10.6, 17, 'O que mais cai', 'O ponto de controle que cai na prova.')
+r.rolagem([(0, 0), (3.0, 0), (4.4, 650), (6.8, 650), (8.2, 1440), (10.4, 1440), (11.8, 1980), (17, 1980)])
+r.destaque(1.0, 3.0, (52, 164, 315, 26))
+r.destaque(4.8, 6.8, (52, 1022, 524, 34))
+r.destaque(8.6, 10.4, (52, 1778, 340, 26))
+r.destaque(12.2, 13.6, (52, 2198, 395, 26))
+r.fim(13.6, 'Pergunta. A Queen IA explica.', 'E a resposta vira flashcards ou questões, no mesmo lugar.', 'Teste grátis. Link na bio.')
+r.gravar(17, capa_t=1.5)

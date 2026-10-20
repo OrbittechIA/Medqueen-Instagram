@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-label="MedQueen">
+  <title>MedQueen</title>
+  <defs>
+    <mask id="mq-full-sep-q" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+      <rect width="128" height="128" fill="white"/>
+      <path d="M29 102C18.7 91.5 16.9 70.6 26.8 51.2L44 65.3L64 82.3L84 65.3L101.2 51.2C111.1 70.6 109.3 91.5 99 102C88.2 113.1 73 117 58 114.4C45.6 112.2 36.1 108.4 29 102Z" stroke="black" stroke-width="17" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M59 112C74.8 109.2 91 112 108.5 121" stroke="black" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+    <mask id="mq-full-sep-c" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+      <rect width="128" height="128" fill="white"/>
+      <path d="M64 60.5L64 107.5" stroke="black" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="64" cy="60" r="7.5" fill="black"/>
+      <path d="M71.8 65.5C81 69.3 80.3 76.3 67.1 80.3C54.4 84.1 53.8 91.1 67.3 95.2C78 98.5 79.1 104 71.3 109" stroke="black" stroke-width="9.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="69.8" cy="66" r="5.2" fill="black"/>
+    </mask>
+  </defs>
+  <g mask="url(#mq-full-sep-q)">
+    <path d="M64 3.5C66.2 9.2 69.4 12.4 75.1 14.6C69.4 16.8 66.2 20 64 25.7C61.8 20 58.6 16.8 52.9 14.6C58.6 12.4 61.8 9.2 64 3.5Z" fill="#17185f"/>
+    <path d="M34 29L47.5 38.8L64 24L80.5 38.8L94 29L86.5 52.2C71.7 47.5 56.3 47.5 41.5 52.2L34 29Z" fill="#17185f"/>
+    <path d="M41.5 52.2C56.3 47.5 71.7 47.5 86.5 52.2" stroke="#17185f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g mask="url(#mq-full-sep-c)">
+    <path d="M29 102C18.7 91.5 16.9 70.6 26.8 51.2L44 65.3L64 82.3L84 65.3L101.2 51.2C111.1 70.6 109.3 91.5 99 102C88.2 113.1 73 117 58 114.4C45.6 112.2 36.1 108.4 29 102Z" stroke="#17185f" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M59 112C74.8 109.2 91 112 108.5 121" stroke="#17185f" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M64 60.5L64 107.5" stroke="#17185f" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="60" r="5.5" fill="#17185f"/>
+  <path d="M71.8 65.5C81 69.3 80.3 76.3 67.1 80.3C54.4 84.1 53.8 91.1 67.3 95.2C78 98.5 79.1 104 71.3 109" stroke="#17185f" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="69.8" cy="66" r="3.2" fill="#17185f"/>
+</svg>
