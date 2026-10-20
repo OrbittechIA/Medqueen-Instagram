@@ -32,8 +32,9 @@ CARDS = [
                        ('Só uma etapa gera GTP direto:', 'succinil‑CoA → succinato.'),
                        ('É uma via <b>anfibólica</b>.', 'Degrada e também fornece intermediários para síntese.')], rosa=True)),
     dict(tipo='final', olho='Revisão ativa', t=72,
-         titulo='Não fixou? Transforma em treino.',
-         visual=tablet('desk-criar-material-b.png', w=780, h=420, crop=(40, 600, 560, 302), dest=[(54, 700, 516, 140)]),
-         cta_titulo='Salva pra revisar antes da prova.',
-         cta_texto='Na MedQueen, a explicação da Queen IA vira flashcards ou questões em um toque.'),
+         titulo='Não fixou? Vira treino.',
+         visual=tablet('desk-criar-material-b.png', w=700, h=330, crop=(40, 640, 560, 264), dest=[(54, 700, 516, 140)]),
+         cta_titulo='Aproveite os 7 dias de teste grátis.',
+         cta_texto='Na MedQueen IA, a explicação da Queen IA vira flashcards ou questões em um toque.',
+         acao='Link na bio', pe_final='link na bio'),
 ]

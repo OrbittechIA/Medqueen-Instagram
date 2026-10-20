@@ -20,8 +20,8 @@ CARDS = [
                        ('Vira card e volta na revisão.', 'Até o ponto fraco virar acerto.')])),
     dict(tipo='final', olho='MedQueen IA', t=80,
          titulo='Seu erro de hoje vira o treino de amanhã.',
-         visual=queen_img(470), pe_final='link na bio',
-         cta_titulo='Teste grátis.',
+         visual=queen_img(400), pe_final='link na bio',
+         cta_titulo='Aproveite os 7 dias de teste grátis.',
          cta_texto='Simulados, caderno de erros e flashcards no mesmo lugar, com a Queen IA.',
          acao='Link na bio'),
 ]

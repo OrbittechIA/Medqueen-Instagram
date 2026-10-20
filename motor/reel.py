@@ -29,7 +29,9 @@ CSS = f"""
 body{{background:#F6F5FC;font-family:S;color:#111827;position:relative}}
 body.camada{{background:transparent}}
 .fundo{{position:absolute;inset:0;background:radial-gradient(700px 600px at 95% 4%,rgba(158,140,240,.32),transparent 70%),radial-gradient(700px 600px at 0% 100%,rgba(240,111,143,.22),transparent 70%)}}
-.logo{{position:absolute;left:90px;top:170px;height:66px}}
+.logo{{position:absolute;left:90px;top:170px;--h:66px;display:inline-flex;align-items:flex-start;height:var(--h)}}
+.logo img{{height:var(--h);display:block}}
+.logo b{{margin-left:calc(var(--h)*-0.005);margin-top:calc(var(--h)*0.368);height:calc(var(--h)*0.292);padding:0 calc(var(--h)*0.075);border-radius:calc(var(--h)*0.07);background:#3A1D8F;color:#fff;font-family:J;font-weight:800;font-size:calc(var(--h)*0.19);letter-spacing:.04em;display:inline-flex;align-items:center;line-height:1}}
 .txt{{position:absolute;left:90px;right:90px;top:270px;height:360px;display:flex;flex-direction:column;justify-content:flex-end}}
 .olho{{align-self:flex-start;font-family:J;font-weight:700;font-size:26px;letter-spacing:.07em;text-transform:uppercase;color:#3A1D8F;background:#ECE8FB;border-radius:999px;padding:12px 24px;margin-bottom:22px}}
 h1{{font-family:J;font-weight:800;font-size:var(--t,78px);line-height:1.04;letter-spacing:-.018em;word-spacing:.04em}}
@@ -80,7 +82,7 @@ class Reel:
     def _render(self):
         pares = []
         for i, (t0, t1, olho, titulo, tt) in enumerate(self.trechos):
-            corpo = f'<div class="fundo"></div><img class="logo" src="{MARCA}/medqueen-logo-horizontal.svg"><div class="txt"><div class="olho">{olho}</div><h1>{titulo}</h1></div><div class="tab"></div>'
+            corpo = f'<div class="fundo"></div><span class="logo"><img src="{MARCA}/medqueen-logo-horizontal.svg"><b>IA</b></span><div class="txt"><div class="olho">{olho}</div><h1>{titulo}</h1></div><div class="tab"></div>'
             pares.append((f'f{i}', _html(corpo, t=tt), False))
         if self._fim:
             _, a, b, c = self._fim

@@ -48,6 +48,6 @@ S = [
  # domingo 01/11
  frase('19-dom-1150', 'Domingo é dia de planejar. Não de recomeçar.', 'Separa o que você errou na semana e começa por aí.'),
  quiz('20-dom-1550', 'Qual etapa do ciclo de Krebs gera GTP direto?', ['Citrato → isocitrato', 'Succinil‑CoA → succinato', 'Malato → oxaloacetato']),
- resp('21-dom-2120', 'Succinil‑CoA → succinato.', 'É a única etapa com produção direta de GTP.', 'Quer revisar o ciclo inteiro? <b>O carrossel de segunda está no perfil.</b>'),
+ resp('21-dom-2120', 'Succinil‑CoA → succinato.', 'É a única etapa com produção direta de GTP.', 'Quer revisar o ciclo inteiro? <b>O carrossel de Krebs está no perfil.</b>'),
 ]
 render_stories(S, f'{RAIZ}/saida/stories-2026-10-26')

@@ -30,7 +30,9 @@ body{{background:var(--nevoa);color:var(--tinta);font-family:S,sans-serif;positi
  radial-gradient(560px 480px at 4% 98%,rgba(240,111,143,.20),transparent 70%),
  radial-gradient(900px 700px at 50% 50%,#FFFFFF 0%,rgba(255,255,255,0) 75%)}}
 .topo{{position:absolute;left:92px;right:92px;top:74px;display:flex;justify-content:space-between;align-items:center;z-index:3}}
-.topo img{{height:62px;display:block}}
+.lg{{--h:62px;display:inline-flex;align-items:flex-start;height:var(--h)}}
+.lg img{{height:var(--h);display:block}}
+.lg b{{margin-left:calc(var(--h)*-0.005);margin-top:calc(var(--h)*0.368);height:calc(var(--h)*0.292);padding:0 calc(var(--h)*0.075);border-radius:calc(var(--h)*0.07);background:var(--roxo);color:#fff;font-family:J;font-weight:800;font-size:calc(var(--h)*0.19);letter-spacing:.04em;display:inline-flex;align-items:center;line-height:1}}
 .cont{{font-family:J;font-weight:700;font-size:22px;color:var(--cinza2);letter-spacing:.04em}}
 .pe{{position:absolute;left:92px;right:92px;bottom:78px;display:flex;align-items:center;gap:26px;z-index:3}}
 .barra{{flex:1;height:5px;background:#E2DFF2;border-radius:5px;overflow:hidden}}
@@ -193,11 +195,13 @@ def queen(w=380):
 def balao(txt):
     return f'<div class="balao">{txt}</div>'
 
+LOGO_IA = f'<span class="lg"><img src="{MARCA}/medqueen-logo-horizontal.svg"><b>IA</b></span>'
+
 def pagina(card, i, n, story=False):
     tipo = card.get('tipo', 'passo')
     t = card.get('t'); s = card.get('s')
     estilo = (f'--t:{t}px;' if t else '') + (f'--s:{s}px;' if s else '')
-    topo = f'<div class="topo"><img src="{MARCA}/medqueen-logo-horizontal.svg">' + ('' if story else f'<div class="cont">{i:02d}/{n:02d}</div>') + '</div>'
+    topo = f'<div class="topo">{LOGO_IA}' + ('' if story else f'<div class="cont">{i:02d}/{n:02d}</div>') + '</div>'
     pe = '' if story else (f'<div class="pe"><div class="barra"><i style="width:{i/n*100:.1f}%"></i></div>'
           + ('<div class="arraste">arraste →</div>' if i < n else f'<div class="arraste">{card.get("pe_final", "salva pra revisar")}</div>') + '</div>')
     corpo = f'<div class="olho">{card["olho"]}</div>' if card.get('olho') else ''
