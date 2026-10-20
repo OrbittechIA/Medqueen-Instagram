@@ -7,7 +7,7 @@ PNG vira JPG (qualidade 95). MP4 vai como reel.mp4. Depois: git add, commit e pu
 import sys, os, json, glob, shutil
 from PIL import Image
 MOTOR = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(MOTOR)
-RAW = 'https://raw.githubusercontent.com/OrbittechIA/medqueen-instagram/main/'
+RAW = 'https://raw.githubusercontent.com/OrbittechIA/Medqueen-Instagram/main/'
 orig, dest = sys.argv[1], sys.argv[2].strip('/')
 src = os.path.join(MOTOR, 'saida', orig); out = os.path.join(REPO, dest); os.makedirs(out, exist_ok=True)
 urls = []
