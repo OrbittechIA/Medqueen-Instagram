@@ -20,6 +20,7 @@ Rodada de 20/10 (terça, fora do horário normal): a semana de 26/10 já estava 
 | Ter 20/10 18:50 | Carrossel 8 cards | Estudo | Ciclo de Krebs: o que cai na prova em 8 cards | posts/2026-10-20-s01-krebs |
 | Qui 22/10 18:50 | Carrossel 6 cards | Produto | Errou a questão? Ela volta como treino | posts/2026-10-22-p01-erro-vira-treino |
 | Sáb 24/10 18:50 | Reel 17 s | Produto | Pedi o ciclo de Krebs pra prova (Queen IA no tablet) | posts/2026-10-24-r01-krebs-queen |
+| Qua 21/10 17:07 (publicado na hora, pedido do Matheus) | Reel 50 s (Runway, feito pelo Matheus) | Marca | História da MedQueen: cinco aplicativos abertos, as ferramentas não conversavam | posts/2026-10-21-r02-historia · https://www.instagram.com/reel/DexOlxsmLY9/ |
 | Ter 20/10 a dom 25/10 | 18 stories | Story | stories 01 a 18 de stories/2026-10-20 | stories/2026-10-20 |
 | **Dom 01/11** 11:50, 15:50, 21:20 | 3 stories | Story | stories 19 a 21 (frase de domingo, teste do GTP e resposta). Já agendados: a rodada de 26/10 produz só os 21 horários que faltam na semana de 26/10 | stories/2026-10-20 |
 
