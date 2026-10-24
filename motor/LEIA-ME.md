@@ -34,23 +34,23 @@ A tarefa roda **segunda 00:01** e produz a semana que começa **nesse mesmo dia*
 
 | Dia | Feed | Story 1 | Story 2 | Story 3 |
 |---|---|---|---|---|
-| Seg | 18:50 (21:50Z) **carrossel** | 13:50 (16:50Z) | 15:50 (18:50Z) | 21:20 (00:20Z do dia seguinte) |
-| Ter | sem feed | 11:50 (14:50Z) | 15:50 (18:50Z) | 21:20 (00:20Z) |
-| Qua | 18:50 (21:50Z) **carrossel** | 11:50 | 15:50 | 21:20 |
-| Qui | sem feed | 11:50 | 15:50 | 21:20 |
-| Sex | 18:50 (21:50Z) **carrossel ou reel** | 11:50 | 15:50 | 21:20 |
-| Sáb | sem feed | 11:50 | 15:50 | 21:20 |
-| Dom | sem feed | 11:50 | 15:50 | 21:20 |
+| Seg | 18:50 (21:50Z) **post único** | 13:50 (16:50Z) | 15:50 (18:50Z) | 21:20 (00:20Z do dia seguinte) |
+| Ter | 18:50 (21:50Z) **carrossel** | 11:50 (14:50Z) | 15:50 (18:50Z) | 21:20 (00:20Z) |
+| Qua | 18:50 **post único** | 11:50 | 15:50 | 21:20 |
+| Qui | 18:50 **carrossel** | 11:50 | 15:50 | 21:20 |
+| Sex | 18:50 **post único** | 11:50 | 15:50 | 21:20 |
+| Sáb | 18:50 **carrossel** | 11:50 | 15:50 | 21:20 |
+| Dom | 18:50 **post único** | 11:50 | 15:50 | 21:20 |
 
-Total: 3 feed + 21 stories = 24. Pelo menos 2 dos 3 feeds são carrossel. Segunda nada sai antes das 13:50 (o Matheus revisa de manhã).
+Total: **7 feed + 21 stories = 28** (decisão do Matheus em 23/10/2026: feed todo dia, alternando post único e carrossel; seg, qua, sex e dom = post único; ter, qui e sáb = carrossel). Segunda nada sai antes das 13:50 (o Matheus revisa de manhã). Reel de pessoa gravada pode entrar no futuro, mas só quando o Matheus mandar o vídeo; até lá não planejar reel de pessoa.
 
-Stories: no dia de feed, o story das 21:20 anuncia o post novo (`imagem('saida/<post>/01.png')`). Os outros alternam: teste rápido (pergunta) com a resposta no story seguinte, dica da Queen IA, tela do produto com destaque, frase curta. Story pela API sai sem texto e sem figurinha: o texto vai dentro da imagem.
+Stories: todo dia o story das 21:20 anuncia o post novo do feed (`imagem('saida/<post>/01.png')`). Os outros alternam: teste rápido (pergunta) com a resposta no story seguinte, dica da Queen IA, tela do produto com destaque, frase curta. Story pela API sai sem texto e sem figurinha: o texto vai dentro da imagem.
 
 ## 4. Pauta
 
-**Antes de tudo, veja se a semana já está pronta:** `list-posts-tool` com `channels=["01a03943-aa85-72df-bb05-0dc788a5e9d9"]` e `status=scheduled` (o resultado é grande: salvar em arquivo e ler com `jq`). Se já houver 24 agendados entre segunda 00:00 e domingo 23:59 da semana alvo, não produza nada: só meça (seção 8), atualize o histórico e avise. Se tiver alguns, produza só os horários que faltam.
+**Antes de tudo, veja se a semana já está pronta:** `list-posts-tool` com `channels=["01a03943-aa85-72df-bb05-0dc788a5e9d9"]` e `status=scheduled` (o resultado é grande: salvar em arquivo e ler com `jq`). Se já houver 28 agendados (7 feed + 21 stories) entre segunda 00:00 e domingo 23:59 da semana alvo, não produza nada: só meça (seção 8), atualize o histórico e avise. Se tiver alguns, produza só os horários que faltam.
 
-Linhas (proporção inicial, hipótese a ajustar com as métricas): Estudo ~40% · Notícia de medicina ~25% · Novidade de IA ~15% · Produto ~15% · Marca ~5%. Com 3 feeds por semana, a regra prática é: **1 Estudo + 1 Produto + 1 alternando (Notícia, IA ou Estudo)**.
+Linhas (proporção inicial, hipótese a ajustar com as métricas): Estudo ~40% · Notícia de medicina ~25% · Novidade de IA ~15% · Produto ~15% · Marca ~5%. Com 7 feeds por semana, a regra prática é: **3 Estudo + 2 Produto + 1 Notícia ou IA + 1 Marca**. Carrossel combina com Estudo e Produto passo a passo; post único combina com gancho forte, comparação lado a lado, notícia, IA e marca.
 
 Banco de ideias (risque no histórico o que usar, acrescente ideias novas no fim):
 
@@ -88,6 +88,16 @@ Copie um arquivo de `motor/posts/` como base, troque o texto, rode.
 - Card `final`: `cta_titulo`, `cta_texto`, `acao` (botão) e `pe_final` (texto do rodapé: "salva pra revisar" ou "link na bio").
 - `coluna=True` empilha dois visuais (ex.: fluxo + nota). `<em>` no título pinta de roxo com grifo rosa. Use `‑` (hífen que não quebra) em palavras como acetil‑CoA no título.
 
+**Post único** (1 imagem 1080x1350): base `posts/u00_modelo_post_unico.py` (é só modelo, não publicar). Spec com um card só; o motor tira o contador e a barra sozinho. Uma ideia só: título grande (até 8 palavras) com `<em>` na palavra-chave, uma linha de apoio e um visual forte (print no tablet/celular com destaque, comparação lado a lado, número grande ou diagrama). `pe_final` curto, ex.: "7 dias grátis · link na bio" ou "salva pra revisar".
+
+**Padrão visual de referência** (dois carrosséis feitos à mão que o Matheus mandou em 23/10/2026: https://www.instagram.com/p/DctLpAtnFyI/ e https://www.instagram.com/p/DcecNXbn7la/). Não copiar, chegar perto do nível:
+- Título enorme, ocupando cerca de 1/3 do card, no máximo 2 cores (roxo escuro + rosa, ou palavra-chave em degradê roxo-rosa), com traço/grifo rosa embaixo da palavra-chave. Pouquíssimo texto por card.
+- Cada card tem UM visual herói grande: celular ou tablet com a tela real do app, mapa mental, diagrama com ícones em cartões ligados por linhas com bolinhas, comparação "material bruto → o que a MedQueen gera" com seta.
+- Fundo lavanda claro com degradê suave, brilhos (estrelinhas de 4 pontas) e traço fino de ícones médicos ao fundo (estetoscópio, cruz, DNA) bem apagados. Cartões brancos com sombra suave e cantos arredondados.
+- Logo sempre presente; "passe para o lado →" no canto inferior direito nos cards do meio; o último card com chamada "link na bio" em botão.
+- Narrativa: cada card avança uma ideia (problema → virada → mecanismo → resultado → chamada), não lista solta.
+- O que NÃO herdar: as pessoas desses carrosséis são geradas por IA. Regra da conta: sem pessoa gerada por IA (só a Queen IA oficial).
+
 **Reel** (1080x1920, sem som): base `posts/r01_krebs_queen.py`. Um print alto do app rola dentro de um tablet; títulos trocam por trecho; destaques acendem; cartão final com a chamada. Leva cerca de 30 s para gravar.
 
 **Stories** (1080x1920): base `posts/stories_2026_10_26.py`. Ajudantes prontos no arquivo: `quiz`, `resp`, `dica`, `frase`, `novo`. Salvar em `saida/stories-AAAA-MM-DD/` (data da segunda).
@@ -107,7 +117,7 @@ Copie um arquivo de `motor/posts/` como base, troque o texto, rode.
 
 1. `python3 publicar.py <pasta em saida> posts/AAAA-MM-DD-<slug>` para cada post (data = dia em que sai) e `python3 publicar.py stories-AAAA-MM-DD stories/AAAA-MM-DD` para os stories. Ele converte PNG em JPG e imprime as URLs públicas.
 2. Montar a **folha de revisão** da semana (todos os feeds e stories numa imagem) e salvar em `revisao/AAAA-MM-DD.jpg` no repositório. É o que o Matheus abre na segunda de manhã.
-3. `git add -A && git commit` (mensagem: "Semana AAAA-MM-DD: 3 posts e 21 stories") e `git push`. Esperar 1 minuto (o link raw demora a ficar disponível). O ambiente não abre raw.githubusercontent.com; quem baixa é o TryPost.
+3. `git add -A && git commit` (mensagem: "Semana AAAA-MM-DD: 7 posts e 21 stories") e `git push`. Esperar 1 minuto (o link raw demora a ficar disponível). O ambiente não abre raw.githubusercontent.com; quem baixa é o TryPost.
 4. TryPost, ferramenta `create-post-tool` (um por vez; o lote pode ser bloqueado e precisar repetir só o que faltou), conta `01a03943-aa85-72df-bb05-0dc788a5e9d9`, `status: scheduled`, `scheduled_at` em UTC (tabela da seção 3).
    - Carrossel: `content_type: instagram_feed`, `media: [{url, meta:{alt_text}}...]` (máximo 10), `content` = legenda.
    - Reel: `content_type: instagram_reel`, `meta: {"share_to_feed": true}`, `media: [{url, meta: {"cover_offset_ms": 1500}}]`.
@@ -116,7 +126,8 @@ Copie um arquivo de `motor/posts/` como base, troque o texto, rode.
    - Rótulos (`label_ids`): Estudo `01a15a6a-f1d8-704f-adb5-e6b0d92088de` · Notícia `01a15a6a-fa14-73bc-8116-bc9bcef6b7b2` · IA `01a15a6b-0290-7369-86cf-6cbb80097998` · Produto `01a15a6b-0b33-736a-835d-fef36c8141a1` · Marca `01a15a6b-1439-711b-9f6f-9c076509f0f2` · Story `01a15a6b-1cba-7083-a26d-c3f595e41c8f`.
    - Agendar cada um no horário exato. Não usar a fila automática (ela não separa feed de story).
    - Se o TryPost devolver erro de mídia, esperar 2 minutos e tentar de novo uma vez.
-5. No fim, `list-posts-tool` da semana: tem que ter 24 agendados, sem horário repetido.
+   - Post único: `content_type: instagram_feed` com uma imagem só.
+5. No fim, `list-posts-tool` da semana: tem que ter 28 agendados (7 feed, um por dia às 18:50, e 21 stories), sem horário repetido.
 
 ## 8. Medir a semana que passou
 

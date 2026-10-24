@@ -201,8 +201,11 @@ def pagina(card, i, n, story=False):
     tipo = card.get('tipo', 'passo')
     t = card.get('t'); s = card.get('s')
     estilo = (f'--t:{t}px;' if t else '') + (f'--s:{s}px;' if s else '')
-    topo = f'<div class="topo">{LOGO_IA}' + ('' if story else f'<div class="cont">{i:02d}/{n:02d}</div>') + '</div>'
-    pe = '' if story else (f'<div class="pe"><div class="barra"><i style="width:{i/n*100:.1f}%"></i></div>'
+    unico = (n == 1)   # post único: sem contador nem barra de progresso
+    topo = f'<div class="topo">{LOGO_IA}' + ('' if story or unico else f'<div class="cont">{i:02d}/{n:02d}</div>') + '</div>'
+    if story: pe = ''
+    elif unico: pe = f'<div class="pe"><div></div><div class="arraste">{card.get("pe_final", "link na bio")}</div></div>'
+    else: pe = (f'<div class="pe"><div class="barra"><i style="width:{i/n*100:.1f}%"></i></div>'
           + ('<div class="arraste">arraste →</div>' if i < n else f'<div class="arraste">{card.get("pe_final", "salva pra revisar")}</div>') + '</div>')
     corpo = f'<div class="olho">{card["olho"]}</div>' if card.get('olho') else ''
     if card.get('titulo'): corpo += f'<h1>{card["titulo"]}</h1>'
