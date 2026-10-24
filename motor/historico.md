@@ -36,4 +36,4 @@ Temas de story já usados: principal ponto de controle do Krebs; voltas por glic
 - 20/10/2026: CTA único "Aproveite os 7 dias de teste grátis. Link na bio." em todos os posts. Logo com selo IA (MedQueen IA). Best Content cancelado.
 - 23/10/2026: feed todo dia a partir da semana de 26/10, às 18:50, alternando post único (seg, qua, sex, dom) e carrossel (ter, qui, sáb). Total semanal 7 feed + 21 stories = 28. Referência visual: dois carrosséis feitos à mão (DctLpAtnFyI e DcecNXbn7la), registrados no LEIA-ME. Reel de pessoa gravada só quando o Matheus mandar o vídeo.
 - 24/10/2026: Queen IA liberada à vontade (é a cara do produto), em qualquer formato; substitui pessoa nos visuais. Pessoa gerada por IA continua fora.
-- 24/10/2026: Queen IA dosada: no máximo 2 de 7 feeds e 5 de 21 stories por semana, nunca seguidos.
+- 24/10/2026: Queen IA dosada: 3 ou 4 dos 7 feeds (alternando dias) e 1 story por dia (7 de 21).
