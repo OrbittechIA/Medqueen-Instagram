@@ -53,6 +53,47 @@ h1 em{{font-style:normal;color:#3A1D8F;background:linear-gradient(transparent 72
 .fim:after{{content:"";position:absolute;right:-120px;top:-120px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(240,111,143,.55),transparent 70%)}}
 .fim h2{{font-family:J;font-weight:800;font-size:66px;line-height:1.08;position:relative;z-index:1}}
 .fim p{{font-size:38px;line-height:1.3;margin-top:22px;color:#E7E3FA;position:relative;z-index:1;font-family:S}}
+.tela{{position:absolute;left:0;top:0;width:1080px;height:1920px;padding:330px 80px 220px;display:flex;flex-direction:column}}
+.big{{font-family:J;font-weight:800;font-size:var(--g,112px);line-height:1.06;letter-spacing:-.025em;color:#111827}}
+.escuro .big,.roxo .big{{color:#fff}}
+.big em{{font-style:normal;color:#3A1D8F;background:linear-gradient(transparent 70%,rgba(240,111,143,.55) 70%)}}
+.escuro .big em,.roxo .big em{{color:#FFB3C6;background:none}}
+.oculto{{visibility:hidden}}
+.tag{{align-self:flex-start;font-family:J;font-weight:800;font-size:30px;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#F06F8F;border-radius:999px;padding:12px 26px;margin-bottom:34px}}
+.q{{font-family:J;font-weight:800;font-size:92px;line-height:1.08;letter-spacing:-.02em;color:#111827;margin-bottom:34px}}
+.alt{{display:flex;gap:24px;align-items:center;background:#fff;border-radius:30px;padding:34px 34px;font-family:S;font-size:48px;line-height:1.22;color:#111827;margin-top:26px;border:3px solid #E4E2F0;box-shadow:0 14px 30px -20px rgba(58,29,143,.35)}}
+.alt b{{flex:none;width:76px;height:76px;border-radius:50%;background:#ECE8FB;color:#3A1D8F;font-family:J;font-size:32px;display:flex;align-items:center;justify-content:center}}
+.alt.certa{{border-color:#16A34A;background:#ECFDF3}} .alt.certa b{{background:#16A34A;color:#fff}}
+.alt.apagada{{opacity:.32}}
+.cont{{position:absolute;right:80px;top:150px;width:150px;height:150px;border-radius:50%;background:#F06F8F;color:#fff;font-family:J;font-weight:800;font-size:92px;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 40px -16px rgba(240,111,143,.8)}}
+.expl{{margin-top:34px;background:#3A1D8F;color:#fff;border-radius:30px;padding:34px 36px;font-family:S;font-size:46px;line-height:1.28}}
+.expl b{{color:#FFB3C6}}
+.chat{{display:flex;flex-direction:column;gap:22px;margin-top:20px}}
+.msg{{max-width:820px;border-radius:38px;padding:30px 36px;font-family:S;font-size:46px;line-height:1.3}}
+.aluno{{align-self:flex-end;background:#3A1D8F;color:#fff;border-bottom-right-radius:10px}}
+.qmsg{{align-self:flex-start;display:flex;gap:18px;align-items:flex-end}}
+.qmsg img{{width:84px;height:84px;border-radius:50%;border:3px solid #fff;box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}}
+.qmsg .msg{{background:#fff;color:#111827;border:2px solid #ECE8FB;border-bottom-left-radius:10px;max-width:720px}}
+.qmsg .msg b{{color:#3A1D8F}}
+.dots{{display:flex;gap:12px;padding:34px 36px}} .dots i{{width:18px;height:18px;border-radius:50%;background:#B9B1E6}}
+.cab{{display:flex;align-items:center;gap:20px;font-family:J;font-weight:800;font-size:38px;color:#111827;padding-bottom:22px;border-bottom:2px solid #E4E2F0}}
+.cab img{{width:96px;height:96px;border-radius:50%}} .cab small{{display:block;font-family:S;font-weight:600;font-size:26px;color:#16A34A}}
+.lados{{display:flex;gap:28px;margin-top:40px}}
+.col{{flex:1;border-radius:34px;padding:34px 30px}}
+.col.ruim{{background:#EDEBF5}} .col.bom{{background:#3A1D8F;color:#fff}}
+.col h3{{font-family:J;font-weight:800;font-size:40px;margin-bottom:22px}}
+.col p{{font-family:S;font-size:34px;line-height:1.28;margin-top:18px;padding-left:44px;position:relative}}
+.col.ruim p:before{{content:"✕";position:absolute;left:0;color:#E11D48;font-weight:800}}
+.col.bom p:before{{content:"✓";position:absolute;left:0;color:#FFB3C6;font-weight:800}}
+.afirm{{font-family:J;font-weight:800;font-size:100px;line-height:1.06;letter-spacing:-.02em;color:#111827;margin-top:60px}}
+.carimbo{{position:absolute;left:50%;top:1230px;transform:translate(-50%,0) rotate(-10deg);font-family:J;font-weight:800;font-size:150px;letter-spacing:.04em;padding:14px 56px;border:14px solid;border-radius:30px;background:rgba(255,255,255,.88)}}
+.carimbo.mito{{color:#E11D48;border-color:#E11D48}} .carimbo.verdade{{color:#16A34A;border-color:#16A34A}}
+.porque{{position:absolute;left:90px;right:90px;top:1560px;font-family:S;font-size:50px;line-height:1.3;color:#475569;text-align:center}}
+.porque b{{color:#111827}}
+.ep{{font-family:J;font-weight:800;font-size:280px;line-height:1;color:#3A1D8F;letter-spacing:-.04em}}
+.item{{display:flex;gap:26px;align-items:flex-start;margin-top:34px;font-family:J;font-weight:700;font-size:52px;line-height:1.15;color:#111827}}
+.item b{{flex:none;width:86px;height:86px;border-radius:24px;background:#F06F8F;color:#fff;font-size:46px;display:flex;align-items:center;justify-content:center}}
+.item span small{{display:block;font-family:S;font-weight:400;font-size:34px;color:#475569;margin-top:8px}}
 .fim .bt{{display:inline-block;margin-top:38px;background:#fff;color:#3A1D8F;font-family:J;font-weight:800;font-size:38px;padding:24px 40px;border-radius:999px;position:relative;z-index:1}}
 """
 
@@ -75,7 +116,11 @@ class Cena:
     balao: (t, 'html') balão da Queen IA. pergunta: (t, 'texto') bolha de pergunta que é digitada.
     queen: (t, 'busto'|'corpo') imagem da Queen IA. sons: [(t, nome, ganho_db)] efeitos."""
     def __init__(self, dur, titulo, olho=None, sub=None, escuro=False, aparelho=None, img=None, zoom=None,
-                 destaques=None, selos=None, balao=None, pergunta=None, queen=None, sons=None, t=None, lupas=None):
+                 destaques=None, selos=None, balao=None, pergunta=None, queen=None, sons=None, t=None, lupas=None, estados=None, fundo=None):
+        # estados: [(t, html)] telas inteiras (1080x1920, classe .tela) que se sucedem; usadas pelos formatos de reel_formatos.py
+        # fundo: 'claro' | 'escuro' | 'roxo' (padrão: escuro se escuro=True, senão claro)
+        self.estados = estados or []; self.fundo = fundo or ('escuro' if escuro else 'claro')
+        if self.fundo in ('escuro', 'roxo'): escuro = True
         # aparelho 'pronto' = print que já vem com moldura de celular (ex.: cel-ia-krebs.png); sem zoom, use lupas.
         # lupas: [(t0, t1, (x,y,w,h) na imagem, (cx, cy, raio) na tela)]
         self.lupas = lupas or []
@@ -120,7 +165,7 @@ class Reel:
             for i, c in enumerate(self.cenas):
                 tt = c.t or (96 if not c.aparelho else 76)
                 corpo = (f'<div class="olho">{c.olho}</div>' if c.olho else '') + f'<h1 style="--t:{tt}px">{c.titulo}</h1>' + (f'<p class="sub">{c.sub}</p>' if c.sub else '')
-                cam = dict(titulo=self._html_png(pg, corpo, f'c{i}-titulo', largura=920, classe='escuro' if c.escuro else ''))
+                cam = dict(titulo=self._html_png(pg, corpo, f'c{i}-titulo', largura=920, classe='escuro' if c.escuro else '') if c.titulo else Image.new('RGBA', (1, 1), (0, 0, 0, 0)))
                 cam['selos'] = [(t, self._html_png(pg, f'<div class="selo"><i>✓</i>{txt}</div>', f'c{i}-selo{k}')) for k, (t, txt) in enumerate(c.selos)]
                 if c.balao: cam['balao'] = (c.balao[0], self._html_png(pg, f'<div class="balao"><b>Queen IA</b>{c.balao[1]}</div>', f'c{i}-balao', largura=800))
                 if c.pergunta:
@@ -129,6 +174,13 @@ class Reel:
                         passos.append(self._html_png(pg, f'<div class="pergunta">{txt[:n] or "&nbsp;"}</div>', f'c{i}-perg{n}', largura=860))
                     passos.append(self._html_png(pg, f'<div class="pergunta">{txt}</div>', f'c{i}-pergfim', largura=860))
                     cam['pergunta'] = (c.pergunta[0], passos)
+                cam['estados'] = []
+                for k, (te, html) in enumerate(c.estados):
+                    f = f'{self.pasta}/c{i}-e{k}.html'
+                    open(f, 'w', encoding='utf-8').write(f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body class="{c.fundo}" style="width:{W}px;height:{H}px;position:relative;overflow:hidden"><div class="tela">{html}</div></body></html>')
+                    pg.goto(f'file://{f}'); pg.evaluate('document.fonts.ready'); pg.wait_for_timeout(100)
+                    pg.screenshot(path=f'{self.pasta}/c{i}-e{k}.png', omit_background=True)
+                    cam['estados'].append((te, Image.open(f'{self.pasta}/c{i}-e{k}.png').convert('RGBA')))
                 self.camadas.append(cam)
             if self._fim:
                 f = self._fim
@@ -137,13 +189,13 @@ class Reel:
             br.close()
         self.queen_corpo = Image.open(f'{MARCA}/queen_ia_recorte.png').convert('RGBA')
         self.queen_busto = Image.open(f'{MARCA}/queen-ia-bust-master-384.png').convert('RGBA')
-        self.fundo_claro = self._fundo(False); self.fundo_escuro = self._fundo(True)
+        self.fundo_claro = self._fundo(False); self.fundo_escuro = self._fundo(True); self.fundo_roxo = self._fundo('roxo')
         self.imgs = {}
         for c in self.cenas:
             if c.img and c.img not in self.imgs: self.imgs[c.img] = Image.open(f'{PR}/{c.img}').convert('RGB')
 
     def _fundo(self, escuro):
-        im = Image.new('RGB', (W, H), '#140B33' if escuro else '#F6F5FC')
+        im = Image.new('RGB', (W, H), '#3A1D8F' if escuro == 'roxo' else '#140B33' if escuro else '#F6F5FC')
         cam = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(cam)
         if escuro:
             d.ellipse((620, -300, 1500, 600), fill=(88, 59, 196, 120)); d.ellipse((-400, 1400, 500, 2300), fill=(240, 111, 143, 70))
@@ -266,10 +318,22 @@ class Reel:
 
     def _quadro_cena(self, i, t):
         c = self.cenas[i]; cam = self.camadas[i]
-        q = (self.fundo_escuro if c.escuro else self.fundo_claro).copy()
-        q.alpha_composite(self.logo_escuro if c.escuro else self.logo_claro, (80, 150))
+        q = {'roxo': self.fundo_roxo, 'escuro': self.fundo_escuro}.get(c.fundo, self.fundo_claro).copy()
+        q.alpha_composite(self.logo_escuro if c.fundo in ('escuro', 'roxo') else self.logo_claro, (80, 150))
         tit = cam['titulo']
-        self._colar(q, tit, 80, 300 if c.aparelho else 820 - tit.height // 2, t, 0.05, dy=50, dur=0.5)
+        if c.titulo: self._colar(q, tit, 80, 300 if c.aparelho else 820 - tit.height // 2, t, 0.05, dy=50, dur=0.5)
+        if cam['estados']:
+            atual = None; ant = None; t_at = 0
+            for (te, im) in cam['estados']:
+                if t >= te: ant, atual, t_at = atual, im, te
+            if atual is not None:
+                a = suave((t - t_at) / 0.2)
+                if ant is not None and a < 1:
+                    q.alpha_composite(Image.blend(ant, atual, a))
+                elif ant is None and a < 1:
+                    self._colar(q, atual, 0, 0, t, t_at, dy=30, dur=0.3)
+                else:
+                    q.alpha_composite(atual)
         if c.aparelho:
             g = self._aparelho(q, c, t, min(1, max(0, (t - 0.2) / 0.6)))
             self._lupas(q, c, t)
@@ -315,7 +379,7 @@ class Reel:
         if self._fim['queen']:
             im = self.queen_corpo.resize((640, int(640 * self.queen_corpo.height / self.queen_corpo.width)), Image.LANCZOS)
             self._colar(q, im, (W - 640) // 2, H - im.height + 60, t, 0.1, dy=90, dur=0.6)
-        self._colar(q, self.cam_fim, (W - self.cam_fim.width) // 2, 330, t, 0.25, dy=60, dur=0.5)
+        self._colar(q, self.cam_fim, (W - self.cam_fim.width) // 2, 330 if self._fim['queen'] else (H - self.cam_fim.height) // 2, t, 0.25, dy=60, dur=0.5)
         if t < 0.18:
             q = Image.blend(self._quadro_cena_simples(len(self.cenas) - 1), q, suave(t / 0.18))
         return q
