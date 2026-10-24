@@ -12,7 +12,7 @@ Estratégia completa: `medqueen/instagram/brain-instagram.md` e `medqueen/instag
 - Sem "não é X, é Y", sem emoji como marcador de lista nos cards, sem frase de efeito vazia, sem "Concorda?".
 - **Feed sempre claro**: fundo branco/lavanda do motor. Nunca fundo preto, azul-marinho ou roxo escuro dominando. O roxo só em detalhe, título e cartão final.
 - **Print nunca solto (regra do Matheus).** Todo print entra dentro de `tablet()`, `celular()` ou `pronto()` e, sempre que fizer sentido, com destaque (`dest`) ou lupa (`lupa`) no ponto que importa.
-- **Sem pessoa gerada por IA.** A única personagem é a Queen IA oficial (ilustração, `www/marca/queen_ia_recorte.png`, com o símbolo da MedQueen no jaleco). Ela entra em apoio, dica e fechamento; nunca em post de dor nem em manifesto.
+- **Sem pessoa gerada por IA.** No lugar de gente, use a **Queen IA**, a personagem oficial e a cara do produto (ilustração, `www/marca/queen_ia_recorte.png` corpo inteiro e `www/marca/queen-ia-bust-master-384.png` busto, com o símbolo da MedQueen no jaleco). Decisão do Matheus em 24/10/2026: pode usar à vontade, em qualquer formato (capa, card do meio, post único, story, fechamento), inclusive como o visual herói onde os carrosséis de referência usavam uma pessoa. Só não alterar o desenho dela nem gerar versões novas por IA.
 - Claims proibidos: "única", "a melhor", "a maior", "10x", "não alucina", "100% preciso", "te aprova", "garante aprovação", promessa de nota, urgência inventada, plano ou benefício que não existe, citar concorrente pelo nome, "a Queen IA sabe seu período/erros" (o produto ainda pede essas infos). OSCE fora como tema de post até o Matheus liberar.
 - O que pode liderar: o material vira resumo, flashcards, simulado; o erro vira explicação e próxima revisão; simulado por tema ou pelo material; caderno de erros por área; a resposta da Queen IA vira resumo, flashcards, mapa ou questões; memória visível.
 - **CTA, um só por post, sempre o mesmo (decisão do Matheus, 20/10/2026): "Aproveite os 7 dias de teste grátis. Link na bio."** Vale para card final, fim de reel e legenda. Sem CTA de comentário. "Salva pra revisar" pode aparecer só como apoio no texto, nunca como a chamada.
@@ -96,7 +96,7 @@ Copie um arquivo de `motor/posts/` como base, troque o texto, rode.
 - Fundo lavanda claro com degradê suave, brilhos (estrelinhas de 4 pontas) e traço fino de ícones médicos ao fundo (estetoscópio, cruz, DNA) bem apagados. Cartões brancos com sombra suave e cantos arredondados.
 - Logo sempre presente; "passe para o lado →" no canto inferior direito nos cards do meio; o último card com chamada "link na bio" em botão.
 - Narrativa: cada card avança uma ideia (problema → virada → mecanismo → resultado → chamada), não lista solta.
-- O que NÃO herdar: as pessoas desses carrosséis são geradas por IA. Regra da conta: sem pessoa gerada por IA (só a Queen IA oficial).
+- O que NÃO herdar: as pessoas desses carrosséis são geradas por IA. Onde eles usam uma pessoa (segurando tablet, apontando para a tela), use a Queen IA oficial no lugar.
 
 **Reel** (1080x1920, sem som): base `posts/r01_krebs_queen.py`. Um print alto do app rola dentro de um tablet; títulos trocam por trecho; destaques acendem; cartão final com a chamada. Leva cerca de 30 s para gravar.
 
