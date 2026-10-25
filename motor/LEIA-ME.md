@@ -50,6 +50,8 @@ Stories: todo dia o story das 21:20 anuncia o post novo do feed (`imagem('saida/
 
 ## 4. Pauta
 
+**ATENÇÃO, RODADA DE 26/10/2026: a semana de 26/10 a 01/11 foi produzida à mão em 25/10 (linha nova de IA para Medicina) e está com o Matheus para aprovar. Nesta rodada NÃO produza nem agende nada: só meça (seção 8), atualize o histórico e avise. Esta nota vale só para a rodada de 26/10.**
+
 **Antes de tudo, veja se a semana já está pronta:** `list-posts-tool` com `channels=["01a03943-aa85-72df-bb05-0dc788a5e9d9"]` e `status=scheduled` (o resultado é grande: salvar em arquivo e ler com `jq`). Se já houver 30 agendados (7 feed + 2 reels em vídeo + 21 stories) entre segunda 00:00 e domingo 23:59 da semana alvo, não produza nada: só meça (seção 8), atualize o histórico e avise. Se tiver alguns, produza só os horários que faltam.
 
 Linhas (proporção inicial, hipótese a ajustar com as métricas): Estudo ~40% · Notícia de medicina ~25% · Novidade de IA ~15% · Produto ~15% · Marca ~5%. Com 7 feeds por semana, a regra prática é: **3 Estudo + 2 Produto + 1 Notícia ou IA + 1 Marca**. Carrossel combina com Estudo e Produto passo a passo; post único combina com gancho forte, comparação lado a lado, notícia, IA e marca.
