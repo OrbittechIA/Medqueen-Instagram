@@ -162,12 +162,22 @@ def pronto(img, h=760, dest=(), lupa=None):
               f'<img src="file://{PR}/{img}" style="width:{iw*zs:.0f}px;left:{lr-lx*zs:.0f}px;top:{lr-ly*zs:.0f}px"></div>')
     return f'<div class="pronto" style="position:relative;width:{w:.0f}px;height:{h}px"><img src="file://{PR}/{img}" style="height:{h}px">{d}</div>'
 
-POSES = ('tablet', 'apresentando', 'bracos-cruzados', 'pensando')
+import glob as _glob
+POSES = ('tablet', 'apresentando', 'bracos-cruzados', 'pensando')  # 4 poses antigas (www/marca/queen-pose-*.png)
+def _pose_arq(pose):
+    """Banco de 50 poses em www/marca/queen-poses/NN-nome.png (fundo transparente). Aceita número ('07'), nome ('bracos-cruzados') ou pose antiga."""
+    if pose in POSES and not str(pose).isdigit():
+        return f'queen-pose-{pose}.png'
+    alvo = f'{int(pose):02d}-' if str(pose).isdigit() else f'-{pose}.png'
+    achou = [f for f in sorted(_glob.glob(f'{BASE}/www/marca/queen-poses/*.png')) if (alvo in f.split('/')[-1] if str(pose).isdigit() else f.endswith(alvo))]
+    if not achou:
+        raise ValueError(f'pose da Queen não encontrada: {pose} (veja www/marca/queen-poses/LEIA-ME.md)')
+    return 'queen-poses/' + achou[0].split('/')[-1]
 def queen_img(h=560, pose=None):
     """Queen IA oficial em linha (dentro do visual).
-    pose: None = retrato oficial; ou uma de POSES (www/marca/queen-pose-*.png, fundo transparente).
+    pose: None = retrato oficial; número ou nome do banco de 50 poses (www/marca/queen-poses/LEIA-ME.md).
     Regra (25/10/2026): não repetir a mesma pose em posts seguidos; variar dentro da semana."""
-    arq = f'queen-pose-{pose}.png' if pose else 'queen_ia_recorte.png'
+    arq = _pose_arq(pose) if pose else 'queen_ia_recorte.png'
     return f'<img src="{MARCA}/{arq}" style="height:{h}px;display:block;margin:0 auto;-webkit-mask-image:linear-gradient(#000 82%,transparent)">'
 
 def lista(itens, tipo='num', rosa=False):
