@@ -162,9 +162,13 @@ def pronto(img, h=760, dest=(), lupa=None):
               f'<img src="file://{PR}/{img}" style="width:{iw*zs:.0f}px;left:{lr-lx*zs:.0f}px;top:{lr-ly*zs:.0f}px"></div>')
     return f'<div class="pronto" style="position:relative;width:{w:.0f}px;height:{h}px"><img src="file://{PR}/{img}" style="height:{h}px">{d}</div>'
 
-def queen_img(h=560):
-    """Queen IA oficial em linha (dentro do visual)."""
-    return f'<img src="{MARCA}/queen_ia_recorte.png" style="height:{h}px;display:block;-webkit-mask-image:linear-gradient(#000 80%,transparent)">'
+POSES = ('tablet', 'apresentando', 'bracos-cruzados', 'pensando')
+def queen_img(h=560, pose=None):
+    """Queen IA oficial em linha (dentro do visual).
+    pose: None = retrato oficial; ou uma de POSES (www/marca/queen-pose-*.png, fundo transparente).
+    Regra (25/10/2026): não repetir a mesma pose em posts seguidos; variar dentro da semana."""
+    arq = f'queen-pose-{pose}.png' if pose else 'queen_ia_recorte.png'
+    return f'<img src="{MARCA}/{arq}" style="height:{h}px;display:block;margin:0 auto;-webkit-mask-image:linear-gradient(#000 82%,transparent)">'
 
 def lista(itens, tipo='num', rosa=False):
     li = ''
