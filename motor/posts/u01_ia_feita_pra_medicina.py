@@ -6,4 +6,4 @@ SLUG = 'u01-ia-feita-pra-medicina'
 CARDS = [dict(tipo='capa', olho='IA na Medicina', t=90,
     titulo='A IA que você usa <em>foi feita pra Medicina</em>?',
     texto='IA generalista responde qualquer coisa. A Queen IA explica do jeito que cai na prova e retoma de onde você parou.',
-    visual=queen_img(600, 'apresentando'), pe_final='7 dias grátis · link na bio')]
+    visual=queen_img(640, '13'), pe_final='7 dias grátis · link na bio')]

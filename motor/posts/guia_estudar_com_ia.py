@@ -5,7 +5,7 @@ from carrossel import tablet, pronto, lista, nota, queen_img, balao
 SLUG = 'guia-estudar-com-ia'
 CARDS = [
  dict(tipo='capa', olho='Guia gratuito', t=96, titulo='Como estudar Medicina com IA <em>sem se enganar</em>.',
-      texto='O método em 6 passos, do jeito que usamos na MedQueen IA.', visual=queen_img(560, 'tablet')),
+      texto='O método em 6 passos, do jeito que usamos na MedQueen IA.', visual=queen_img(580, '01')),
  dict(olho='Antes de tudo', titulo='IA generalista x IA de Medicina.', t=84,
       visual=lista([('<b>Generalista</b> responde qualquer assunto, sem saber o que cai na sua prova.', ''),
                     ('<b>De Medicina</b> organiza a resposta pra prova, usa o seu material e lembra do que você já estudou.', '')], 'num')),
@@ -30,6 +30,6 @@ CARDS = [
                     ('<b>Sex:</b> simulado do tema da semana.', ''),
                     ('<b>Sáb:</b> revisa só o que errou.', ''),
                     ('<b>Dom:</b> planeja a próxima semana.', '')], 'num')),
- dict(tipo='final', olho='MedQueen IA', t=80, titulo='Tudo isso num lugar só.', visual=queen_img(380, 'bracos-cruzados'), pe_final='medqueen.com.br',
+ dict(tipo='final', olho='MedQueen IA', t=80, titulo='Tudo isso num lugar só.', visual=queen_img(380, '16'), pe_final='medqueen.com.br',
       cta_titulo='Teste 7 dias grátis.', cta_texto='Explicação com a Queen IA, simulados, flashcards e caderno de erros. Acesse medqueen.com.br.', acao='medqueen.com.br'),
 ]

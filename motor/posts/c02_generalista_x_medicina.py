@@ -5,7 +5,7 @@ from carrossel import tablet, pronto, lista, numeros, nota, queen_img, balao
 SLUG = 'c02-generalista-x-medicina'
 CARDS = [
  dict(tipo='capa', olho='IA na Medicina', t=82, titulo='IA generalista x <em>IA de Medicina</em>: 4 diferenças que pesam na sua nota.',
-      visual=queen_img(560, 'bracos-cruzados')),
+      visual=queen_img(580, '07')),
  dict(olho='1. Memória', titulo='Ela retoma de onde você parou.',
       texto='Suas conversas e materiais ficam salvos. Você não explica tudo de novo a cada pergunta.',
       visual=tablet('desk-ia-krebs-1.png', w=860, crop=(300, 40, 760, 660), h=560, dest=[(330, 560, 260, 140)])),
@@ -18,6 +18,6 @@ CARDS = [
  dict(olho='4. Erro vira treino', titulo='O que você erra volta pra revisão.',
       visual=pronto('cel-caderno-erros.png', h=720, dest=[(75, 810, 447, 280)])),
  dict(tipo='final', olho='MedQueen IA', t=78, titulo='IA generalista não foi feita pra Medicina. <em>A MedQueen IA foi.</em>',
-      visual=queen_img(340, 'apresentando'), pe_final='link na bio',
+      visual=queen_img(350, '10'), pe_final='link na bio',
       cta_titulo='Aproveite os 7 dias de teste grátis.', cta_texto='Explicação, simulados, flashcards e caderno de erros com a Queen IA.', acao='Link na bio'),
 ]

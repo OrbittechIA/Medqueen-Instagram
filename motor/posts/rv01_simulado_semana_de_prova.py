@@ -4,11 +4,11 @@ from reel_video import Reel, Cena
 # Reel em vídeo 1 (terça): semana de prova -> simulado -> onde errou -> caderno de erros -> flashcards.
 FULL = (0, 0, 1568, 704)
 r = Reel('saida/rv01-simulado', musica='trilha_anuncio_1.mp3')
-r.cena(Cena(3.0, 'Faltam 5 dias pra prova. <em>Por onde começar?</em>', olho='Semana de prova', escuro=True,
+r.cena(Cena(3.0, 'Faltam 5 dias pra prova. <em>Por onde começar?</em>', olho='Semana de prova',
             sons=[(0.1, 'hit', -10)]))
-r.cena(Cena(3.0, 'Reler tudo não dá tempo.', sub='E reler não mostra o que você ainda não sabe.', escuro=True,
+r.cena(Cena(3.0, 'Reler tudo não dá tempo.', sub='E reler não mostra o que você ainda não sabe.',
             sons=[(0.2, 'downer', -12)]))
-r.cena(Cena(3.0, 'Faz um simulado. <em>Ele mostra.</em>', escuro=True,
+r.cena(Cena(3.0, 'Faz um simulado. <em>Ele mostra.</em>',
             sons=[(0.0, 'metallic_rise', -14), (2.0, 'hit', -10)]))
 r.cena(Cena(6.0, 'Escolhe o tema ou usa o seu material.', aparelho='pronto', img='cel-novo-simulado.png',
             destaques=[(1.2, 3.2, (96, 770, 400, 100)), (3.4, 5.6, (96, 890, 400, 100))],

@@ -9,7 +9,7 @@ def quiz(nome, pergunta, opcoes):
                 visual=lista([(o, '') for o in opcoes], 'num'), texto='A resposta sai no próximo story.')
 def resp(nome, titulo, texto, extra=''):
     return dict(nome=nome, olho='Resposta', titulo=titulo, t=88, texto=texto, visual=nota(extra) if extra else '')
-_POSES_DICA = iter(['pensando', 'apresentando', 'tablet', 'bracos-cruzados', None, 'pensando'])  # uma por dia, seg a sáb, sem repetir em dias seguidos
+_POSES_DICA = iter(['40', '38', '11', '36', '23', '43'])  # uma por dia, seg a sáb, sem repetir em dias seguidos
 def dica(nome, frase):
     return dict(nome=nome, olho='Dica da Queen IA', visual=balao(frase) + queen_img(820, next(_POSES_DICA)), coluna=True)
 def frase(nome, titulo, texto=''):

@@ -4,7 +4,7 @@ from reel_video import Reel
 from reel_formatos import palavras, chat
 # Formato CONVERSA COM A QUEEN. Conteúdo conferido em nefrologia básica: nefrótica (proteinúria > 3,5 g/dia, hipoalbuminemia, edema, hiperlipidemia); nefrítica (hematúria, hipertensão, oligúria, edema; proteinúria geralmente < 3,5 g/dia).
 r = Reel('saida/rv05-chat-nefro', musica='trilha_anuncio_1.mp3')
-r.cena(palavras('POV: prova de Nefro amanhã e você ainda confunde <em>nefrótica e nefrítica</em>.', fundo='escuro', g=96, passo=0.22))
+r.cena(palavras('POV: prova de Nefro amanhã e você ainda confunde <em>nefrótica e nefrítica</em>.', fundo='claro', g=96, passo=0.22))
 r.cena(chat([
     ('aluno', 'Me explica rápido nefrótica x nefrítica? Prova amanhã 😭'),
     ('queen', '<b>Nefrótica:</b> proteinúria acima de 3,5 g/dia, hipoalbuminemia, edema e hiperlipidemia.'),

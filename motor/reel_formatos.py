@@ -18,7 +18,7 @@ from reel_video import Cena, MARCA
 
 QUEEN = f'file://{MARCA}/queen-ia-bust-master-384.png'
 
-def palavras(frase, dur=None, fundo='escuro', passo=0.28, tag=None, g=112, sons=None, extra=''):
+def palavras(frase, dur=None, fundo='claro', passo=0.28, tag=None, g=112, sons=None, extra=''):
     """frase: texto com <em>...</em> opcional. Cada palavra entra no seu tempo."""
     toks = []; dentro = False
     for w in frase.split(' '):
@@ -102,6 +102,6 @@ def lista(titulo, itens, fundo='claro', passo=1.8, tag=None):
     for k in range(len(itens)): est.append((t, html(k + 1))); sons.append((t, 'hit', -14)); t += passo
     return Cena(t + 1.6, '', fundo=fundo, estados=est, sons=sons)
 
-def episodio(serie, numero, tema, fundo='roxo'):
-    html = f'<div style="flex:1;display:flex;flex-direction:column;justify-content:center"><div class="tag">{serie}</div><div class="ep" style="color:#fff">#{numero}</div><div class="big" style="--g:84px;margin-top:20px">{tema}</div></div>'
+def episodio(serie, numero, tema, fundo='claro'):
+    html = f'<div style="flex:1;display:flex;flex-direction:column;justify-content:center"><div class="tag">{serie}</div><div class="ep">#{numero}</div><div class="big" style="--g:84px;margin-top:20px">{tema}</div></div>'
     return Cena(2.6, '', fundo=fundo, estados=[(0.1, html)], sons=[(0.1, 'deep_woosh', -10), (0.5, 'hit', -12)])

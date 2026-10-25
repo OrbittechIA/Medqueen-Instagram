@@ -4,9 +4,9 @@ from reel_video import Reel, Cena
 # Reel em vídeo 2 (quinta): abre o app -> próxima tarefa já está ali -> Queen IA explica -> a resposta vira material.
 FULL = (0, 0, 1568, 704)
 r = Reel('saida/rv02-proxima-tarefa', musica='trilha_anuncio_1.mp3')
-r.cena(Cena(3.0, 'Abre o app e <em>não sabe o que estudar</em>?', olho='Rotina de estudo', escuro=True,
+r.cena(Cena(3.0, 'Abre o app e <em>não sabe o que estudar</em>?', olho='Rotina de estudo',
             sons=[(0.1, 'hit', -10)]))
-r.cena(Cena(3.2, 'Na MedQueen IA, a próxima tarefa <em>já está ali</em>.', escuro=True,
+r.cena(Cena(3.2, 'Na MedQueen IA, a próxima tarefa <em>já está ali</em>.',
             sons=[(0.0, 'deep_woosh', -10)]))
 r.cena(Cena(6.5, 'Sua próxima tarefa, com o <em>seu acerto</em> no tema.', aparelho='tablet', img='desk-hoje.png',
             zoom=[(0, FULL), (1.4, (330, 140, 900, 470))],

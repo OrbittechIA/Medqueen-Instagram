@@ -98,6 +98,15 @@ ul.lista li b{{font-weight:700}}
 .story ul.lista li{{font-size:46px;padding:34px 38px}} .story ul.lista li i{{width:62px;height:62px;font-size:30px}}
 .story .nota{{font-size:44px;padding:36px 40px}} .story .sub{{font-size:44px}}
 .story .balao{{font-size:50px;max-width:880px;padding:40px 44px}} .story .olho{{font-size:28px}}
+/* fundos claros variados (pedido do Matheus 25/10/2026: variar o fundo; fundo escuro proibido) */
+body.f-lavanda{{background:#F6F5FC}}
+body.f-creme{{background:#FFF8EF}} body.f-creme .fundo{{background:radial-gradient(640px 540px at 92% 6%,rgba(255,196,140,.32),transparent 70%),radial-gradient(560px 480px at 4% 98%,rgba(240,111,143,.18),transparent 70%),radial-gradient(900px 700px at 50% 50%,#FFFDF9 0%,rgba(255,253,249,0) 75%)}}
+body.f-rosa{{background:#FDEFF4}} body.f-rosa .fundo{{background:radial-gradient(640px 540px at 90% 8%,rgba(240,111,143,.30),transparent 70%),radial-gradient(600px 500px at 6% 96%,rgba(158,140,240,.24),transparent 70%),radial-gradient(900px 700px at 50% 50%,#FFF8FA 0%,rgba(255,248,250,0) 75%)}}
+body.f-menta{{background:#EEF8F3}} body.f-menta .fundo{{background:radial-gradient(640px 540px at 92% 6%,rgba(110,214,170,.30),transparent 70%),radial-gradient(560px 480px at 4% 98%,rgba(158,140,240,.22),transparent 70%),radial-gradient(900px 700px at 50% 50%,#FAFFFC 0%,rgba(250,255,252,0) 75%)}}
+body.f-ceu{{background:#EEF4FE}} body.f-ceu .fundo{{background:radial-gradient(660px 560px at 90% 6%,rgba(110,160,250,.30),transparent 70%),radial-gradient(560px 480px at 4% 98%,rgba(240,111,143,.16),transparent 70%),radial-gradient(900px 700px at 50% 50%,#FAFCFF 0%,rgba(250,252,255,0) 75%)}}
+body.f-lilas{{background:#E9E3FB}} body.f-lilas .fundo{{background:radial-gradient(700px 600px at 88% 8%,rgba(140,110,240,.38),transparent 70%),radial-gradient(600px 500px at 6% 96%,rgba(240,111,143,.26),transparent 70%),radial-gradient(800px 640px at 50% 52%,rgba(255,255,255,.75) 0%,rgba(255,255,255,0) 75%)}}
+body.f-pessego{{background:#FFF1EA}} body.f-pessego .fundo{{background:radial-gradient(640px 540px at 92% 6%,rgba(255,150,120,.26),transparent 70%),radial-gradient(560px 480px at 4% 98%,rgba(158,140,240,.20),transparent 70%),radial-gradient(900px 700px at 50% 50%,#FFFAF7 0%,rgba(255,250,247,0) 75%)}}
+body.f-branco{{background:#FFFFFF}} body.f-branco .fundo{{background:radial-gradient(#E9E5F7 2px,transparent 2.5px) 0 0/34px 34px,radial-gradient(640px 540px at 92% 6%,rgba(158,140,240,.18),transparent 70%);-webkit-mask-image:linear-gradient(#000,rgba(0,0,0,.35))}}
 /* final */
 .cartao{{margin-top:auto;background:linear-gradient(135deg,var(--roxo),#4B2AB0 60%,#5B3BC4);color:#fff;border-radius:40px;padding:46px 48px;position:relative;overflow:hidden;box-shadow:0 40px 70px -40px rgba(58,29,143,.8)}}
 .cartao:after{{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(240,111,143,.55),transparent 70%)}}
@@ -211,7 +220,12 @@ def balao(txt):
 
 LOGO_IA = f'<span class="lg"><img src="{MARCA}/medqueen-logo-horizontal.svg"><b>IA</b></span>'
 
-def pagina(card, i, n, story=False):
+TEMAS = ('lavanda', 'creme', 'lilas', 'menta', 'rosa', 'ceu', 'pessego', 'branco')
+def _tema(chave, i=0):
+    import zlib
+    return TEMAS[(zlib.crc32(str(chave).encode()) + i) % len(TEMAS)]
+
+def pagina(card, i, n, story=False, tema='lavanda'):
     tipo = card.get('tipo', 'passo')
     t = card.get('t'); s = card.get('s')
     estilo = (f'--t:{t}px;' if t else '') + (f'--s:{s}px;' if s else '')
@@ -230,7 +244,7 @@ def pagina(card, i, n, story=False):
         corpo += f'<div class="cartao"><h2>{card["cta_titulo"]}</h2><p>{card["cta_texto"]}</p>' + (f'<div class="acao">{card["acao"]}</div>' if card.get('acao') else '') + '</div>'
     q = card.get('queen', '')
     return f'''<!doctype html><html class="{'story' if story else ''}"><head><meta charset="utf-8"><style>{CSS}</style></head>
-<body class="{'story' if story else ''}" style="{estilo}"><div class="fundo"></div>{topo}<div class="miolo">{corpo}</div>{q}{pe}</body></html>'''
+<body class="{'story' if story else ''} f-{card.get('fundo') or tema}" style="{estilo}"><div class="fundo"></div>{topo}<div class="miolo">{corpo}</div>{q}{pe}</body></html>'''
 
 def _carregar(spec_path):
     spec = importlib.util.spec_from_file_location('spec', spec_path); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
@@ -244,7 +258,7 @@ def render(spec_path):
         b = p.chromium.launch()
         pg = b.new_page(viewport={'width': 1080, 'height': 1350})
         for i, c in enumerate(m.CARDS, 1):
-            f = f'{out}/_c{i}.html'; open(f, 'w', encoding='utf-8').write(pagina(c, i, n))
+            f = f'{out}/_c{i}.html'; open(f, 'w', encoding='utf-8').write(pagina(c, i, n, tema=_tema(m.SLUG, i)))
             pg.goto(f'file://{f}'); pg.evaluate('document.fonts.ready'); pg.wait_for_timeout(300)
             pg.screenshot(path=f'{out}/{i:02d}.png')
         b.close()
@@ -257,7 +271,7 @@ def render_stories(lista, pasta):
     with sync_playwright() as p:
         b = p.chromium.launch(); pg = b.new_page(viewport={'width': 1080, 'height': 1920})
         for s in lista:
-            f = f'{pasta}/{s["nome"]}.html'; open(f, 'w', encoding='utf-8').write(pagina(s, 1, 1, story=True))
+            f = f'{pasta}/{s["nome"]}.html'; open(f, 'w', encoding='utf-8').write(pagina(s, 1, 1, story=True, tema=_tema(s['nome'])))
             pg.goto(f'file://{f}'); pg.evaluate('document.fonts.ready'); pg.wait_for_timeout(300)
             pg.screenshot(path=f'{pasta}/{s["nome"]}.png'); print('ok', s['nome'])
         b.close()

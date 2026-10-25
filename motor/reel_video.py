@@ -119,8 +119,8 @@ class Cena:
                  destaques=None, selos=None, balao=None, pergunta=None, queen=None, sons=None, t=None, lupas=None, estados=None, fundo=None):
         # estados: [(t, html)] telas inteiras (1080x1920, classe .tela) que se sucedem; usadas pelos formatos de reel_formatos.py
         # fundo: 'claro' | 'escuro' | 'roxo' (padrão: escuro se escuro=True, senão claro)
-        self.estados = estados or []; self.fundo = fundo or ('escuro' if escuro else 'claro')
-        if self.fundo in ('escuro', 'roxo'): escuro = True
+        # REGRA DO MATHEUS (25/10/2026): fundo escuro é proibido. Qualquer pedido de escuro/roxo vira claro.
+        self.estados = estados or []; self.fundo = 'claro'; escuro = False
         # aparelho 'pronto' = print que já vem com moldura de celular (ex.: cel-ia-krebs.png); sem zoom, use lupas.
         # lupas: [(t0, t1, (x,y,w,h) na imagem, (cx, cy, raio) na tela)]
         self.lupas = lupas or []

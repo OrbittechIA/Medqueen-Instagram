@@ -18,6 +18,6 @@ CARDS = [
       visual=pronto('cel-novo-simulado.png', h=720, dest=[(96, 770, 400, 100), (96, 890, 400, 100)])),
  dict(olho='5. Caderno de erros', titulo='Vê em que área você está perdendo ponto.',
       visual=pronto('cel-caderno-erros.png', h=720, lupa=(298, 702, 200, 470, 380, 1.45))),
- dict(tipo='final', olho='MedQueen IA', t=80, titulo='Os 5 no mesmo lugar.', visual=queen_img(380), pe_final='link na bio',
+ dict(tipo='final', olho='MedQueen IA', t=80, titulo='Os 5 no mesmo lugar.', visual=queen_img(380, '16'), pe_final='link na bio',
       cta_titulo='Aproveite os 7 dias de teste grátis.', cta_texto='Comenta IA que eu te mando o guia: como estudar Medicina com IA sem se enganar.', acao='Link na bio'),
 ]
