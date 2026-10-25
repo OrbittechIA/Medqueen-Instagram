@@ -9,7 +9,7 @@ def quiz(nome, pergunta, opcoes):
                 visual=lista([(o, '') for o in opcoes], 'num'), texto='A resposta sai no próximo story.')
 def resp(nome, titulo, texto, extra=''):
     return dict(nome=nome, olho='Resposta', titulo=titulo, t=88, texto=texto, visual=nota(extra) if extra else '')
-_POSES_DICA = iter(['40', '38', '11', '36', '23', '43'])  # uma por dia, seg a sáb, sem repetir em dias seguidos
+_POSES_DICA = iter(['40', '38', '11', '36', '23', '43', '34'])  # uma por dia, seg a sáb, sem repetir em dias seguidos
 def dica(nome, frase):
     return dict(nome=nome, olho='Dica da Queen IA', visual=balao(frase) + queen_img(820, next(_POSES_DICA)), coluna=True)
 def frase(nome, titulo, texto=''):
@@ -45,5 +45,8 @@ S = [
  quiz('16-sab-1150', 'Qual erro de IA é o mais perigoso na Medicina?', ['Resposta longa demais', 'Número ou dose inventada', 'Resposta em inglês']),
  dica('17-sab-1550', 'Sábado: <b>pede um simulado de 10 questões do tema da semana.</b> Em 20 minutos você sabe onde está.'),
  novo('18-sab-2120', 'Resposta: número ou dose inventada', 'Como checar se a IA errou, em 4 passos.', 'saida/c03-ia-errou-como-checar/01.png'),
+ # domingo 01/11 (o das 11:50 continua o de 20/10: "Domingo é dia de planejar")
+ dica('20-dom-1550', 'Domingo: <b>abre o caderno de erros e escolhe 3 temas pra semana.</b> Começar sabendo o que revisar economiza horas.'),
+ novo('21-dom-2120', 'Post novo', 'Começa a semana sabendo o que revisar.', 'saida/u04-domingo-organiza/01.png'),
 ]
 render_stories(S, f'{RAIZ}/saida/stories-2026-10-26-ia')
