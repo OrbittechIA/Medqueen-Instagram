@@ -26,8 +26,37 @@ Rodada de 20/10 (terça, fora do horário normal): a semana de 26/10 já estava 
 
 Temas de story já usados: principal ponto de controle do Krebs; voltas por glicose; localização da succinato desidrogenase; etapa que gera GTP; "reler x testar"; "entende o distrator"; "fim de semana revisa o que errou"; "semana de prova não começa na véspera"; "domingo é dia de planejar".
 
-### Números
-(preencher na medição da semana de 02/11)
+### Números (medido em 26/10/2026, TryPost; snapshot por post de 25/10 03:08 UTC, pode subir)
+
+| Post | Formato | Alcance | Visualizações | Curtidas | Salvamentos | Compartilhamentos | Visitas ao perfil |
+|---|---|---|---|---|---|---|---|
+| Ter 20/10 Ciclo de Krebs | Carrossel 8 | 8 | 17 | 1 | 0 | 0 | 0 |
+| Qua 21/10 História da MedQueen (Runway) | Reel 50 s | 14 | 16 | 2 | 0 | 0 | sem dado |
+| Qui 22/10 Errou a questão, volta como treino | Carrossel 6 | 7 | 12 | 1 | 0 | 0 | 0 |
+| Sáb 24/10 Krebs com a Queen IA | Reel 17 s | 4 | 3 | 0 | 0 | 0 | sem dado |
+| Dom 25/10 IA feita pra Medicina, com memória (publicado à mão) | Reel 42 s | 2 | 7 | 0 | 0 | 0 | sem dado |
+
+Reels: tempo médio assistido 7,0 s (história), 1,3 s (Krebs), 2,7 s (dom 25/10). Stories: sem dado por story nesta rodada.
+Conta em 7 dias (20/10 a 26/10): 22 publicações, alcance 222, 283 visualizações, 4 curtidas, 0 salvamentos, 0 compartilhamentos, 3 visitas ao perfil, 533 seguidores (mais 24). Alcance de não seguidores: sem dado.
+Falhou: story de qua 22/10 21:20 (09-qua-2120, "Media not found"), não saiu.
+
+## Semana 26/10 a 01/11/2026 (linha IA para Medicina, feita à mão em 25/10; aguardando aprovação do Matheus)
+
+| Quando (Brasília) | Formato | Linha | Gancho | Pasta |
+|---|---|---|---|---|
+| Seg 26/10 18:50 | Post único | IA | IA pra estudar Medicina: a que você usa foi feita pra isso? | posts/2026-10-26-u01-ia-feita-pra-medicina |
+| Ter 27/10 12:30 | Reel em vídeo (demonstração) | Produto | Semana de prova? Faz um simulado (rv01) | posts/2026-10-27-rv01-simulado |
+| Ter 27/10 18:50 | Carrossel 7 | Estudo/IA | 5 jeitos de usar IA pra estudar Medicina sem perder tempo | posts/2026-10-27-c01-5-jeitos-ia |
+| Qua 28/10 18:50 | Post único | Produto | Tá na hora de fazer flashcard com IA | posts/2026-10-28-u02-flashcard-com-ia |
+| Qui 29/10 12:30 | Reel em vídeo (demonstração) | Produto | A próxima tarefa já está ali + Queen IA (rv02) | posts/2026-10-29-rv02-proxima-tarefa |
+| Qui 29/10 18:50 | Carrossel 6 | IA | IA generalista x IA de Medicina: 4 diferenças | posts/2026-10-29-c02-generalista-x-medicina |
+| Sex 30/10 18:50 | Post único | Produto | Tá na hora de fazer simulado com IA | posts/2026-10-30-u03-simulado-com-ia |
+| Sáb 31/10 18:50 | Carrossel 6 | IA | A IA pode errar: como checar em 4 passos | posts/2026-10-31-c03-ia-errou-como-checar |
+| Dom 01/11 18:50 | Post único | Estudo | Domingo: começa a semana sabendo o que revisar (tela Hoje) | posts/2026-11-01-u04-domingo-organiza |
+| Seg 26/10 a dom 01/11 | 21 stories | Story | stories/2026-10-26-ia | stories/2026-10-26-ia |
+
+Conferido em 26/10: 30 agendados na semana (7 feed, 2 reels, 21 stories), sem horário repetido. Já agendados para a semana de 02/11: rv03 quiz (ter 03/11 12:30) e rv04 mito ou verdade (qui 05/11 12:30).
+Folhas de revisão: revisao/2026-10-26-gradiente.jpg (feed) e revisao/2026-10-26-stories-gradiente.jpg (stories).
 
 ## Decisões
 - 20/10/2026: cadência 3 feed (pelo menos 2 carrosséis) + 3 stories por dia. Matheus revisa segunda de manhã; primeiro post segunda à tarde.
