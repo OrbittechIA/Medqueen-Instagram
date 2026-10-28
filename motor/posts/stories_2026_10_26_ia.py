@@ -2,6 +2,7 @@
 Queen IA em 1 story por dia (o das 15:50). Rodar: python3 posts/stories_2026_10_26_ia.py"""
 import os as _os; RAIZ = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
 import sys; sys.path.insert(0, RAIZ)
+from conceito import folha_prova
 from carrossel import render_stories, tablet, pronto, lista, nota, imagem, queen_img, balao
 
 def quiz(nome, pergunta, opcoes):
@@ -38,7 +39,7 @@ S = [
  novo('12-qui-2120', 'Post novo', 'IA generalista x IA de Medicina: 4 diferenças.', 'saida/c02-generalista-x-medicina/01.png'),
  # sexta 30/10
  dict(nome='13-sex-1150', olho='Simulado com IA', titulo='Escolhe o tema. A IA monta a prova.', t=84,
-      visual=pronto('cel-novo-simulado.png', h=980, dest=[(96, 770, 400, 100), (96, 890, 400, 100)])),
+      visual=folha_prova()),
  dica('14-sex-1550', 'Errou no simulado? <b>Ótimo. Agora você sabe exatamente o que revisar.</b>'),
  novo('15-sex-2120', 'Post novo', 'Tá na hora de fazer simulado com IA.', 'saida/u03-simulado-com-ia/01.png'),
  # sábado 31/10

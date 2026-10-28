@@ -5,8 +5,8 @@ O spec define SLUG e CARDS (lista de dicts).
 Tipos de card: capa, passo (padrão), final.
 Campos: olho, titulo (aceita <em>), texto, visual (HTML de um ajudante), centro, t (tamanho do título), s (tamanho do texto).
 
-REGRA DO MATHEUS: print nunca vai solto. Todo print entra dentro de tablet() ou celular()
-e, quando fizer sentido, com destaque (caixa e lupa) no ponto que importa.
+REGRA DO MATHEUS (28/10/2026): NÃO usamos mais print do produto. A gente argumenta em volta do recurso
+com os visuais de conceito.py. tablet(), celular() e pronto() dão erro de propósito.
 """
 import sys, os, html, importlib.util
 from PIL import Image
@@ -144,8 +144,16 @@ def _tela(img, w, h, crop=None, dest=(), rotulos=(), lupa=None):
                   f'<img src="file://{PR}/{img}" style="width:{iw*zs:.0f}px;left:{lr-lx*zs:.0f}px;top:{lr-ly*zs:.0f}px"></div>')
     return out, extra
 
+
+SEM_PRINT = True  # REGRA DO MATHEUS (28/10/2026): não usamos mais print do produto. Use os visuais de conceito.py.
+def _sem_print(nome):
+    if SEM_PRINT:
+        raise RuntimeError(f'{nome}(): print do produto está proibido desde 28/10/2026. Argumente em volta com conceito.py '
+                           '(cartoes, erro_vira_card, folha_prova, material_vira, trio, continua, plano_semana).')
+
 def tablet(img, w=840, h=None, crop=None, dest=(), rotulos=(), lupa=None):
     """Tablet na horizontal (4:3 por padrão) com o print dentro."""
+    _sem_print("tablet")
     h = h or int(w * 3 / 4)
     dentro, fora = _tela(img, w, h, crop, dest, rotulos, lupa)
     return (f'<div class="tab" style="width:{w+44}px"><span class="cam"></span>'
@@ -154,6 +162,7 @@ def tablet(img, w=840, h=None, crop=None, dest=(), rotulos=(), lupa=None):
 
 def celular(img, h=760, crop=None, dest=(), rotulos=(), lupa=None):
     """Celular com o print dentro (print de tela de celular, sem moldura)."""
+    _sem_print("celular")
     w = int(h * 390 / 844)
     dentro, fora = _tela(img, w, h, crop, dest, rotulos, lupa)
     return (f'<div class="cel" style="width:{w+26}px"><span class="ilha"></span>'
@@ -163,6 +172,7 @@ def celular(img, h=760, crop=None, dest=(), rotulos=(), lupa=None):
 def pronto(img, h=760, dest=(), lupa=None):
     """Print que já vem com moldura de celular (ex.: cel-caderno-erros.png). Destaques em coordenadas da imagem.
     lupa=(x, y, raio_tela, cx_tela, cy_tela, aumento): círculo ampliado do ponto (x,y) da imagem."""
+    _sem_print("pronto")
     iw, ih = _dim(img); s = h / ih; w = iw * s
     d = ''.join(f'<div class="dest leve" style="left:{(x)*s-10:.0f}px;top:{(y)*s-10:.0f}px;width:{dw*s+20:.0f}px;height:{dh*s+20:.0f}px"></div>' for x, y, dw, dh in dest)
     if lupa:

@@ -1,6 +1,7 @@
 import os as _os; RAIZ = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
 import sys; sys.path.insert(0, RAIZ)
 from carrossel import tablet, pronto, lista, numeros, nota, queen_img, balao
+from conceito import cartoes, erro_vira_card, folha_prova, material_vira, trio, continua, plano_semana
 # Sáb 31/10 18:50, carrossel. Linha "IA sem se enganar". Queen IA na capa e no final.
 SLUG = 'c03-ia-errou-como-checar'
 CARDS = [
@@ -10,7 +11,7 @@ CARDS = [
  dict(olho='Passo 2', titulo='Dose, critério e conduta: sempre na fonte.', t=84,
       visual=lista([('Livro-texto da disciplina.', ''), ('Diretriz da sociedade médica.', ''), ('Bula ou protocolo oficial.', '')], 'check')),
  dict(olho='Passo 3', titulo='Testa com questão.', t=84, texto='Se você entendeu, acerta. Se errou, a explicação não serviu.',
-      visual=pronto('cel-novo-simulado.png', h=640, dest=[(96, 590, 400, 70)])),
+      visual=folha_prova(titulo='Teste rápido · Krebs', temas=(('Entendeu', 80, '#0F766E'), ('Revisar', 20, '#C2416A')))),
  dict(olho='Passo 4', titulo='Desconfia de número sem fonte.', t=84,
       visual=lista([('Porcentagem que ninguém citou.', ''), ('Dose sem referência.', ''), ('Valor de referência "redondo demais".', '')], 'num', rosa=True)),
  dict(tipo='final', olho='MedQueen IA', t=76, titulo='Na MedQueen IA, a explicação vira questão pra você <em>testar na hora</em>.',
