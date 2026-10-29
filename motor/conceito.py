@@ -127,3 +127,33 @@ def plano_semana(temas=(('Nefrologia', '#C2416A'), ('Cardiologia', '#3A1D8F'), (
 <div class="cx-card" style="padding:26px 34px;display:flex;align-items:center;gap:20px"><div class="cx-ic" style="background:#FDE8EE;width:72px;height:72px">{ic('alvo', '#C2416A')}</div>
  <div style="font:800 32px J,sans-serif">Domingo: 3 temas que mais te derrubaram</div></div>
 <div style="display:flex;gap:20px">{cards}</div></div>'''
+
+def resposta_queen(pergunta='Me explica o ciclo de Krebs pra prova?',
+                   blocos=(('Onde acontece', 'Na matriz mitocondrial. Exceção: a succinato desidrogenase fica na membrana interna, é o complexo II.'),
+                           ('Saldo por volta', '3 NADH, 1 FADH₂, 1 GTP e 2 CO₂.'),
+                           ('Pontos de controle', 'Citrato sintase, isocitrato desidrogenase e alfa-cetoglutarato desidrogenase.'),
+                           ('Pegadinha de prova', 'O ciclo não usa O₂ direto, mas para sem ele, porque NADH e FADH₂ precisam ser reoxidados na cadeia.')),
+                   resto='Continua: como cai na prova, mnemônico da ordem e 3 questões comentadas',
+                   largura=920, visiveis=3):
+    """Resposta da Queen IA que parece rica sem virar textão (pedido do Matheus, 29/10/2026).
+    Mostra a pergunta, a resposta estruturada em blocos com rótulo, corta com degradê no meio de um bloco
+    e fecha com a faixa 'resposta completa na MedQueen IA'. visiveis: quantos blocos aparecem inteiros."""
+    cores = ('#3A1D8F', '#0F766E', '#5865D8', '#C2416A', '#B45309')
+    bl = ''
+    for k, (rot, txt) in enumerate(blocos):
+        corte = k >= visiveis
+        bl += (f'<div style="display:flex;gap:18px;{"opacity:.55" if corte else ""}"><span style="width:8px;border-radius:6px;background:{cores[k % 5]};flex:none"></span>'
+               f'<div><div class="cx-rotulo" style="font-size:19px;color:{cores[k % 5]}">{rot}</div>'
+               f'<div style="font:600 29px/1.32 S,sans-serif;color:#1F2340;margin-top:6px">{txt}</div></div></div>')
+    return CSS + f'''<div class="cx" style="width:{largura}px;display:flex;flex-direction:column;gap:22px">
+<div style="align-self:flex-end;background:#3A1D8F;color:#fff;border-radius:30px 30px 10px 30px;padding:20px 30px;font:700 30px S,sans-serif;max-width:720px">{pergunta}</div>
+<div style="display:flex;gap:16px;align-items:flex-start">{queen_avatar(76)}
+<div class="cx-card" style="flex:1;padding:34px 38px 0;border-radius:10px 34px 34px 34px;position:relative;overflow:hidden">
+ <div style="display:flex;justify-content:space-between;align-items:center"><div style="font:800 34px J,sans-serif">Queen IA</div>
+ <span class="cx-pill" style="background:#EFEAFD;color:#3A1D8F;font-size:20px;padding:8px 18px">foco em prova</span></div>
+ <div style="display:flex;flex-direction:column;gap:22px;margin-top:24px;max-height:{110 * visiveis + 150}px;overflow:hidden">{bl}</div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:230px;background:linear-gradient(rgba(255,255,255,0),#fff 62%)"></div>
+ <div style="position:relative;margin:-40px -38px 0;padding:22px 38px;background:linear-gradient(90deg,#3A1D8F,#5B3BC4);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px">
+  <div><div style="font:800 26px J,sans-serif">Resposta completa na MedQueen IA</div><div style="font-size:21px;color:#E4DCFA;margin-top:4px">{resto}</div></div>
+  <span style="flex:none;border-radius:999px;background:#fff;color:#3A1D8F;padding:12px 22px;font:800 20px J,sans-serif">7 dias grátis</span></div>
+</div></div></div>'''
