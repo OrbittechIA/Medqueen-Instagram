@@ -58,6 +58,45 @@ Falhou: story de qua 22/10 21:20 (09-qua-2120, "Media not found"), não saiu.
 Conferido em 26/10: 30 agendados na semana (7 feed, 2 reels, 21 stories), sem horário repetido. Já agendados para a semana de 02/11: rv03 quiz (ter 03/11 12:30) e rv04 mito ou verdade (qui 05/11 12:30).
 Folhas de revisão: revisao/2026-10-26-gradiente.jpg (feed) e revisao/2026-10-26-stories-gradiente.jpg (stories).
 
+### Números (medido em 02/11/2026, TryPost; snapshot por post de 01/11 03:08 UTC, o de dom 01/11 de 22:51 UTC, pode subir)
+
+| Post | Formato | Alcance | Visualizações | Curtidas | Salvamentos | Compartilhamentos | Visitas ao perfil |
+|---|---|---|---|---|---|---|---|
+| Seg 26/10 IA feita pra Medicina | Post único | 3 | 7 | 1 | 0 | 0 | 0 |
+| Ter 27/10 rv01 simulado | Reel 44 s | 1 | 3 | 0 | 0 | 0 | sem dado |
+| Ter 27/10 5 jeitos de usar IA | Carrossel 7 | 3 | 6 | 0 | 0 | 0 | 0 |
+| Qua 28/10 Flashcard com IA | Post único | 2 | 5 | 0 | 0 | 0 | 0 |
+| Qui 29/10 rv02 próxima tarefa | Reel 28 s | 2 | 1 | 0 | 0 | 0 | sem dado |
+| Qui 29/10 Generalista x Medicina | Carrossel 6 | 3 | 6 | 0 | 0 | 0 | 0 |
+| Sex 30/10 Simulado com IA | Post único | 1 | 3 | 0 | 0 | 0 | 0 |
+| Sáb 31/10 IA errou, como checar | Carrossel 6 | 2 | 4 | 0 | 0 | 0 | 0 |
+| Dom 01/11 Domingo organiza | Post único | 0 | 0 | 0 | 0 | 0 | 0 (snapshot 1 h depois de sair) |
+
+Reels: tempo médio assistido 33,7 s (rv01) e 10,7 s (rv02). Stories: sem dado por story nesta rodada.
+Conta em 7 dias (26/10 a 01/11): 28 publicações, alcance 191 (semana anterior 339), 261 visualizações, 1 curtida, 0 salvamentos, 0 compartilhamentos, 1 visita ao perfil, 532 seguidores (mais 3 na semana; 533 em 26/10). Alcance de não seguidores: sem dado.
+Leitura: o feed quase não alcança ninguém (1 a 3 contas por post); quase todo o alcance da semana veio dos stories.
+Falharam (status failed): story ter 27/10 11:50 (04-ter-1150, "Could not fetch media from URL"), story sex 30/10 21:20 (15-sex-2120, "Media not found") e story dom 01/11 21:20 (21-dom-2120 da estreia, "Media not found"). Não saíram.
+
+## Semana 02/11 a 08/11/2026 (motor automático, rodada de seg 02/11 00:01)
+
+| Quando (Brasília) | Formato | Linha | Gancho | Pasta |
+|---|---|---|---|---|
+| Seg 02/11 18:50 | Post único (Queen IA, resposta_queen) | Produto | Travou na gasometria? Pergunta pra Queen IA | posts/2026-11-02-u05-gasometria-queen |
+| Ter 03/11 12:30 | Reel quiz (rv03, já agendado) | Estudo | Tríades que caem na prova #1: Virchow | posts/2026-11-03-rv03-quiz-triades |
+| Ter 03/11 18:50 | Carrossel 6 | Estudo | Anemia na prova: começa pelo VCM | posts/2026-11-03-c04-anemias-vcm |
+| Qua 04/11 18:50 | Post único | Notícia | Enamed 2026: resultado sai em 4 de dezembro (fonte Inep, 20/10/2026) | posts/2026-11-04-u06-enamed-resultado |
+| Qui 05/11 12:30 | Reel mito ou verdade (rv04, já agendado) | Estudo | Mito ou verdade: 3 coisas que estudante jura que funcionam | posts/2026-11-05-rv04-mito-verdade |
+| Qui 05/11 18:50 | Carrossel 6 (Queen IA no final, pose 16) | Estudo | Hipo x hipertireoidismo: lado a lado | posts/2026-11-05-c05-hipo-x-hipertireoidismo |
+| Sex 06/11 18:50 | Post único | Produto | A aula do professor vira simulado | posts/2026-11-06-u07-aula-vira-simulado |
+| Sáb 07/11 18:50 | Carrossel 6 | Estudo | Antibiótico: onde cada classe ataca | posts/2026-11-07-c06-antibioticos-mecanismo |
+| Dom 08/11 18:50 | Post único (Queen IA, pose 35) | Marca | Estude. Evolua. Salve vidas. | posts/2026-11-08-u08-estude-evolua-salve-vidas |
+| Seg 02/11 a dom 08/11 | 21 stories (Queen IA às 15:50, poses 18, 47, 25, 33, 44, 39, 27) | Story | stories/2026-11-02 | stories/2026-11-02 |
+
+Temas de story usados: VCM 72 fL (micro); dica gasometria pelo pH; dica VCM primeiro; exoftalmia = Graves; dica Enamed refazer erros; TSH primeiro; enquete questões na semana; questões da aula do professor; aminoglicosídeo 30S; antibiótico pelo alvo; enquete matéria que mais derrubou; 1 tema e 10 questões no domingo.
+Banco de ideias riscado: anemias, hipo x hiper, antibióticos por classe, gasometria (via resposta da Queen).
+Conferido em 02/11: 30 agendados na semana (7 feed, 2 reels, 21 stories), sem horário repetido. Folha de revisão: revisao/2026-11-02.jpg.
+Para a semana de 09/11: usar posts/banco-rv05-chat-nefro (ter ou qui) e produzir só 1 Reel novo.
+
 ## Decisões
 - 20/10/2026: cadência 3 feed (pelo menos 2 carrosséis) + 3 stories por dia. Matheus revisa segunda de manhã; primeiro post segunda à tarde.
 - 20/10/2026: print nunca solto; sempre em tablet ou celular com destaque ou lupa.
