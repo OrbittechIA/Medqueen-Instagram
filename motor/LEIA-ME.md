@@ -1,7 +1,10 @@
 # Motor do Instagram da MedQueen IA (@medqueen.ia)
 
 Manual da tarefa semanal. Quem roda isto é uma sessão nova do Claude, sem memória da conversa anterior. Siga na ordem.
-O Matheus revisa tudo na **segunda de manhã** (no TryPost ou pela folha de revisão). O primeiro post da semana sai **segunda à tarde**, então ele tem tempo de cortar ou pedir ajuste. Mesmo assim a conferência do passo 6 é obrigatória: o post sai sozinho se ele não mexer.
+
+> **MUDANÇA DE 03/11/2026 (decisão do Matheus): o TryPost saiu. Feed e stories agora são CRIADOS e AGENDADOS no Best Content** (`social.bestcontent.ai`, plano Max, logado no Chrome principal do Matheus, deviceId `0ffabed5-99a7-491f-b5ee-48a5dbdcab04`). O motor deste repositório continua só para os **Reels em vídeo** (`reel_video.py`), que sobem prontos no Best Content. O passo a passo novo está na **seção 7B**; as seções 5 a 7 sobre renderizar card e TryPost ficam como referência de conteúdo e regra, não de ferramenta. A seção 1 (regras) continua valendo inteira.
+> **Aprovação:** o Claude cria, agenda tudo com a legenda no nosso padrão e DEPOIS manda o resumo pro Matheus. Se ele não fizer nada, está aprovado. Se ele reprovar algo, diz qual post editar.
+> **Se cair a luz, o PC dormir ou o Chrome desconectar:** pare, avise, e quando ele religar continue de onde parou (confira no Calendário do Best Content o que já está agendado antes de criar de novo).
 
 Estratégia completa: `medqueen/instagram/brain-instagram.md` e `medqueen/instagram/estrategia-alcance-organico.md` no projeto "MedQueen Growth" do claude.ai (se a sessão tiver acesso ao projeto, leia antes). Este manual tem o necessário para rodar sem o projeto.
 
@@ -55,7 +58,7 @@ Stories: todo dia o story das 21:20 anuncia o post novo do feed (`imagem('saida/
 
 ## 4. Pauta
 
-**Antes de tudo, veja se a semana já está pronta:** `list-posts-tool` com `channels=["01a03943-aa85-72df-bb05-0dc788a5e9d9"]` e `status=scheduled` (o resultado é grande: salvar em arquivo e ler com `jq`). Se já houver 30 agendados (7 feed + 2 reels em vídeo + 21 stories) entre segunda 00:00 e domingo 23:59 da semana alvo, não produza nada: só meça (seção 8), atualize o histórico e avise. Se tiver alguns, produza só os horários que faltam.
+**Antes de tudo, veja se a semana já está pronta:** desde 03/11/2026, olhar o **Calendário do Best Content** (quantos "Agendado" na semana alvo). Referência antiga: `list-posts-tool` com `channels=["01a03943-aa85-72df-bb05-0dc788a5e9d9"]` e `status=scheduled` (o resultado é grande: salvar em arquivo e ler com `jq`). Se já houver 30 agendados (7 feed + 2 reels em vídeo + 21 stories) entre segunda 00:00 e domingo 23:59 da semana alvo, não produza nada: só meça (seção 8), atualize o histórico e avise. Se tiver alguns, produza só os horários que faltam.
 
 Linhas (proporção inicial, hipótese a ajustar com as métricas): Estudo ~40% · Notícia de medicina ~25% · Novidade de IA ~15% · Produto ~15% · Marca ~5%. Com 7 feeds por semana, a regra prática é: **3 Estudo + 2 Produto + 1 Notícia ou IA + 1 Marca**. Carrossel combina com Estudo e Produto passo a passo; post único combina com gancho forte, comparação lado a lado, notícia, IA e marca.
 
@@ -156,8 +159,31 @@ Copie um arquivo de `motor/posts/` como base, troque o texto, rode.
    - Post único: `content_type: instagram_feed` com uma imagem só.
 5. No fim, `list-posts-tool` da semana: tem que ter 30 agendados (7 feed às 18:50, 2 reels em vídeo ter e qui às 12:30, e 21 stories), sem horário repetido.
 
+## 7B. Criar e agendar no Best Content (fluxo em vigor desde 03/11/2026)
+
+Tudo pelo Chrome principal (ferramentas claude-in-chrome). Nunca digitar senha. Se aparecer "Conexão Instagram expirada", parar e avisar o Matheus (reconectar exige login dele).
+
+**Já configurado (não refazer):** Estilo principal da marca (Editar estilo > Edição avançada > Descrição do estilo) com as regras fixas: fundo claro em gradiente lilás claro (#DDD2FA) para creme (#FFF6EA), igual em todos os slides; sem pessoa gerada por IA (só a Queen IA, com a imagem dela anexada); sem print de app; texto curto. Os prompts que o Best Content gera já trazem o fundo.
+
+**Post de imagem (feed ou story):** Criar > Posts de Imagens > **Imagem Estática** > formato (Post Portrait, Carrossel Portrait ou Stories Único) > Continuar > **Engajar** (carrossel: abordagem **Educativo**) > **Criar do Zero** (nunca Inspirações: gasta crédito) > escrever a ideia com o texto exato de cada slide > Continuar > Continuar.
+- **Número de slides do carrossel (regra do Matheus, 03/11/2026): pelo tema, não fixo.** Capa + 1 slide por parte do conteúdo + fechamento. Dica em 3 passos = 5; em 2 passos = 4; tema com 4 partes = 6. Escrever "exatamente N slides" na ideia e marcar o limite N.
+- Não reescrever os prompts que ele gera por slide (estraga a máquina de criação). Só conferir conteúdo médico e acrescentar o que faltar de padrão.
+- **Logo:** ligada no primeiro e no último slide, desligada no meio (o padrão dele já vem assim; conferir). Story: ligada.
+- **Queen IA:** "Adicionar imagem" no slide > Biblioteca > "Queen IA 2.0 Frontal.png" > Usar imagem > prompt de uso (identidade travada, sem coroa, papel e posição no slide) > Adicionar > "Entendi, adicionar" > em carrossel, "Manter como está" (só no slide escolhido). Mesma dosagem da seção 1 (feed 3 ou 4 por semana; story 1 por dia, o das 15:50).
+- Carrossel: "Gerar com IA" > **Mais refinado** > Gerar carrossel (uns 5 minutos). Story/post único: uns 40 segundos.
+- **Conferir cada slide** (dado médico, CTA). Ele costuma INVENTAR chamada ("Comente X pra receber...", "Arraste pra cima..."): corrigir no chat do editor ("Peça alterações no design"), pedindo pra trocar pelo CTA padrão ou remover e "não mudar mais nada". São 12 edições grátis por post.
+- Finalizar > apagar a legenda que ele gerou e colar a NOSSA (padrão da seção 5) > Publicar > Instagram > Continuar > **Agendar** > dia (clicar o número do dia no calendário; conferir a linha "Publicar em DD de mês às HH:MM") > horário > Confirmar. Story não tem legenda no Instagram, pode deixar a dele.
+- Popup "O que achou do post?" e "Level up": fechar no X, nunca clicar nas estrelas.
+
+**Reel em vídeo pronto (nosso motor):** Calendário > **Nova Pauta** > **Upload** > título, vídeo (file_upload do mp4 copiado para o scratchpad), legenda, data, horário > Criar Pauta. Ela entra como "Ideia": abrir o card no calendário > **Agendar Publicação** > **Confirmar Agendamento**. Não adicionar áudio (a trilha é escolha do Matheus).
+
+**Créditos:** 10 por imagem. Plano Max = 1.900 por mês.
+
+**No fim:** Calendário do Best Content tem que mostrar todos os horários da tabela da seção 3 como "Agendado". Mandar o resumo pro Matheus (seção 9) já com tudo agendado; silêncio = aprovado.
+
 ## 8. Medir a semana que passou
 
+0. **Desde 03/11/2026 os números vêm do Analytics do Best Content** (menu Resultados > Analytics, pelo Chrome). O TryPost foi descontinuado; os passos abaixo valem só para semanas antigas que ainda estiverem lá.
 1. `list-posts-tool` (publicados nos últimos 7 dias) e `get-post-metrics-tool` de cada um; `get-channel-insights-tool` da conta (range 7d).
 2. Anotar no `historico.md`, na semana certa: alcance, alcance de não seguidores (se vier), salvamentos, compartilhamentos e visitas ao perfil por post. Se a ferramenta não devolver, escrever "sem dado". Nunca estimar.
 3. Regra de decisão: a partir de 4 semanas de dado, dobrar a linha ou formato com mais (salvamentos + compartilhamentos) por alcance e cortar a pior. Anotar a decisão no histórico.
