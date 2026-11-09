@@ -12,11 +12,16 @@ A tarefa roda **domingo** e monta a semana que começa na **segunda seguinte** (
 |---|---|---|---|
 | Carrossel de fotos | 7 (1 por dia) | todo dia 11:43 | esta tarefa |
 | Motion do produto | 7 (1 por dia) | todo dia 19:43 | esta tarefa |
-| Meme da Cláudia | 6 (seg a sáb) | 15:13 | o Matheus produz; a tarefa só deixa a lacuna e avisa |
+| Meme da Cláudia | 7 (2 memes x 3 variações, seg a sáb, + 1 repetido no domingo) | todo dia 15:13 | o Matheus gera os 2 memes; o Claude faz as variações e agenda quando ele entrega |
 
-Domingo não tem meme: só carrossel e motion. Total da semana: 20 posts.
+Total da semana: 21 posts (3 por dia).
 
-**Memes:** a tarefa NÃO cria meme. No fim, avisa o Matheus: "precisamos de 6 memes pra seg a sáb, 15:13". Ele produz durante a semana e manda; quem estiver na conversa com ele só agenda no Trypost (tiktok_video, is_aigc true, brand_organic_toggle true, PUBLIC_TO_EVERYONE, allow_comments true).
+**Memes (decisão do Matheus, 09/11/2026):** a criação do meme NÃO é automatizada. A tarefa de domingo só pede: no fim, avisa o Matheus "me manda os 2 memes da semana que eu faço as 6 variações e agendo". Quando ele mandar os 2 vídeos prontos (na conversa), quem estiver com ele:
+1. Cria `meme/AAAA-MM-DD-slug/` pra cada meme (data da segunda da semana), salva o vídeo como `original.mp4` e escreve o `config.json` (ver cabeçalho de `meme/variacoes.py`): `corte` (segundo da virada), `card` (segundo do card final), `faixa` (y de cima e de baixo que cobre a legenda original: tirar quadros e medir) e os textos da v2 e da v3. A matéria nomeada no gancho ganha de dor genérica (semana 1).
+2. Roda `python3 -I meme/variacoes.py meme/<pasta>`: sai v1 (original), v2 (faixa branca, texto novo) e v3 (faixa branca, outro gancho e começo cortado 0,8 s). Confere uma tira de quadros de cada.
+3. Agenda às 15:13 (18:13 UTC) alternando os memes, nunca 2 versões do mesmo meme no mesmo dia: seg A v1, ter B v1, qua A v2, qui B v2, sex A v3, sáb B v3, dom repete A v1 (a tarefa de domingo troca o de domingo pela variação com mais views da semana, se for outra). Se ele entregar no meio da semana, espalhar pelos dias que sobraram, sem pular o domingo.
+4. Trypost: `tiktok_video`, privacy PUBLIC_TO_EVERYONE, allow_comments, allow_duet e allow_stitch true, `is_aigc` true, `brand_organic_toggle` true. Legenda com a matéria no começo, uma pergunta e 4 ou 5 hashtags.
+5. Commit de `meme/` (original, config e as 3 variações) e linha no `historico.md`.
 
 Conta no Trypost: TikTok `01a1ac00-1cb5-730b-951f-b46dd3c8f372`. Antes de produzir, `list-posts-tool` com `channels` = essa conta e `status: scheduled` (resultado grande: salvar e ler com jq). Se um horário da semana alvo já estiver ocupado pelo mesmo tipo de post, não produzir outro pra ele.
 
@@ -85,4 +90,4 @@ Padrão aprovado pelo Matheus em 09/11/2026 (cara de **aluno que postou**, não 
 
 - Commit só de `tiktok/` (fotos e slides do carrossel, configs dos vídeos, `historico.md`, `musicas.md`). Não subir `frames/`, `preview/`, `meta.json` nem `.f32` (estão no .gitignore). O `video.mp4` sobe (uns 2,5 MB cada) pra ficar guardado.
 - `git fetch origin main && git rebase origin/main` antes do push.
-- Mensagem curta pro Matheus (SendUserMessage): os 7 carrosséis e os 7 motions com dia e assunto, os números da semana anterior em 3 linhas (o que ganhou e o que perdeu), as músicas usadas, e o aviso: "precisamos de 6 memes pra seg a sáb às 15:13". Mandar com SendUserFile as folhas dos carrosséis e 2 ou 3 motions.
+- Mensagem curta pro Matheus (SendUserMessage): os 7 carrosséis e os 7 motions com dia e assunto, os números da semana anterior em 3 linhas (o que ganhou e o que perdeu), as músicas usadas, e o pedido: "me manda os 2 memes da semana que eu faço as 6 variações e agendo". Antes do aviso, se o domingo de HOJE tiver meme agendado às 15:13, trocar a mídia dele (update-post-tool) pela variação da semana com mais views, se for outra. Mandar com SendUserFile as folhas dos carrosséis e 2 ou 3 motions.

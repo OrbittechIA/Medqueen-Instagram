@@ -10,5 +10,5 @@
   seg cascata · ter 1º período · qua fisiologia 30 min · qui Krebs · sex PDF 200 páginas · sáb véspera · dom veterana.
 - Motions (4 formatos + 3 variações), conteúdo conferido na própria MedQueen IA em 09/11:
   seg flashcards cascata · ter aula diuréticos · qua simulado cardio · qui o que cai na prova farmaco autonômica · sex flashcards plexo braquial · sáb aula Krebs · dom simulado imuno.
-- Memes: o Matheus produz (seg a sáb 15:13).
+- Memes: o Matheus gera 2 memes; o Claude faz 3 variações de cada (meme/variacoes.py) e agenda seg a sáb 15:13 alternando, + 1 repetido no domingo.
 - O que medir no domingo: views por formato de motion (flashcards x aula x prova x simulado), por matéria e por gancho de carrossel.
