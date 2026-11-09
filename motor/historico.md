@@ -115,9 +115,10 @@ Para a semana de 09/11: usar posts/banco-rv05-chat-nefro (ter ou qui) e produzir
 Legendas, texto de cada slide e dos 21 stories: `motor/posts/legendas_2026_11_09.py`.
 Travou: a sessão de 09/11 rodou sem as ferramentas do Chrome, então não mediu a semana de 02/11 nem agendou nada. Falta: medir no Analytics, criar os 4 carrosséis/posts únicos e 21 stories no Best Content (7B) e subir os 4 vídeos (2 motions + 2 reels).
 Série "Tríades que caem na prova": #2 Cushing.
+Músicas (09/11): motion 02 com a 048, rv06 com a 029. Matheus aprovou as duas e os dois vídeos.
 
 ## Decisões
-- 09/11/2026: 2 motions do produto por semana no feed (seg e sex 18:50, no lugar de 2 posts únicos), formato Reel 30 s a 1 min, telas reais com zoom e edição por cima, variando celular, tablet e computador. Print do produto liberado de novo (08/11).
+- 09/11/2026: 2 motions do produto por semana no feed (seg e sex 18:50, no lugar de 2 posts únicos), formato Reel 30 s a 1 min, telas reais com zoom e edição por cima, variando celular, tablet e computador. Print do produto liberado de novo (08/11). HyperFrames só para os vídeos de produto de uns 60 s; Reels curtos de quiz e pergunta seguem como antes. Músicas 048 e 029 aprovadas.
 - 20/10/2026: cadência 3 feed (pelo menos 2 carrosséis) + 3 stories por dia. Matheus revisa segunda de manhã; primeiro post segunda à tarde.
 - 20/10/2026: print nunca solto; sempre em tablet ou celular com destaque ou lupa.
 - 20/10/2026: sem pessoa gerada por IA; só a Queen IA oficial (ilustração).
