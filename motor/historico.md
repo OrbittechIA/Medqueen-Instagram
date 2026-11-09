@@ -97,27 +97,46 @@ Banco de ideias riscado: anemias, hipo x hiper, antibióticos por classe, gasome
 Conferido em 02/11: 30 agendados na semana (7 feed, 2 reels, 21 stories), sem horário repetido. Folha de revisão: revisao/2026-11-02.jpg.
 Para a semana de 09/11: usar posts/banco-rv05-chat-nefro (ter ou qui) e produzir só 1 Reel novo.
 
-## Semana 09/11 a 15/11/2026 (rodada de seg 09/11; preparada sem Chrome, AINDA NÃO AGENDADA no Best Content)
+### Números (medido em 09/11/2026, Analytics do Best Content, aba Posts; alcance, curtidas, comentários, compartilhamentos)
+
+| Post | Formato | Alcance | Curtidas | Comentários | Compartilhamentos |
+|---|---|---|---|---|---|
+| Seg 02/11 Gasometria com a Queen IA | Post único | 4 | 0 | 0 | 0 |
+| Ter 03/11 rv03 Tríades #1 Virchow | Reel | 12 | 0 | 0 | 0 |
+| Ter 03/11 Anemia pelo VCM | Carrossel | 4 | 0 | 0 | 0 |
+| Qua 04/11 Enamed resultado 4/12 | Post único | 5 | 1 | 0 | 0 |
+| Qui 05/11 rv04 Mito ou verdade | Reel | 8 | 0 | 0 | 0 |
+| Qui 05/11 Hipo x hipertireoidismo | Carrossel | 4 | 1 | 0 | 0 |
+| Sex 06/11 Aula vira simulado | Post único | 5 | 0 | 0 | 0 |
+| Sáb 07/11 12:25 OAB da Medicina virou lei (extra, fora do motor) | Carrossel | 7 | 1 | 0 | 0 |
+| Sáb 07/11 Antibióticos por classe | Carrossel | 8 | 1 | 0 | 0 |
+| Dom 08/11 Estude, evolua, salve vidas | Post único | 4 | 0 | 0 | 0 |
+
+Conta (cards do topo do Analytics, período "Últimos 7 dias", mas os cards dizem "30D"): 539 seguidores (+1,1%), alcance 62, impressões 506, engajamento 19,35%. Salvamentos e visitas ao perfil: sem dado na tela.
+Leitura: melhor alcance foi o Reel quiz (12); o resto do feed segue entre 4 e 8 contas por post.
+
+## Semana 09/11 a 15/11/2026 (rodada de seg 09/11; formato novo do Matheus: 2 motions + 5 carrosséis + 1 Reel de questão = 29)
 
 | Quando (Brasília) | Formato | Linha | Gancho | Pasta |
 |---|---|---|---|---|
-| Seg 09/11 18:50 | Motion 60 s (no lugar do post único) | Produto | Ainda vira a noite resumindo PDF? (HyperFrames, 08/11) | posts/2026-11-09-m01-conheca-medqueen |
-| Ter 10/11 12:30 | Reel conversa com a Queen (rv05) | Estudo | Nefrótica x nefrítica | posts/2026-11-10-rv05-chat-nefro |
+| Seg 09/11 18:50 | Motion 60 s | Produto | Ainda vira a noite resumindo PDF? (HyperFrames, 08/11) | posts/2026-11-09-m01-conheca-medqueen |
 | Ter 10/11 18:50 | Carrossel 6 | Estudo | Sopros que caem na prova: os 4 clássicos | Best Content |
-| Qua 11/11 18:50 | Post único | Notícia | Enamed agora vale pro CRM (Correio Braziliense 06/11, Hora Brasil 07/11) | Best Content |
+| Qua 11/11 18:50 | Carrossel 5 | Notícia | Enamed agora vale pro CRM (Agência Gov e O Liberal, 06/11/2026) | Best Content |
 | Qui 12/11 12:30 | Reel quiz (rv06) | Estudo | Tríades que caem na prova #2: Cushing | posts/2026-11-12-rv06-quiz-cushing |
 | Qui 12/11 18:50 | Carrossel 5 | Estudo | IC pela fração de ejeção: os cortes 40 e 50 | Best Content |
-| Sex 13/11 18:50 | Motion 43 s (no lugar do post único) | Produto | Perguntou pra IA e ganhou um textão? A resposta vira material | posts/2026-11-13-m02-queen-vira-material |
+| Sex 13/11 18:50 | Motion 43 s | Produto | Perguntou pra IA e ganhou um textão? A resposta vira material | posts/2026-11-13-m02-queen-vira-material |
 | Sáb 14/11 18:50 | Carrossel 6 | Estudo | Cadeia respiratória: quem bloqueia o quê | Best Content |
-| Dom 15/11 18:50 | Post único (Queen IA, pose 33) | Marca | Medicina não se aprende na véspera | Best Content |
+| Dom 15/11 18:50 | Carrossel 5 (Queen IA no fechamento) | Marca | Medicina não se aprende na véspera | Best Content |
 | Seg 09/11 a dom 15/11 | 21 stories (Queen às 15:50) | Story | textos em motor/posts/legendas_2026_11_09.py | Best Content |
 
 Legendas, texto de cada slide e dos 21 stories: `motor/posts/legendas_2026_11_09.py`.
-Travou: a sessão de 09/11 rodou sem as ferramentas do Chrome, então não mediu a semana de 02/11 nem agendou nada. Falta: medir no Analytics, criar os 4 carrosséis/posts únicos e 21 stories no Best Content (7B) e subir os 4 vídeos (2 motions + 2 reels).
+rv05 (conversa nefrótica x nefrítica) voltou pro banco: `posts/2026-11-10-rv05-chat-nefro` pronto, não agendado.
 Série "Tríades que caem na prova": #2 Cushing.
 Músicas (09/11): motion 02 com a 048, rv06 com a 029. Matheus aprovou as duas e os dois vídeos.
+Conferido em 09/11 (rodada da manhã, com o Matheus): 29 agendados no Calendário do Best Content (2 motions, 5 carrosséis, 1 Reel de questão, 21 stories), sem horário repetido. Carrosséis no Best Content com 'Mais refinado'; legendas nossas coladas.
 
 ## Decisões
+- 09/11/2026 (2ª decisão do dia): feed = motion do produto seg e sex + carrossel ter, qua, qui, sáb e dom (post único acabou); Reel de questão só 1 por semana (qui 12:30); stories iguais. Total 29 por semana.
 - 09/11/2026: 2 motions do produto por semana no feed (seg e sex 18:50, no lugar de 2 posts únicos), formato Reel 30 s a 1 min, telas reais com zoom e edição por cima, variando celular, tablet e computador. Print do produto liberado de novo (08/11). HyperFrames só para os vídeos de produto de uns 60 s; Reels curtos de quiz e pergunta seguem como antes. Músicas 048 e 029 aprovadas.
 - 20/10/2026: cadência 3 feed (pelo menos 2 carrosséis) + 3 stories por dia. Matheus revisa segunda de manhã; primeiro post segunda à tarde.
 - 20/10/2026: print nunca solto; sempre em tablet ou celular com destaque ou lupa.

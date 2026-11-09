@@ -6,7 +6,14 @@ Manual da tarefa semanal. Quem roda isto é uma sessão nova do Claude, sem mem�
 > **Aprovação:** o Claude cria, agenda tudo com a legenda no nosso padrão e DEPOIS manda o resumo pro Matheus. Se ele não fizer nada, está aprovado. Se ele reprovar algo, diz qual post editar.
 > **Se cair a luz, o PC dormir ou o Chrome desconectar:** pare, avise, e quando ele religar continue de onde parou (confira no Calendário do Best Content o que já está agendado antes de criar de novo).
 
-> **MUDANÇA DE 09/11/2026 (pedido do Matheus): 2 MOTIONS DO PRODUTO POR SEMANA NO FEED.** Dos 4 dias de post único (seg, qua, sex, dom), 2 viram motion em formato Reel, de uns 60 s (30 s a 1 min), apresentando o produto: uma funcionalidade ou um discurso de venda, às 18:50. **O HyperFrames (motor/motion) é só pra esses vídeos de produto.** Os Reels curtos de pergunta, quiz, mito ou verdade e conversa (ter e qui 12:30) continuam exatamente como antes (reel_video.py), sem mudar nada. **Música (biblioteca de 100 faixas no Drive, nunca as trilhas antigas):** aprovadas 050, 048 (motion) e 029 (quiz); reprovadas 078, 080 e 022. Linha certa: tech minimalista, eletrônica tranquila. Não repetir faixa na mesma semana; mixar a cerca de -14 LUFS, pico abaixo de -1,5 dBTP, efeitos por cima. Padrão: seg e sex. Referência aprovada: `posts/2026-11-09-m01-conheca-medqueen` (feito no HyperFrames em 08/11). Estilo: telas reais do app em celular, tablet ou computador (variar o aparelho), zoom no ponto que importa, edição por cima (legenda de destaque, marca-texto, círculo, chips, whip, tremida). Vocabulário em `medqueen/instagram/direcao-de-edicao-motion.md` no projeto. Motor: `motor/motion/m02/` (index.html com `render(t)` + `render.py prev|full`, Chromium invisível + FFmpeg, efeitos de `www/som/efeitos`). Copie a pasta, troque prints e textos, renderize, confira 15 quadros. **Print do produto liberado de novo (Matheus, 08/11/2026)** agora que os prints saem bons; a regra "sem print" da seção 1 não vale mais para motion e Reel de produto. Prints em `motor/prints`; print novo sai do app pelo Chrome (seção 5).
+> **SEMANA NOVA DESDE 09/11/2026 (Matheus, vale acima das seções 3 e 5): feed = 2 motions do produto + 5 carrosséis; 1 Reel de questão por semana.**
+> - **Seg e sex 18:50: motion do produto** (formato Reel, 30 s a 1 min, HyperFrames em `motor/motion/`), uma funcionalidade ou um discurso de venda. Sobe pronto no Best Content (Calendário > Nova Pauta > Upload). **O HyperFrames é só pra esses vídeos de produto.**
+> - **Ter, qua, qui, sáb e dom 18:50: carrossel feito no Best Content** (seção 7B). **Post único acabou.**
+> - **Qui 12:30: 1 Reel de questão por semana** (quiz de prova, "questãozinha", com `reel_video.py`/`reel_formatos.py` como antes), sobe no Best Content igual aos outros Reels. Terça 12:30 não tem mais Reel. Os outros formatos de Reel curto (mito ou verdade, conversa, lista) ficam no banco e só entram se o Matheus pedir.
+> - **Stories iguais:** 3 por dia no Best Content (11:50, 15:50, 21:20; seg 13:50, 15:50, 21:20).
+> - **Total: 7 feed + 1 Reel de questão + 21 stories = 29 horários.**
+> - **Música (biblioteca de 100 faixas no Drive, nunca as trilhas antigas):** aprovadas 050, 048 (motion) e 029 (quiz); reprovadas 078, 080 e 022. Linha certa: tech minimalista, eletrônica tranquila. Não repetir faixa na mesma semana; mixar a cerca de -14 LUFS, pico abaixo de -1,5 dBTP, efeitos por cima.
+> - **Motion:** referência aprovada `posts/2026-11-09-m01-conheca-medqueen`. Estilo: telas reais do app em celular, tablet ou computador (variar o aparelho), zoom no ponto que importa, edição por cima (legenda de destaque, marca-texto, círculo, chips, whip, tremida). Vocabulário em `medqueen/instagram/direcao-de-edicao-motion.md` no projeto. Motor: `motor/motion/m02/` (index.html com `render(t)` + `render.py prev|full`, Chromium invisível + FFmpeg, efeitos de `www/som/efeitos`). Copie a pasta, troque prints e textos, renderize, confira 15 quadros. **Print do produto liberado (Matheus, 08/11/2026)** em motion e Reel de produto; a regra "sem print" da seção 1 não vale pra eles. Prints em `motor/prints`; print novo sai do app pelo Chrome (seção 5). O Best Content aceita upload de até 10 MB pelo file_upload: se o mp4 passar disso, recomprimir com ffmpeg (crf maior) mantendo 1080x1920.
 
 Estratégia completa: `medqueen/instagram/brain-instagram.md` e `medqueen/instagram/estrategia-alcance-organico.md` no projeto "MedQueen Growth" do claude.ai (se a sessão tiver acesso ao projeto, leia antes). Este manual tem o necessário para rodar sem o projeto.
 
@@ -41,20 +48,17 @@ Estratégia completa: `medqueen/instagram/brain-instagram.md` e `medqueen/instag
 
 A tarefa roda **segunda 00:01** e produz a semana que começa **nesse mesmo dia** (segunda a domingo).
 
-| Dia | Feed | Story 1 | Story 2 | Story 3 |
+| Dia | Feed 18:50 (21:50Z) | Story 1 | Story 2 | Story 3 |
 |---|---|---|---|---|
-| Seg | 18:50 (21:50Z) **post único** | 13:50 (16:50Z) | 15:50 (18:50Z) | 21:20 (00:20Z do dia seguinte) |
-| Ter | 18:50 (21:50Z) **carrossel** | 11:50 (14:50Z) | 15:50 (18:50Z) | 21:20 (00:20Z) |
-| Qua | 18:50 **post único** | 11:50 | 15:50 | 21:20 |
-| Qui | 18:50 **carrossel** | 11:50 | 15:50 | 21:20 |
-| Sex | 18:50 **post único** | 11:50 | 15:50 | 21:20 |
-| Sáb | 18:50 **carrossel** | 11:50 | 15:50 | 21:20 |
-| Dom | 18:50 **post único** | 11:50 | 15:50 | 21:20 |
+| Seg | **motion do produto** | 13:50 | 15:50 | 21:20 |
+| Ter | **carrossel** | 11:50 | 15:50 | 21:20 |
+| Qua | **carrossel** | 11:50 | 15:50 | 21:20 |
+| Qui | **carrossel** + **Reel de questão 12:30 (15:30Z)** | 11:50 | 15:50 | 21:20 |
+| Sex | **motion do produto** | 11:50 | 15:50 | 21:20 |
+| Sáb | **carrossel** | 11:50 | 15:50 | 21:20 |
+| Dom | **carrossel** | 11:50 | 15:50 | 21:20 |
 
-| Ter e Qui | **+ Reel em vídeo 12:30 (15:30Z)** | | | |
-| Qua e Sex | **+ vídeo do fundador 12:30 (15:30Z)**: o Matheus grava, o Claude escreve o roteiro (salvo no projeto em `medqueen/instagram/roteiros-founder-*.md`) e edita. Só agenda quando o vídeo chegar. | | | |
-
-Total: **7 feed + 2 reels em vídeo + 21 stories = 30** (decisão do Matheus em 23/10/2026: feed todo dia, alternando post único e carrossel; seg, qua, sex e dom = post único; ter, qui e sáb = carrossel). Segunda nada sai antes das 13:50 (o Matheus revisa de manhã). Reel de pessoa gravada pode entrar no futuro, mas só quando o Matheus mandar o vídeo; até lá não planejar reel de pessoa.
+Total: **7 feed (2 motions + 5 carrosséis) + 1 Reel de questão + 21 stories = 29** (decisão do Matheus em 09/11/2026; antes eram post único seg/qua/sex/dom e 2 Reels ter e qui). Vídeo do fundador (qua e sex 12:30) só quando o Matheus mandar o vídeo gravado. Segunda nada sai antes das 13:50.
 
 Stories: todo dia o story das 21:20 anuncia o post novo do feed (`imagem('saida/<post>/01.png')`). Os outros alternam: teste rápido (pergunta) com a resposta no story seguinte, dica da Queen IA, tela do produto com destaque, frase curta. Story pela API sai sem texto e sem figurinha: o texto vai dentro da imagem.
 
@@ -62,7 +66,7 @@ Stories: todo dia o story das 21:20 anuncia o post novo do feed (`imagem('saida/
 
 **Antes de tudo, veja se a semana já está pronta:** desde 03/11/2026, olhar o **Calendário do Best Content** (quantos "Agendado" na semana alvo). Referência antiga: `list-posts-tool` com `channels=["01a03943-aa85-72df-bb05-0dc788a5e9d9"]` e `status=scheduled` (o resultado é grande: salvar em arquivo e ler com `jq`). Se já houver 30 agendados (7 feed + 2 reels em vídeo + 21 stories) entre segunda 00:00 e domingo 23:59 da semana alvo, não produza nada: só meça (seção 8), atualize o histórico e avise. Se tiver alguns, produza só os horários que faltam.
 
-Linhas (proporção inicial, hipótese a ajustar com as métricas): Estudo ~40% · Notícia de medicina ~25% · Novidade de IA ~15% · Produto ~15% · Marca ~5%. Com 7 feeds por semana, a regra prática é: **3 Estudo + 2 Produto + 1 Notícia ou IA + 1 Marca**. Carrossel combina com Estudo e Produto passo a passo; post único combina com gancho forte, comparação lado a lado, notícia, IA e marca.
+Linhas (proporção inicial, hipótese a ajustar com as métricas): Estudo ~40% · Notícia de medicina ~25% · Novidade de IA ~15% · Produto ~15% · Marca ~5%. Com 7 feeds por semana (desde 09/11), a regra prática é: **2 motions de Produto (seg e sex) + 5 carrosséis: 3 Estudo + 1 Notícia ou IA + 1 Marca**. Notícia e marca também vão em carrossel (post único acabou em 09/11).
 
 Banco de ideias (risque no histórico o que usar, acrescente ideias novas no fim):
 
@@ -100,7 +104,7 @@ Copie um arquivo de `motor/posts/` como base, troque o texto, rode.
 - Card `final`: `cta_titulo`, `cta_texto`, `acao` (botão) e `pe_final` (texto do rodapé: "salva pra revisar" ou "link na bio").
 - `coluna=True` empilha dois visuais (ex.: fluxo + nota). `<em>` no título pinta de roxo com grifo rosa. Use `‑` (hífen que não quebra) em palavras como acetil‑CoA no título.
 
-**Post único** (1 imagem 1080x1350): base `posts/u00_modelo_post_unico.py` (é só modelo, não publicar). Spec com um card só; o motor tira o contador e a barra sozinho. Uma ideia só: título grande (até 8 palavras) com `<em>` na palavra-chave, uma linha de apoio e um visual forte (print no tablet/celular com destaque, comparação lado a lado, número grande ou diagrama). `pe_final` curto, ex.: "7 dias grátis · link na bio" ou "salva pra revisar".
+**Post único** (ACABOU em 09/11/2026; fica só como referência) (1 imagem 1080x1350): base `posts/u00_modelo_post_unico.py` (é só modelo, não publicar). Spec com um card só; o motor tira o contador e a barra sozinho. Uma ideia só: título grande (até 8 palavras) com `<em>` na palavra-chave, uma linha de apoio e um visual forte (print no tablet/celular com destaque, comparação lado a lado, número grande ou diagrama). `pe_final` curto, ex.: "7 dias grátis · link na bio" ou "salva pra revisar".
 
 **Padrão visual de referência** (dois carrosséis feitos à mão que o Matheus mandou em 23/10/2026: https://www.instagram.com/p/DctLpAtnFyI/ e https://www.instagram.com/p/DcecNXbn7la/). Não copiar, chegar perto do nível:
 - Título enorme, ocupando cerca de 1/3 do card, no máximo 2 cores (roxo escuro + rosa, ou palavra-chave em degradê roxo-rosa), com traço/grifo rosa embaixo da palavra-chave. Pouquíssimo texto por card.
@@ -167,6 +171,13 @@ Tudo pelo Chrome principal (ferramentas claude-in-chrome). Nunca digitar senha. 
 
 **Já configurado (não refazer):** Estilo principal da marca (Editar estilo > Edição avançada > Descrição do estilo) com as regras fixas: fundo claro em gradiente lilás claro (#DDD2FA) para creme (#FFF6EA), igual em todos os slides; sem pessoa gerada por IA (só a Queen IA, com a imagem dela anexada); sem print de app; texto curto. Os prompts que o Best Content gera já trazem o fundo.
 
+**TELA NOVA DO CRIAR (vista em 09/11/2026, vale acima do passo a passo antigo logo abaixo):**
+- Story: abrir `https://social.bestcontent.ai/criar/post?formato=story`. Carrossel: `...?formato=carrossel`, e na barra embaixo da caixa escolher "Até N slides" (o número exato) e trocar "Rápido" por **"Mais refinado"** (volta pra Rápido a cada post).
+- Escrever a ideia com o texto exato de cada slide e sempre: "sem barra de comentário, sem campo de resposta, sem botão, sem chamada inventada" (sem isso ele desenha uma barra "Deixe seu comentário"). Quando tiver a Queen IA, descrever: "Queen IA oficial da biblioteca (Queen IA 2.0 Frontal.png: cabelo longo roxo escuro, óculos roxo, jaleco branco com o símbolo da MedQueen, sem coroa)"; sem isso ela pode sair de cabelo castanho.
+- Continuar > perguntas: objetivo "Engajar" (story) ou "Pode decidir por mim" (carrossel); nas outras, "Pode decidir por mim" ou "Deixar de fora". Tela "Confira o texto": conferir e preencher título vazio > "Criar a arte"/"Criar as artes" (story uns 40 s, carrossel uns 3 min).
+- Concluir post > na tela "Seu post está pronto", apagar a legenda dele e colar a nossa > "Publicar ou agendar" > **conferir as redes: ele às vezes marca o TikTok junto; deixar só Instagram** > "Escolher dia e hora" > Dia e Hora (campos nativos: clicar no começo do campo e digitar DDMMAAAA e HHMM) > conferir o rodapé "Instagram / dia, às HHhMM" > "Agendar em 1 rede".
+- Popups "O que achou do post?" e de conquista: fechar no X (nunca clicar no "Continuar" do popup de conquista achando que é o do formulário).
+
 **Post de imagem (feed ou story):** Criar > Posts de Imagens > **Imagem Estática** > formato (Post Portrait, Carrossel Portrait ou Stories Único) > Continuar > **Engajar** (carrossel: abordagem **Educativo**) > **Criar do Zero** (nunca Inspirações: gasta crédito) > escrever a ideia com o texto exato de cada slide > Continuar > Continuar.
 - **Número de slides do carrossel (regra do Matheus, 03/11/2026): pelo tema, não fixo.** Capa + 1 slide por parte do conteúdo + fechamento. Dica em 3 passos = 5; em 2 passos = 4; tema com 4 partes = 6. Escrever "exatamente N slides" na ideia e marcar o limite N.
 - Não reescrever os prompts que ele gera por slide (estraga a máquina de criação). Só conferir conteúdo médico e acrescentar o que faltar de padrão.
@@ -194,7 +205,7 @@ Tudo pelo Chrome principal (ferramentas claude-in-chrome). Nunca digitar senha. 
 ## 9. Avisar o Matheus
 
 Mensagem curta (ferramenta SendUserMessage), em português, sem travessão, com:
-- os 3 temas do feed e o dia de cada um;
+- os 7 temas do feed (2 motions + 5 carrosséis) e o Reel de questão, com dia;
 - o link da folha de revisão: `https://github.com/OrbittechIA/Medqueen-Instagram/blob/main/revisao/AAAA-MM-DD.jpg`;
 - os números da semana anterior em 3 linhas (melhor post, pior post, alcance total) ou "ainda sem número";
 - qualquer coisa que travou e o que ele precisa fazer (só se precisar).
