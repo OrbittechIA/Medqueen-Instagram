@@ -13,5 +13,13 @@
   "POV: prova de farmaco amanhã e todo antibiótico parece igual pra você",
   "eu depois de 3 simulados com IA"
  ],
- "v3_pula": 0.8
+ "v3_pula": 0.8,
+ "trilha_v2": [
+  "/home/claude/claudia/biblioteca/piseiro/piseiro_03.mp3",
+  35.27
+ ],
+ "trilha_v3": [
+  "/home/claude/claudia/biblioteca/pagode/pagode_04.mp3",
+  11.67
+ ]
 }

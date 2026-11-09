@@ -15,3 +15,7 @@ Atenção: eletronica_05 faz fade até o silêncio entre 16,3 s e 17,5 s (recome
 | 15/11 | simulado imuno | biblioteca/047_ambiente_tech_calma_158s | calma, a partir de 10 s |
 | 09/11 | meme Cláudia ciclo de Krebs (v1, v2, v3) | memes/Piseiro/piseiro_01 | de 19,2 s, drop (23,0 s) no corte da virada |
 | 09/11 | meme Cláudia antibióticos (v1, v2, v3) | memes/audio_01 (raiz) | de 8,58 s, drop (12,58 s) no corte da virada; pagode_03 reprovado pelo Matheus ("nunca mais") e trocado |
+| 09/11 | meme Krebs v2 | memes/Pagode - Samba/pagode_02 | drop 18,70 no corte |
+| 09/11 | meme Krebs v3 | memes/Eletrônica/eletronica_01 | drop 146,74 no corte (trecho diferente do motion de 10/11) |
+| 09/11 | meme antibióticos v2 | memes/Piseiro/piseiro_03 | drop 35,27 no corte |
+| 09/11 | meme antibióticos v3 | memes/Pagode - Samba/pagode_04 | drop 11,67 no corte |

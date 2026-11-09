@@ -14,3 +14,4 @@
 - O que medir no domingo: views por formato de motion (flashcards x aula x prova x simulado), por matéria e por gancho de carrossel.
 - Meme A da semana 2 (09/11): ciclo de Krebs (Cláudia de scrub no corredor > sofá com notebook), trilha piseiro_01 (drop no corte, 3,8 s). Agendado 15:13: seg v1, qua v2, sex v3, dom v1 repetido. Ter, qui e sáb 15:13 ficam pro meme B.
 - Meme B da semana 2 (09/11): antibióticos (Cláudia de camiseta branca no auditório > CENARIO QUARTO de regata verde-oliva, braços cruzados), vende simulado, trilha audio_01 (drop no corte, 4,0 s; pagode_03 reprovado e banido). Agendado 15:13: ter v1, qui v2, sáb v3.
+- 09/11: Matheus cobrou que as 3 versões tinham a mesma música e o mesmo formato de texto. Refeitas as v2 e v3 dos 2 memes: cada versão com gênero de trilha diferente e v3 em formato novo (caixas brancas estilo TikTok sobre a legenda borrada). Script meme/variacoes_v2.py.
