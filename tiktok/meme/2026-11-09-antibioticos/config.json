@@ -1,0 +1,17 @@
+{
+ "corte": 4.0,
+ "card": 8.0,
+ "faixa": [
+  190,
+  540
+ ],
+ "v2": [
+  "quando o professor avisa que cai o mecanismo de TODO antibiótico",
+  "eu depois de fazer simulado com IA do meu próprio material"
+ ],
+ "v3": [
+  "POV: prova de farmaco amanhã e todo antibiótico parece igual pra você",
+  "eu depois de 3 simulados com IA"
+ ],
+ "v3_pula": 0.8
+}

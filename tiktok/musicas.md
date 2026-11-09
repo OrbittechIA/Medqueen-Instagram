@@ -14,3 +14,4 @@ Atenção: eletronica_05 faz fade até o silêncio entre 16,3 s e 17,5 s (recome
 | 14/11 | aula Krebs | biblioteca/051_ambiente_tech_calma_67s | calma, a partir de 2 s |
 | 15/11 | simulado imuno | biblioteca/047_ambiente_tech_calma_158s | calma, a partir de 10 s |
 | 09/11 | meme Cláudia ciclo de Krebs (v1, v2, v3) | memes/Piseiro/piseiro_01 | de 19,2 s, drop (23,0 s) no corte da virada |
+| 09/11 | meme Cláudia antibióticos (v1, v2, v3) | memes/Pagode - Samba/pagode_03 | de 29,55 s, drop (33,55 s) no corte da virada |
