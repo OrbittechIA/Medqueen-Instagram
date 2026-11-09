@@ -1,0 +1,80 @@
+{
+ "formato": "aula",
+ "gancho": [
+  "POV: pedi aula de",
+  "fisiologia renal",
+  "pra IA com o meu PDF"
+ ],
+ "pdf": "Aula 7 · Fisiologia renal.pdf",
+ "pedido": "Me explica esse material como uma aula pra prova",
+ "queen": "16-apresentando-duas-maos.png",
+ "legendas": [
+  "Quadro pronto pra <span class=\"grad\">revisar</span>",
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "linha_destaque": 1,
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Bora pra aula de <strong>fisiologia renal</strong>, montada direto do seu material."
+  },
+  {
+   "t": "h2",
+   "h": "1. O que o túbulo faz"
+  },
+  {
+   "t": "p",
+   "h": "Cada segmento do néfron reabsorve sódio por um transportador diferente. É por isso que cada diurético age num lugar."
+  },
+  {
+   "t": "h3",
+   "h": "Onde cada diurético age"
+  },
+  {
+   "t": "table",
+   "head": [
+    "Segmento",
+    "Transportador",
+    "Diurético"
+   ],
+   "rows": [
+    [
+     "Túbulo proximal",
+     "Anidrase carbônica",
+     "Acetazolamida"
+    ],
+    [
+     "Alça ascendente espessa",
+     "NKCC2",
+     "Furosemida"
+    ],
+    [
+     "Túbulo distal",
+     "NCC",
+     "Hidroclorotiazida"
+    ],
+    [
+     "Ducto coletor",
+     "ENaC e receptor da aldosterona",
+     "Amilorida e espironolactona"
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "h": "2. Efeitos que mais aparecem"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "Furosemida e tiazídico podem causar hipocalemia.",
+    "Espironolactona e amilorida poupam potássio e podem causar hipercalemia."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu transforme isso em flashcards?"
+  }
+ ]
+}

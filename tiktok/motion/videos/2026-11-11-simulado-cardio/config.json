@@ -1,0 +1,36 @@
+{
+ "formato": "simulado",
+ "gancho": [
+  "POV: a IA montou um",
+  "simulado de cardio",
+  "com o meu PDF"
+ ],
+ "pdf": "Aula 4 · Fisiologia cardíaca.pdf",
+ "pedido": "Monta um simulado desse material",
+ "queen": "21-comemorando-punho.png",
+ "legendas": [
+  "Questão no estilo da <span class=\"grad\">prova</span>",
+  "Correção na <span class=\"grad\">hora</span>",
+  "Explica o <span class=\"grad\">porquê</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Montei um <strong>simulado de 10 questões</strong> do seu material, no estilo da prova. Bora começar?"
+  }
+ ],
+ "simulado": {
+  "materia": "Fisiologia cardíaca",
+  "area": "Fisiologia",
+  "enunciado": "No potencial de ação do miócito ventricular, qual fase corresponde ao platô?",
+  "opcoes": [
+   "Fase 0",
+   "Fase 1",
+   "Fase 2",
+   "Fase 4"
+  ],
+  "certa": 2,
+  "acertos": 9,
+  "porque": "No platô (fase 2), a entrada de cálcio pelos canais tipo L equilibra a saída de potássio, e a célula fica despolarizada por mais tempo."
+ }
+}

@@ -1,0 +1,5 @@
+motion/videos/*/frames/
+motion/videos/*/preview/
+motion/videos/*/meta.json
+motion/videos/*/render.log
+*.f32

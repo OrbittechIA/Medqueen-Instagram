@@ -1,0 +1,28 @@
+{
+ "formato": "flashcards",
+ "gancho": [
+  "POV: joguei o PDF de",
+  "plexo braquial",
+  "na IA"
+ ],
+ "pdf": "Aula 3 · Membro superior.pdf",
+ "pedido": "Cria flashcards do plexo braquial",
+ "queen": "02-tablet-mostrando-tela.png",
+ "flashcards": {
+  "total": 18,
+  "cards": [
+   [
+    "Quais raízes formam o plexo braquial?",
+    "De C5 a T1."
+   ],
+   [
+    "Qual nervo inerva o músculo deltoide?",
+    "Nervo axilar."
+   ],
+   [
+    "Lesão de qual nervo causa garra no 4º e 5º dedos?",
+    "Nervo ulnar."
+   ]
+  ]
+ }
+}

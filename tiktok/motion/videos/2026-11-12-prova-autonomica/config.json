@@ -1,0 +1,33 @@
+{
+ "formato": "prova",
+ "gancho": [
+  "POV: perguntei pra IA",
+  "o que cai na prova",
+  "de farmaco autonômica"
+ ],
+ "pdf": "Aula 9 · Farmacologia do sistema autônomo.pdf",
+ "pedido": "O que mais cai na prova desse material?",
+ "queen": "09-apontando-direita.png",
+ "legendas": [
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Separei do seu material o que mais aparece em prova de <strong>farmacologia autonômica</strong>:"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "Atropina bloqueia o receptor muscarínico: taquicardia, boca seca e pupila dilatada.",
+    "Intoxicação por organofosforado é excesso de acetilcolina; o tratamento usa atropina e pralidoxima.",
+    "Betabloqueador não seletivo pode piorar o broncoespasmo de quem tem asma."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu crie flashcards só desses pontos?"
+  }
+ ]
+}

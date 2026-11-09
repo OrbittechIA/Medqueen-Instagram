@@ -1,0 +1,80 @@
+{
+ "formato": "aula",
+ "gancho": [
+  "POV: pedi aula de",
+  "ciclo de Krebs",
+  "pra IA com o meu PDF"
+ ],
+ "pdf": "Aula 6 · Metabolismo energético.pdf",
+ "pedido": "Me explica o ciclo de Krebs como aula pra prova",
+ "queen": "13-apontando-voce.png",
+ "legendas": [
+  "Quadro pronto pra <span class=\"grad\">revisar</span>",
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "linha_destaque": 0,
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Bora pra aula do <strong>ciclo de Krebs</strong>, direto do seu material."
+  },
+  {
+   "t": "h2",
+   "h": "1. Onde acontece"
+  },
+  {
+   "t": "p",
+   "h": "Na matriz da mitocôndria. O ciclo começa quando o acetil-CoA se junta ao oxaloacetato e forma citrato."
+  },
+  {
+   "t": "h3",
+   "h": "O que sai em cada volta"
+  },
+  {
+   "t": "table",
+   "head": [
+    "Produto",
+    "Por volta",
+    "Etapa que gera"
+   ],
+   "rows": [
+    [
+     "NADH",
+     "3",
+     "Isocitrato, alfa-cetoglutarato e malato desidrogenases"
+    ],
+    [
+     "FADH2",
+     "1",
+     "Succinato desidrogenase"
+    ],
+    [
+     "GTP (ou ATP)",
+     "1",
+     "Succinil-CoA sintetase"
+    ],
+    [
+     "CO2",
+     "2",
+     "Isocitrato e alfa-cetoglutarato desidrogenases"
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "h": "2. Pegadinhas"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "A succinato desidrogenase fica na membrana interna da mitocôndria: é o complexo II da cadeia respiratória.",
+    "Cada glicose gera 2 acetil-CoA, então o ciclo gira 2 vezes por glicose."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu monte um simulado desse ciclo?"
+  }
+ ]
+}

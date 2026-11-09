@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: "MQ Literata"; src: url("assets/literata-normal-variable.woff2") format("woff2"); font-weight: 200 900; }
+@font-face { font-family: "MQ Atkinson"; src: url("assets/atkinson-hyperlegible-next-normal-variable.woff2") format("woff2"); font-weight: 200 800; }
+@font-face { font-family: "MQ Jakarta"; src: url("assets/PlusJakartaSans-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "MQ Jakarta"; src: url("assets/PlusJakartaSans-ExtraBold.ttf"); font-weight: 800; }
+:root { --bg:#f6f5f8; --ink:#1a1523; --muted:#655d73; --line:#e2deeb; --accent:#3a1d8f; --dark:#1c1726; --pink:#f06f8f; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f3eefb; }
+body { font-family: "MQ Atkinson", sans-serif; -webkit-font-smoothing: antialiased; }
+.abs { position: absolute; }
+
+/* fundos claros que trocam por cena */
+.bg { position: absolute; inset: 0; opacity: 0; }
+#bg1 { background: linear-gradient(180deg, #ece4fb 0%, #f7f1fb 50%, #fdf8ef 100%); }
+#bg2 { background: linear-gradient(180deg, #fbe9f0 0%, #f8f1f8 50%, #fdf8ef 100%); }
+#bg3 { background: linear-gradient(180deg, #e8f1fb 0%, #f2effb 50%, #fdf8f0 100%); }
+#bg4 { background: linear-gradient(180deg, #efe9fc 0%, #fbf1f4 55%, #fdf9f1 100%); }
+.glow { position: absolute; border-radius: 50%; }
+
+/* texto grande da tela */
+.head { position: absolute; left: 70px; right: 70px; text-align: center; font: 800 74px/86px "MQ Jakarta"; color: var(--ink); letter-spacing: -.02em; }
+.grad { background: linear-gradient(90deg, #3a1d8f, #f06f8f); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.step { position: absolute; left: 60px; right: 60px; top: 170px; display: flex; align-items: center; justify-content: center; gap: 22px; }
+.step .num { display: inline-grid; place-items: center; width: 74px; height: 74px; border-radius: 22px; background: linear-gradient(135deg, #3a1d8f, #f06f8f); color: #fff; font: 800 40px "MQ Jakarta"; box-shadow: 0 14px 30px -12px rgba(58,29,143,.6); }
+.step .num { flex-shrink: 0; }
+.step .txt { font: 800 64px/74px "MQ Jakarta"; color: var(--ink); letter-spacing: -.02em; }
+
+/* PDFs voando na abertura */
+.pdf { position: absolute; width: 250px; height: 330px; background: #fff; border-radius: 18px; box-shadow: 0 24px 50px -24px rgba(40,20,90,.45); padding: 26px 22px; }
+.pdf .tag { display: inline-block; background: #e5484d; color: #fff; font: 800 20px "MQ Jakarta"; padding: 5px 12px; border-radius: 8px; }
+.pdf .ln { height: 12px; border-radius: 6px; background: #ebe7f2; margin-top: 16px; }
+.pdf .nm { margin-top: 18px; font: 800 22px/28px "MQ Jakarta"; color: #2b2438; }
+
+/* celular */
+#device { position: absolute; left: 50%; top: 0; width: 458px; height: 960px; border-radius: 64px; background: #111; padding: 14px; box-shadow: 0 50px 90px -30px rgba(40,20,90,.5), 0 0 0 2px #2a2a2e inset; transform-origin: 50% 0; }
+#screen { position: relative; width: 430px; height: 932px; border-radius: 50px; overflow: hidden; background: var(--bg); }
+.status { position: absolute; left: 0; top: 0; width: 100%; height: 50px; background: var(--accent); color: #fff; z-index: 30; }
+.status .time { position: absolute; left: 44px; top: 16px; font: 700 16px "MQ Atkinson"; }
+.status .island { position: absolute; left: 50%; top: 11px; width: 122px; height: 35px; margin-left: -61px; background: #000; border-radius: 20px; }
+.status .icons { position: absolute; right: 30px; top: 18px; display: flex; gap: 6px; align-items: center; }
+.bars { display: flex; gap: 2px; align-items: flex-end; } .bars i { display: block; width: 3px; background: #fff; border-radius: 1px; }
+.batt { width: 25px; height: 12px; border: 1.5px solid rgba(255,255,255,.85); border-radius: 4px; padding: 1.5px; } .batt b { display: block; height: 100%; width: 80%; background: #fff; border-radius: 2px; }
+.topbar { position: absolute; top: 50px; left: 0; width: 100%; height: 56px; background: var(--dark); z-index: 29; display: flex; align-items: center; padding: 0 16px; }
+.topbar .logo { height: 28px; margin-left: 14px; }
+.topbar .right { margin-left: auto; display: flex; align-items: center; gap: 18px; color: #fff; font: 700 13px "MQ Atkinson"; }
+.bell { position: relative; } .bell .badge { position: absolute; right: -9px; top: -7px; background: #e0245e; color: #fff; font: 800 9px "MQ Atkinson"; padding: 2px 4px; border-radius: 9px; }
+.nav { position: absolute; left: 0; bottom: 0; width: 100%; height: 74px; background: var(--dark); display: grid; grid-template-columns: repeat(5, 1fr); align-items: end; padding-bottom: 16px; z-index: 29; }
+.nav div { display: flex; flex-direction: column; align-items: center; gap: 5px; color: #d9d4e6; font: 700 11px "MQ Atkinson"; }
+.nav .on { position: relative; color: #fff; } .nav .on::before { content: ""; position: absolute; left: 6px; right: 6px; top: -4px; bottom: -8px; background: rgba(255,255,255,.08); border-radius: 12px; }
+.nav .qav { width: 46px; height: 46px; border-radius: 50%; border: 3px solid var(--dark); margin-top: -26px; object-fit: cover; background: #fff; position: relative; }
+.homebar { position: absolute; left: 50%; bottom: 6px; width: 140px; height: 5px; margin-left: -70px; border-radius: 3px; background: rgba(255,255,255,.75); z-index: 31; }
+svg.i { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+.content { position: absolute; top: 106px; left: 0; width: 100%; height: 752px; overflow: hidden; }
+.scene { position: absolute; inset: 0; background:
+  radial-gradient(120% 60% at 10% 30%, rgba(214,197,244,.55), transparent 60%),
+  radial-gradient(90% 55% at 95% 45%, rgba(250,205,220,.55), transparent 60%),
+  radial-gradient(80% 40% at 50% 8%, rgba(255,255,255,.9), transparent 70%),
+  linear-gradient(180deg, #f3effa 0%, #f6f5f8 55%, #f6f5f8 100%); }
+.pill { position: absolute; left: 16px; top: 14px; height: 42px; padding: 0 16px; display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 12px; color: var(--accent); font: 700 15px "MQ Atkinson"; z-index: 5; }
+
+/* tela inicial da Queen */
+#home { position: absolute; inset: 0; }
+.hero { position: absolute; top: 70px; left: 0; width: 100%; text-align: center; }
+.portrait { width: 76px; height: 76px; border-radius: 50%; padding: 3px; background: #fff; border: 2px solid #d9cdf3; box-shadow: 0 6px 18px -8px rgba(58,29,143,.45); object-fit: cover; }
+.greet { margin-top: 6px; color: var(--muted); font-size: 16px; }
+.hero h2 { font: 600 27px/34px "MQ Literata", serif; color: var(--ink); letter-spacing: -.02em; margin-top: 2px; }
+.sub { margin: 6px auto 0; width: 380px; color: var(--muted); font-size: 15px; line-height: 22px; }
+.composer { position: absolute; left: 16px; right: 16px; top: 288px; background: #fff; border: 1.5px solid #e4dcf6; border-radius: 22px; box-shadow: 0 10px 30px -18px rgba(58,29,143,.35); padding: 14px 16px 76px; min-height: 178px; }
+.composer .label { font: 700 15px "MQ Atkinson"; color: var(--ink); }
+.composer .mode { position: absolute; right: 18px; top: 16px; font: 700 13px "MQ Atkinson"; color: #3d3550; }
+.att { margin-top: 10px; display: flex; align-items: center; gap: 10px; border: 1px solid #e4dcf6; background: #f8f6fd; border-radius: 14px; padding: 10px 12px; }
+.att .ic { width: 36px; height: 42px; border-radius: 6px; background: #fff; border: 1px solid #ead9de; display: grid; place-items: center; font: 800 10px "MQ Jakarta"; color: #e5484d; }
+.att .nm { font: 700 14px "MQ Atkinson"; color: var(--ink); }
+.att .bar { margin-top: 6px; height: 5px; border-radius: 3px; background: #e9e4f5; overflow: hidden; width: 230px; }
+.att .bar b { display: block; height: 100%; background: linear-gradient(90deg, #3a1d8f, #f06f8f); }
+.att .ok { margin-top: 4px; font: 700 12px "MQ Atkinson"; color: #0f9f7a; }
+.safety { margin-top: 8px; font-size: 13px; line-height: 18px; color: #7a5a14; background: #fff8e8; border-radius: 10px; padding: 7px 10px; }
+.composer .input { margin-top: 10px; min-height: 26px; font-size: 17px; line-height: 24px; color: var(--ink); }
+.ph { color: #8a8396; }
+.caret { display: inline-block; width: 2px; height: 20px; background: var(--accent); vertical-align: -3px; margin-left: 1px; }
+.composer .tools { position: absolute; left: 14px; right: 14px; bottom: 14px; display: flex; gap: 8px; align-items: center; }
+.tbtn { height: 46px; padding: 0 14px; display: flex; align-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 13px; font: 700 14px "MQ Atkinson"; color: #3d3550; background: #fff; }
+.send { margin-left: auto; height: 46px; padding: 0 18px; display: flex; align-items: center; gap: 8px; border-radius: 13px; font: 700 15px "MQ Atkinson"; color: #fff; background: #9d8fd3; position: relative; }
+.ripple { position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: rgba(255,255,255,.6); opacity: 0; }
+
+/* conversa */
+#chat { position: absolute; inset: 0; background: var(--bg); opacity: 0; }
+#thread { position: absolute; left: 0; top: 70px; width: 100%; padding: 0 16px; }
+.urow { display: flex; justify-content: flex-end; margin-top: 16px; }
+.ubub { max-width: 84%; background: #eee8fb; color: #2e1a50; border: 1px solid #e2d9f5; border-radius: 18px 18px 6px 18px; padding: 11px 15px; font: 700 15px/22px "MQ Atkinson"; }
+.uatt { display: flex; justify-content: flex-end; margin-bottom: 7px; }
+.uatt span { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #ddd2f3; border-radius: 9px; padding: 4px 9px; font: 700 12px "MQ Atkinson"; color: #3a1d8f; }
+.arow { display: flex; gap: 10px; margin-top: 16px; }
+.aav { width: 32px; height: 32px; border-radius: 10px; object-fit: cover; flex-shrink: 0; background: #fff; border: 1px solid var(--line); }
+.art { flex: 1; min-width: 0; color: #3b3548; font-size: 15px; line-height: 23px; }
+.byline { font: 800 13px/20px "MQ Atkinson"; color: var(--accent); display: flex; gap: 8px; align-items: center; min-height: 22px; }
+.state { font-weight: 600; color: var(--muted); }
+.dots i { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #a79bd6; margin-right: 3px; }
+.art strong { color: var(--ink); }
+.art p { margin-top: 5px; font-size: 14.5px; line-height: 22px; }
+.art h2 { margin-top: 14px; font: 800 18px/24px "MQ Atkinson"; color: #1a1523; }
+.art h3 { margin-top: 12px; font: 800 15px/21px "MQ Atkinson"; color: #3a1d8f; }
+.art ul, .art ol { list-style: none; margin-top: 6px; }
+.art li { display: flex; gap: 8px; font-size: 14px; line-height: 21px; color: #475569; margin-top: 5px; }
+.art li .d { margin-top: 8px; width: 6px; height: 6px; border-radius: 50%; background: #3a1d8f; flex-shrink: 0; }
+.art li .n { margin-top: 1px; width: 20px; height: 20px; border-radius: 6px; background: rgba(58,29,143,.1); color: #3a1d8f; font: 800 11px "MQ Jakarta"; display: grid; place-items: center; flex-shrink: 0; }
+.tbl { margin-top: 10px; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; overflow: hidden; box-shadow: 0 18px 40px -28px rgba(17,24,39,.4); }
+.tbl table { width: 100%; border-collapse: collapse; text-align: left; }
+.tbl th { font: 800 9.5px/13px "MQ Atkinson"; text-transform: uppercase; letter-spacing: .04em; color: #64748b; background: #f8fafc; padding: 8px 9px; border-bottom: 1px solid #e2e8f0; }
+.tbl td { font: 600 12px/17px "MQ Atkinson"; color: #475569; padding: 7px 9px; border-top: 1px solid #f1f5f9; vertical-align: top; }
+.tbl tr:nth-child(even) td { background: rgba(248,250,252,.6); }
+.call { margin-top: 10px; display: flex; gap: 10px; align-items: flex-start; border: 1px solid rgba(217,138,18,.25); background: rgba(217,138,18,.08); border-radius: 12px; padding: 10px 12px; }
+.call i { width: 14px; height: 14px; border-radius: 50%; background: #d98a12; flex-shrink: 0; margin-top: 3px; }
+.call span { display: block; font: 600 12.5px/19px "MQ Atkinson"; color: #8a6320; margin-top: 3px; }
+.call span:first-child { margin-top: 0; }
+#cam { position: absolute; inset: 0; transform-origin: 0 0; }
+#hook { position: absolute; left: 50%; top: 120px; transform: translateX(-50%); z-index: 70; text-align: center; background: #fff; border-radius: 34px; padding: 26px 44px; font: 800 60px/72px "MQ Jakarta"; color: #1a1523; letter-spacing: -.02em; box-shadow: 0 30px 60px -30px rgba(40,20,90,.55); white-space: nowrap; }
+.zcap { position: absolute; left: 50%; top: 150px; z-index: 60; white-space: nowrap; background: #fff; border-radius: 30px; padding: 22px 40px; font: 800 54px/62px "MQ Jakarta"; color: #1a1523; letter-spacing: -.02em; box-shadow: 0 30px 60px -30px rgba(40,20,90,.55); opacity: 0; }
+.art h4 { margin-top: 10px; font: 600 17px/24px "MQ Literata", serif; color: var(--ink); }
+.fc { margin-top: 10px; background: #fff; border: 1px solid #e3e4ea; border-radius: 18px; overflow: hidden; }
+.fc .hd { display: flex; justify-content: space-between; gap: 8px; padding: 14px 14px 0; }
+.fc .t { display: flex; align-items: center; gap: 7px; font: 800 15px "MQ Jakarta"; color: #111827; }
+.fc .c { margin-top: 3px; font-size: 14px; color: #475569; }
+.fc .src { font-size: 12px; line-height: 16px; color: #64748b; margin-top: 3px; }
+.fc .n { font: 800 12px "MQ Jakarta"; color: #475569; white-space: nowrap; }
+.fc .body { position: relative; height: 196px; padding: 12px 14px 14px; perspective: 1200px; overflow: hidden; }
+.flip { position: absolute; left: 14px; right: 14px; top: 12px; height: 170px; transform-style: preserve-3d; }
+.face { position: absolute; inset: 0; border-radius: 16px; border: 1px solid #e2e8f0; background: #f8fafc; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 16px; backface-visibility: hidden; }
+.face.back { transform: rotateY(180deg); background: #f4f0fd; border-color: #ddd3f6; }
+.face .k { display: flex; align-items: center; gap: 6px; font: 700 12px "MQ Atkinson"; color: #7c3aed; }
+.face .q { margin-top: 10px; font: 700 17px/23px "MQ Jakarta"; color: #111827; }
+.face .h { margin-top: 12px; font-size: 12px; color: #64748b; }
+.dock { position: absolute; left: 12px; right: 12px; bottom: 10px; height: 58px; background: #fff; border: 1px solid var(--line); border-radius: 18px; display: flex; align-items: center; padding: 0 8px 0 16px; color: var(--ink); font-size: 16px; box-shadow: 0 -8px 24px -16px rgba(26,21,35,.25); z-index: 6; }
+.dock .s { margin-left: auto; width: 42px; height: 42px; border-radius: 12px; background: #9d8fd3; display: grid; place-items: center; position: relative; overflow: hidden; }
+.cover { position: absolute; left: 0; top: 0; width: 100%; height: 66px; background: linear-gradient(180deg, #f6f5f8 82%, rgba(246,245,248,0)); z-index: 4; }
+
+/* simulado */
+#sim { position: absolute; top: 106px; left: 0; width: 100%; height: 752px; background: #f6f5f8; opacity: 0; z-index: 28; }
+.ph1 { position: absolute; left: 12px; right: 12px; top: 12px; background: #fff; border: 1px solid #e3e0ea; border-radius: 12px; padding: 12px 14px 14px; display: flex; align-items: center; gap: 10px; overflow: hidden; }
+.ph1 .tt { font: 800 15px "MQ Atkinson"; color: #0f172a; }
+.ph1 .st { font: 700 12px "MQ Atkinson"; color: #94a3b8; margin-top: 2px; }
+.ph1 .clk { margin-left: auto; display: flex; align-items: center; gap: 6px; background: #f1f5f9; color: #334155; border-radius: 12px; padding: 9px 11px; font: 800 14px "MQ Atkinson"; }
+.ph1 .pb { position: absolute; left: 0; bottom: 0; height: 3px; background: #263a8f; }
+.qcard { position: absolute; left: 12px; right: 12px; top: 92px; background: #fff; border: 1px solid #e3e0ea; border-radius: 16px; padding: 20px 16px; }
+.chips span { display: inline-block; font: 800 12px "MQ Atkinson"; border-radius: 99px; padding: 4px 10px; margin-right: 6px; }
+.stem { margin-top: 16px; font-size: 18px; line-height: 28px; color: #1c1726; }
+.opt { margin-top: 10px; display: flex; gap: 10px; align-items: flex-start; border: 1px solid #e3e0ea; border-radius: 12px; padding: 13px 12px; font-size: 15px; line-height: 23px; color: #1c1726; background: #fff; }
+.opt .l { display: grid; place-items: center; width: 30px; height: 30px; flex: 0 0 30px; border: 1px solid #e3e0ea; border-radius: 8px; color: #575066; font: 700 13px "MQ Atkinson"; }
+.opt.sel { border-color: #3a1d8f; background: #ece8f7; box-shadow: inset 0 0 0 1px #3a1d8f; }
+.opt.sel .l { background: #3a1d8f; border-color: #3a1d8f; color: #fff; }
+.qfoot { position: absolute; left: 12px; right: 12px; bottom: 20px; display: flex; gap: 8px; }
+.qfoot .b { height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font: 800 14px "MQ Atkinson"; }
+#res { position: absolute; inset: 0; background: #f6f5f8; opacity: 0; padding: 20px 14px; }
+.rk { font: 900 12px "MQ Atkinson"; letter-spacing: .16em; text-transform: uppercase; color: #f06f8f; }
+.rt { font: 600 32px/39px "MQ Literata", serif; color: #1a1523; letter-spacing: -.02em; }
+.tabs { margin-top: 16px; display: flex; gap: 4px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 4px; }
+.tabs div { flex: 1; height: 42px; border-radius: 9px; display: grid; place-items: center; font: 800 14px "MQ Atkinson"; color: #64748b; }
+.tabs .on { background: #eef2ff; color: #4338ca; }
+.rc { margin-top: 12px; border-radius: 20px; border: 1px solid #e2e8f0; background: #fff; padding: 18px 20px; }
+.rc .k { font: 900 12px "MQ Atkinson"; letter-spacing: .06em; text-transform: uppercase; color: #94a3b8; }
+.rc .v { margin-top: 4px; font: 800 40px "MQ Jakarta"; color: #020617; }
+.rc .v small { font-size: 20px; color: #94a3b8; }
+.rv { margin-top: 14px; background: #fff; border: 1px solid #e2e8f0; border-radius: 18px; padding: 16px; }
+.rv .hit { display: inline-block; background: #ecfdf5; color: #047857; font: 900 12px "MQ Atkinson"; border-radius: 99px; padding: 4px 10px; }
+.rv .why { margin-top: 12px; border: 1px solid #e0e7ff; background: rgba(238,242,255,.6); border-radius: 16px; padding: 14px; }
+.rv .why .k { font: 900 12px "MQ Atkinson"; letter-spacing: .04em; text-transform: uppercase; color: #4338ca; }
+.rv .why p { margin-top: 6px; font: 600 14px/22px "MQ Atkinson"; color: #334155; }
+
+/* fluxo final e card */
+.flow { position: absolute; left: 0; right: 0; top: 760px; display: flex; justify-content: center; align-items: center; gap: 18px; }
+.tile { width: 190px; height: 210px; border-radius: 30px; background: #fff; box-shadow: 0 24px 50px -26px rgba(40,20,90,.45); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; font: 800 28px "MQ Jakarta"; color: var(--ink); }
+.tile .ico { width: 84px; height: 84px; border-radius: 24px; display: grid; place-items: center; }
+.tile svg.i { width: 44px; height: 44px; stroke-width: 2.2; }
+.arrow { font: 800 40px "MQ Jakarta"; color: #b5a9dc; }
+#final { position: absolute; inset: 0; opacity: 0; }
+#final .logo { position: absolute; left: 50%; top: 150px; width: 620px; transform: translateX(-50%); }
+#final h1 { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font: 800 76px/88px "MQ Jakarta"; color: var(--ink); letter-spacing: -.02em; }
+#final .checks { position: absolute; left: 150px; top: 560px; }
+#final .checks div { display: flex; align-items: center; gap: 18px; font: 700 38px "MQ Atkinson"; color: #3d3550; margin-top: 18px; }
+#final .checks b { width: 48px; height: 48px; border-radius: 50%; background: var(--pink); display: grid; place-items: center; flex-shrink: 0; }
+#final .queen { position: absolute; left: 50%; bottom: 360px; height: 640px; transform: translateX(-50%); }
+#final .cta { position: absolute; left: 140px; right: 140px; bottom: 300px; height: 130px; border-radius: 34px; background: linear-gradient(90deg, #3a1d8f, #f06f8f); display: grid; place-items: center; color: #fff; font: 800 52px "MQ Jakarta"; box-shadow: 0 30px 60px -30px rgba(58,29,143,.7); }
+#final .bio { position: absolute; left: 0; right: 0; bottom: 235px; text-align: center; font: 700 32px "MQ Atkinson"; color: #4b4360; }
+mark.hlm { color: inherit; background-color: transparent; background-repeat:no-repeat; background-image: linear-gradient(transparent 45%, rgba(253,224,71,.9) 45%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.tbl tr.hl td { background: rgba(253,224,71,.55) !important; color:#1a1523; }
+</style>
+</head>
+<body>
+<div class="bg" id="bg1"></div><div class="bg" id="bg2"></div><div class="bg" id="bg3"></div><div class="bg" id="bg4"></div>
+<div class="glow" style="width:900px;height:900px;left:-300px;top:200px;background:radial-gradient(circle,rgba(240,111,143,.16),transparent 65%)"></div>
+<div class="glow" style="width:900px;height:900px;right:-320px;top:900px;background:radial-gradient(circle,rgba(88,101,216,.14),transparent 65%)"></div>
+
+<!-- cena 1: gancho -->
+<div id="s1" class="abs" style="inset:0">
+  <div class="head" id="h1a" style="top:250px">Você ainda vira a noite</div>
+  <div class="head" id="h1b" style="top:336px">resumindo <span class="grad">PDF?</span></div>
+  <div class="pdf" id="p1"><span class="tag">PDF</span><div class="nm">Aula 7 · Fisiologia renal</div><div class="ln"></div><div class="ln" style="width:80%"></div><div class="ln"></div><div class="ln" style="width:60%"></div></div>
+  <div class="pdf" id="p2"><span class="tag">PDF</span><div class="nm">Aula 8 · Cardiologia</div><div class="ln"></div><div class="ln" style="width:70%"></div><div class="ln"></div><div class="ln" style="width:85%"></div></div>
+  <div class="pdf" id="p3"><span class="tag">PDF</span><div class="nm">Aula 9 · Farmaco</div><div class="ln"></div><div class="ln" style="width:75%"></div><div class="ln"></div><div class="ln" style="width:55%"></div></div>
+  <div class="head" id="h1c" style="top:900px;font-size:88px;line-height:100px">Tem jeito <span class="grad">melhor.</span></div>
+</div>
+
+<!-- cena 2: conheça -->
+<div id="s2" class="abs" style="inset:0;opacity:0">
+  <div class="head" style="top:230px;font-size:64px">Conheça a</div>
+  <img id="s2logo" src="assets/medqueen-ia-logo-horizontal.png" style="position:absolute;left:50%;top:300px;width:820px;transform:translateX(-50%)">
+  <div class="head" id="s2sub" style="top:600px;font-size:56px;line-height:66px">a IA feita pro <span class="grad">estudante de Medicina</span></div>
+  <img id="s2q" src="assets/16-apresentando-duas-maos.png" style="position:absolute;left:50%;bottom:0;height:1060px;transform:translateX(-50%)">
+</div>
+
+<!-- textos das etapas -->
+<div class="step" id="st1"><div class="num">1</div><div class="txt">Sobe o <span class="grad">PDF</span> da aula</div></div>
+<div class="step" id="st2"><div class="num">2</div><div class="txt">A IA dá a <span class="grad">aula completa</span></div></div>
+<div class="step" id="st3"><div class="num">3</div><div class="txt">Vira <span class="grad">flashcards</span></div></div>
+<div class="step" id="st4"><div class="num">4</div><div class="txt">Vira <span class="grad">simulado</span> de prova</div></div>
+
+<div id="cam">
+<!-- celular -->
+<div id="device"><div id="screen">
+  <div class="status"><span class="time">9:41</span><span class="island"></span>
+    <span class="icons"><span class="bars"><i style="height:5px"></i><i style="height:7px"></i><i style="height:9px"></i><i style="height:11px"></i></span>
+    <svg class="i" style="width:16px;height:16px;stroke:#fff" viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a15 15 0 0 1 20 0"/></svg><span class="batt"><b></b></span></span></div>
+  <div class="topbar">
+    <svg class="i" style="color:#fff;width:22px;height:22px" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <img class="logo" src="assets/medqueen-ia-logo-horizontal-on-dark.svg">
+    <div class="right"><span>UC ⌄</span><span class="bell"><svg class="i" style="width:22px;height:22px" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="badge">9+</span></span></div>
+  </div>
+  <div class="content">
+    <div class="scene"></div>
+    <div id="home">
+      <div class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Conversas</div>
+      <div class="hero"><img class="portrait" src="assets/queen-ia-bust-master-384.png"><p class="greet">Olá, Júlia.</p><h2>O que vamos estudar?</h2><p class="sub">Entenda um tema, pratique ou crie. Você decide o que salvar.</p></div>
+      <div class="composer">
+        <div class="label">Sua pergunta</div><div class="mode">Objetiva</div>
+        <div id="attbox" style="display:none">
+          <div class="att"><div class="ic">PDF</div><div><div class="nm" id="attnm"></div><div class="bar"><b id="attbar"></b></div><div class="ok" id="attok">Pronto pra usar</div></div></div>
+          <div class="safety" id="safety">Estou enviando e lendo o material. O envio será liberado quando a fonte estiver pronta.</div>
+        </div>
+        <div class="input" id="typed"></div>
+        <div class="tools">
+          <div class="tbtn" id="anexar"><svg class="i" viewBox="0 0 24 24"><path d="m21.4 11.1-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></svg>Anexar</div>
+          <div class="tbtn"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg>Ditar</div>
+          <div class="send" id="send"><svg class="i" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Enviar<span class="ripple" id="rip1"></span></div>
+        </div>
+      </div>
+    </div>
+    <div id="chat">
+      <div class="cover"></div>
+      <div class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Conversas</div>
+      <div id="thread">
+        <div class="urow" id="u1"><div class="ubub"><div class="uatt"><span><svg class="i" style="width:12px;height:12px" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M12 18v-6M9 15l3 3 3-3"/></svg><b id="u1pdf" style="font-weight:inherit"></b></span></div><b id="u1txt" style="font-weight:inherit"></b></div></div>
+        <div class="arow" id="a1"><img class="aav" src="assets/queen-ia-avatar-master-192.png"><div class="art">
+          <div class="byline">Queen IA <span class="state" id="st_a1">respondendo <span class="dots"><i></i><i></i><i></i></span></span></div>
+          <div id="ans1"></div></div></div>
+        <div class="urow" id="u2"><div class="ubub"><div class="uatt"><span><svg class="i" style="width:12px;height:12px" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M12 18v-6M9 15l3 3 3-3"/></svg><b id="u2pdf" style="font-weight:inherit"></b></span></div><b id="u2txt" style="font-weight:inherit"></b></div></div>
+        <div class="arow" id="a2"><img class="aav" src="assets/queen-ia-avatar-master-192.png"><div class="art">
+          <div class="byline">Queen IA <span class="state" id="st_a2">respondendo <span class="dots"><i></i><i></i><i></i></span></span></div>
+          <div class="fc" id="fc">
+            <div class="hd"><div>
+              <div class="t" id="fctitle_wrap"><svg class="i" style="color:#6a5ae0;width:16px;height:16px" viewBox="0 0 24 24"><path d="m12.8 2.2 8.6 3.9a1 1 0 0 1 0 1.8l-8.6 3.9a2 2 0 0 1-1.6 0L2.6 7.9a1 1 0 0 1 0-1.8l8.6-3.9a2 2 0 0 1 1.6 0z"/><path d="m22 12-9.2 4.2a2 2 0 0 1-1.6 0L2 12M22 17l-9.2 4.2a2 2 0 0 1-1.6 0L2 17"/></svg><b id="fctitle" style="font-weight:inherit"></b></div>
+              <div class="c" id="fcc"></div><div class="src" id="fcsrc"></div>
+            </div><div class="n" id="num">1 / 20</div></div>
+            <div class="body">
+              <div class="flip" id="flipA">
+                <div class="face"><span class="k">Pergunta</span><span class="q" id="qA"></span><span class="h">prévia · toque para ver a resposta</span></div>
+                <div class="face back"><span class="k">Resposta</span><span class="q" id="rA"></span><span class="h">toque para voltar à pergunta</span></div>
+              </div>
+              <div class="flip" id="flipB">
+                <div class="face"><span class="k">Pergunta</span><span class="q" id="qB"></span><span class="h">prévia · toque para ver a resposta</span></div>
+                <div class="face back"><span class="k">Resposta</span><span class="q" id="rB"></span><span class="h">toque para voltar à pergunta</span></div>
+              </div>
+              <div class="flip" id="flipC">
+                <div class="face"><span class="k">Pergunta</span><span class="q" id="qC"></span><span class="h">prévia · toque para ver a resposta</span></div>
+                <div class="face back"><span class="k">Resposta</span><span class="q" id="rC"></span><span class="h">toque para voltar à pergunta</span></div>
+              </div>
+            </div>
+          </div></div></div>
+      </div>
+      <div class="dock"><span id="dockt" class="ph">Pergunte à Queen</span><div class="s" id="dsend"><svg class="i" style="color:#fff" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg><span class="ripple" id="rip2"></span></div></div>
+    </div>
+  </div>
+  <div class="nav">
+    <div><svg class="i" style="width:21px;height:21px" viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 12 0V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 12 0v-4"/><circle cx="20" cy="10" r="2"/></svg>OSCE</div>
+    <div><svg class="i" style="width:21px;height:21px" viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a2.1 2.1 0 1 1 3 3L12 15l-4 1 1-4z"/></svg>Cadernos</div>
+    <div class="on"><img class="qav" src="assets/queen-ia-avatar-master-192.png">Queen IA</div>
+    <div><svg class="i" style="width:21px;height:21px" viewBox="0 0 24 24"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.2 10H20a2 2 0 0 1 1.9 2.5l-1.5 6a2 2 0 0 1-1.9 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.7.9l.8 1.2a2 2 0 0 0 1.7.9H18a2 2 0 0 1 2 2v2"/></svg>Materiais</div>
+    <div><svg class="i" style="width:21px;height:21px" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M18 2H6v7a6 6 0 0 0 12 0z"/></svg>Simulados</div>
+  </div>
+
+  <div id="sim">
+    <div class="ph1"><div><div class="tt" id="simtt"></div><div class="st">Questão 3 de 10 · <span id="answered">2</span> respondidas</div></div>
+      <div class="clk"><svg class="i" style="width:16px;height:16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span id="clock">04:12</span></div><div class="pb" style="width:30%"></div></div>
+    <div class="qcard">
+      <div class="chips"><span style="background:#eef2ff;color:#4338ca" id="simchip1"></span><span style="background:#f1f5f9;color:#64748b" id="simchip2"></span></div>
+      <div class="stem" id="simstem"></div>
+      <div id="opts"></div>
+    </div>
+    <div class="qfoot"><div class="b" style="width:46px;border:1px solid #e2e8f0;color:#475569;background:#fff">‹</div><div class="b" id="nextb" style="flex:1;background:#263a8f;color:#fff;position:relative;overflow:hidden">Finalizar ✓<span class="ripple" id="rip3"></span></div></div>
+    <div id="res">
+      <div class="rk">Resultado da prova</div><div class="rt">Seu desempenho</div>
+      <div class="tabs"><div id="tab1" class="on">Visão geral</div><div id="tab2">Revisar questões</div></div>
+      <div id="ov">
+        <div class="rc"><div class="k">Acertos</div><div class="v"><span id="score">0</span><small>/10</small></div></div>
+        <div class="rc" style="border-color:#a7f3d0;background:#ecfdf5"><div class="k" style="color:#047857">Aproveitamento</div><div class="v" style="color:#065f46"><span id="pct">0</span>%</div></div>
+        <div class="rc" style="border-color:#fecdd3;background:#fff1f2"><div class="k" style="color:#be123c">Erros · em branco</div><div class="v" style="color:#881337"><span id="errs">2</span><small style="color:#be123c"> · 0</small></div></div>
+      </div>
+      <div id="rv" style="display:none">
+        <div class="rv"><span class="hit">Você acertou</span> <span style="font:700 12px 'MQ Atkinson';color:#94a3b8;margin-left:6px" id="rvsrc"></span>
+          <div style="margin-top:10px;font-size:15px;line-height:23px;color:#1c1726" id="rvstem"></div>
+          <div style="margin-top:10px;font:800 14px 'MQ Atkinson';color:#047857" id="rvans"></div>
+          <div class="why"><div class="k">Por que a correta é defensável</div><p id="rvwhy"></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="homebar"></div>
+</div></div>
+</div>
+<div class="zcap" id="zc0">Subi o <span class="grad">PDF</span> da aula</div>
+<div id="hook"><div>POV: joguei o PDF de</div><div><span class="grad">cascata de coagulação</span></div><div>na IA</div></div>
+<div class="zcap" id="zc1">Quadro pronto pra <span class="grad">revisar</span></div>
+<div class="zcap" id="zc2">Marca o que <span class="grad">cai na prova</span></div>
+<div class="zcap" id="zc3">Pergunta e <span class="grad">resposta</span></div>
+<div class="zcap" id="zc4">Questão no estilo da <span class="grad">prova</span></div>
+<div class="zcap" id="zc5">Correção na <span class="grad">hora</span></div>
+
+<!-- cena 6: fluxo -->
+<div id="s6" class="abs" style="inset:0;opacity:0">
+  <div class="head" id="h6a" style="top:330px">Tudo com <span class="grad">IA.</span></div>
+  <div class="head" id="h6b" style="top:430px;font-size:60px;line-height:72px">A partir do <span class="grad">seu material.</span></div>
+  <div class="flow">
+    <div class="tile" id="t1"><div class="ico" style="background:#fdecef;color:#e5484d"><svg class="i" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M8 13h8M8 17h5"/></svg></div>PDF</div>
+    <div class="arrow" id="r1">›</div>
+    <div class="tile" id="t2"><div class="ico" style="background:#efeafb;color:#3a1d8f"><svg class="i" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>Aula</div>
+    <div class="arrow" id="r2">›</div>
+    <div class="tile" id="t3"><div class="ico" style="background:#f3efff;color:#6a5ae0"><svg class="i" viewBox="0 0 24 24"><path d="m12.8 2.2 8.6 3.9a1 1 0 0 1 0 1.8l-8.6 3.9a2 2 0 0 1-1.6 0L2.6 7.9a1 1 0 0 1 0-1.8l8.6-3.9a2 2 0 0 1 1.6 0z"/><path d="m22 12-9.2 4.2a2 2 0 0 1-1.6 0L2 12M22 17l-9.2 4.2a2 2 0 0 1-1.6 0L2 17"/></svg></div>Flashcards</div>
+    <div class="arrow" id="r3">›</div>
+    <div class="tile" id="t4"><div class="ico" style="background:#e8f5f0;color:#0f766e"><svg class="i" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4M3 7l2 2 4-4M13 6h8M13 12h8M13 18h8"/></svg></div>Simulado</div>
+  </div>
+  <img id="s6q" src="assets/10-apontando-logo.png" style="position:absolute;left:50%;bottom:0;height:820px;transform:translateX(-50%)">
+</div>
+
+<!-- cena 7: card final -->
+<div id="final">
+  <img class="logo" src="assets/medqueen-ia-logo-horizontal.png">
+  <h1>A IA que estuda<br>Medicina com você</h1>
+  <div class="checks">
+    <div><b><svg class="i" style="color:#fff;width:28px;height:28px;stroke-width:3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></b>Explica seu PDF como aula</div>
+    <div><b><svg class="i" style="color:#fff;width:28px;height:28px;stroke-width:3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></b>Cria flashcards e simulados</div>
+    <div><b><svg class="i" style="color:#fff;width:28px;height:28px;stroke-width:3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></b>Tira suas dúvidas na hora</div>
+  </div>
+  <img class="queen" id="fqueen" src="assets/36-flashcards-leque.png">
+  <div class="cta">Teste grátis por 7 dias</div>
+  <div class="bio">Link no perfil · medqueen.com.br</div>
+</div>
+
+<script src="engine.js"></script>
+</body>
+</html>

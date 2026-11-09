@@ -1,0 +1,36 @@
+{
+ "formato": "simulado",
+ "gancho": [
+  "POV: a IA montou um",
+  "simulado de imuno",
+  "com o meu PDF"
+ ],
+ "pdf": "Aula 2 · Imunologia.pdf",
+ "pedido": "Monta um simulado de imuno desse PDF",
+ "queen": "23-joinha.png",
+ "legendas": [
+  "Questão no estilo da <span class=\"grad\">prova</span>",
+  "Correção na <span class=\"grad\">hora</span>",
+  "Explica o <span class=\"grad\">porquê</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Pronto: <strong>simulado de 10 questões</strong> tirado do seu material. Bora?"
+  }
+ ],
+ "simulado": {
+  "materia": "Imunologia",
+  "area": "Imunologia",
+  "enunciado": "A anafilaxia após picada de abelha é mediada principalmente por qual anticorpo?",
+  "opcoes": [
+   "IgG",
+   "IgM",
+   "IgE",
+   "IgA"
+  ],
+  "certa": 2,
+  "acertos": 8,
+  "porque": "É hipersensibilidade tipo I: a IgE presa nos mastócitos reconhece o veneno e dispara a liberação de histamina."
+ }
+}
