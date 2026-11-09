@@ -5,7 +5,7 @@ from reel_formatos import quiz
 # Formato QUIZ, série "Tríades que caem na prova" #2.
 # Fonte: tríade de Cushing (hipertensão arterial, bradicardia, respiração irregular) como sinal tardio de hipertensão intracraniana,
 # com risco de herniação: livros de neurologia/emergência (ex.: Harrison, ATLS para TCE).
-r = Reel('saida/rv06-quiz-cushing', musica='trilha_anuncio_1.mp3')
+r = Reel('saida/rv06-quiz-cushing', musica=None)
 r.cena(quiz('Hipertensão, bradicardia e respiração irregular. <span style="color:#3A1D8F">Pensa em quê?</span>',
             ['Tamponamento cardíaco',
              'Hipertensão intracraniana',
