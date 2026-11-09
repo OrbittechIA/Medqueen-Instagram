@@ -1,5 +1,5 @@
 # Semana 09/11 a 15/11/2026. Legendas (vão no Best Content, não na imagem) e texto de cada slide/story.
-# Feed: seg e sex = MOTION do produto (pedido do Matheus em 09/11: 2 dos 4 posts únicos viram motion de 30 s a 1 min).
+# Feed (Matheus, 09/11): seg e sex = MOTION do produto; ter, qua, qui, sáb e dom = carrossel. 1 Reel de questão só (qui 12:30, rv06). rv05 volta pro banco.
 
 LEGENDAS = {
 '2026-11-09-m01-conheca-medqueen': '''Ainda vira a noite resumindo PDF de Medicina? 🩺
@@ -30,20 +30,17 @@ O truque: primeiro decide se é sistólico ou diastólico, depois o foco. 📚
 
 Aproveite os 7 dias de teste grátis. Link na bio.''',
 
-'2026-11-11-u09-enamed-crm': '''Enamed agora é requisito pro registro no CRM 🩺
+'2026-11-11-c10-enamed-crm': '''Enamed agora é requisito pro registro no CRM 🩺
 
-A lei sancionada em novembro de 2026 torna o Enamed obrigatório para novos médicos. Vale para quem ingressou em Medicina a partir de 19/06/2026.
+A lei sancionada em 06/11/2026 torna o Enamed um exame de proficiência: o novo médico só tem registro no CRM com a nota mínima.
 
-📚 Como fica:
-São 3 avaliações, no fim do 2º, do 4º e do 6º ano. A nota final é a média, com peso maior na última.
-Quem não atinge o mínimo pode refazer a etapa final em edições seguintes.
-Quem já tem diploma ou entrou antes de 19/06/2026 segue as regras antigas.
+📚 No carrossel: o que mudou, como fica a prova e o que fazer desde já.
 
 💜 Manda pro colega que entrou na faculdade este ano.
 
 Aproveite os 7 dias de teste grátis. Link na bio.
 
-Fontes: Correio Braziliense, 06/11/2026; Hora Brasil, 07/11/2026.''',
+Fontes: Agência Gov e O Liberal, 06/11/2026.''',
 
 '2026-11-12-rv06-quiz-cushing': '''Tríades que caem na prova #2 🩺
 
@@ -88,7 +85,7 @@ Rotenona, antimicina A, cianeto, monóxido de carbono e oligomicina. Saber qual 
 
 Aproveite os 7 dias de teste grátis. Link na bio.''',
 
-'2026-11-15-u10-vespera': '''Medicina não se aprende na véspera 🩺
+'2026-11-15-c11-vespera': '''Medicina não se aprende na véspera 🩺
 
 Prova de Medicina pesa porque o conteúdo é grande. O que funciona é constância: um pouco por dia, revisando o que você errou.
 
@@ -107,8 +104,12 @@ SLIDES = {
  'Estenose mitral: diastólico, em ruflar, grave. Foco mitral. Estalido de abertura e reforço pré-sistólico.',
  'Fechamento: "Primeiro: sistólico ou diastólico? Depois: o foco." + Aproveite os 7 dias de teste grátis. Link na bio.',
 ],
-'2026-11-11-u09-enamed-crm': [  # post único (notícia)
- 'Título: "Enamed agora vale pro CRM". Apoio: "Quem entrou em Medicina a partir de 19/06/2026 vai precisar de nota mínima para ter registro." Rodapé: "Fonte: Correio Braziliense, 06/11/2026".',
+'2026-11-11-c10-enamed-crm': [  # carrossel, 3 partes = 5 slides
+ 'Capa: "Enamed agora vale pro CRM"',
+ 'O que mudou: lei sancionada em 06/11/2026. O Enamed vira exame de proficiência: sem a nota mínima, o novo médico não tem registro no CRM.',
+ 'Como fica: 3 provas ao longo do curso, com nota mínima pra aprovação.',
+ 'O que fazer desde já: treinar com questões e revisar os erros por área, todo semestre.',
+ 'Fechamento: "Fonte: Agência Gov, 06/11/2026" + Aproveite os 7 dias de teste grátis. Link na bio.',
 ],
 '2026-11-12-c08-ic-fracao-ejecao': [  # 3 partes = 5 slides
  'Capa: "IC pela fração de ejeção: os cortes que caem"',
@@ -125,8 +126,12 @@ SLIDES = {
  'ATP sintase (complexo V): oligomicina. Bloqueia a síntese de ATP e, por consequência, o fluxo de elétrons.',
  'Fechamento: "Inibidor trava o complexo; desacoplador gasta o gradiente." + Aproveite os 7 dias de teste grátis. Link na bio.',
 ],
-'2026-11-15-u10-vespera': [  # post único com Queen IA (pose 33 livro aberto)
- 'Título: "Medicina não se aprende na véspera". Apoio: "Um pouco por dia, revisando o que você errou." Queen IA lendo (pose 33). Rodapé: "7 dias grátis · link na bio".',
+'2026-11-15-c11-vespera': [  # carrossel, 3 partes = 5 slides, Queen IA no fechamento
+ 'Capa: "Medicina não se aprende na véspera"',
+ 'Um pouco por dia: constância vence maratona de véspera.',
+ 'Revisa o que você errou: o erro mostra o que ainda não ficou.',
+ 'Domingo planeja: escolhe 3 temas pra semana, não 10.',
+ 'Fechamento com a Queen IA: "Bora começar a semana?" + Aproveite os 7 dias de teste grátis. Link na bio.',
 ],
 }
 
@@ -138,7 +143,7 @@ STORIES = {
 'ter 10 11:50': 'Teste rápido: sopro holossistólico que irradia para a axila. Qual valvopatia?',
 'ter 10 15:50': 'Queen IA: insuficiência mitral. Holossistólico, foco mitral, irradia para a axila.',
 'ter 10 21:20': 'Post novo no feed: "Sopros que caem na prova: os 4 clássicos".',
-'qua 11 11:50': 'Você sabia? O Enamed virou requisito para o CRM de quem entrou a partir de 19/06/2026.',
+'qua 11 11:50': 'Você sabia? Com a lei de 06/11/2026, o Enamed virou requisito pro CRM dos novos médicos.',
 'qua 11 15:50': 'Queen IA: dica pra qualquer prova grande: refaça as questões que você errou, por área.',
 'qua 11 21:20': 'Post novo no feed: "Enamed agora vale pro CRM".',
 'qui 12 11:50': 'Teste rápido: FE de 45%. Como se classifica a insuficiência cardíaca?',
