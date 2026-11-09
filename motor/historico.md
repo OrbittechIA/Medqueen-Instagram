@@ -97,7 +97,27 @@ Banco de ideias riscado: anemias, hipo x hiper, antibióticos por classe, gasome
 Conferido em 02/11: 30 agendados na semana (7 feed, 2 reels, 21 stories), sem horário repetido. Folha de revisão: revisao/2026-11-02.jpg.
 Para a semana de 09/11: usar posts/banco-rv05-chat-nefro (ter ou qui) e produzir só 1 Reel novo.
 
+## Semana 09/11 a 15/11/2026 (rodada de seg 09/11; preparada sem Chrome, AINDA NÃO AGENDADA no Best Content)
+
+| Quando (Brasília) | Formato | Linha | Gancho | Pasta |
+|---|---|---|---|---|
+| Seg 09/11 18:50 | Motion 60 s (no lugar do post único) | Produto | Ainda vira a noite resumindo PDF? (HyperFrames, 08/11) | posts/2026-11-09-m01-conheca-medqueen |
+| Ter 10/11 12:30 | Reel conversa com a Queen (rv05) | Estudo | Nefrótica x nefrítica | posts/2026-11-10-rv05-chat-nefro |
+| Ter 10/11 18:50 | Carrossel 6 | Estudo | Sopros que caem na prova: os 4 clássicos | Best Content |
+| Qua 11/11 18:50 | Post único | Notícia | Enamed agora vale pro CRM (Correio Braziliense 06/11, Hora Brasil 07/11) | Best Content |
+| Qui 12/11 12:30 | Reel quiz (rv06) | Estudo | Tríades que caem na prova #2: Cushing | posts/2026-11-12-rv06-quiz-cushing |
+| Qui 12/11 18:50 | Carrossel 5 | Estudo | IC pela fração de ejeção: os cortes 40 e 50 | Best Content |
+| Sex 13/11 18:50 | Motion 43 s (no lugar do post único) | Produto | Perguntou pra IA e ganhou um textão? A resposta vira material | posts/2026-11-13-m02-queen-vira-material |
+| Sáb 14/11 18:50 | Carrossel 6 | Estudo | Cadeia respiratória: quem bloqueia o quê | Best Content |
+| Dom 15/11 18:50 | Post único (Queen IA, pose 33) | Marca | Medicina não se aprende na véspera | Best Content |
+| Seg 09/11 a dom 15/11 | 21 stories (Queen às 15:50) | Story | textos em motor/posts/legendas_2026_11_09.py | Best Content |
+
+Legendas, texto de cada slide e dos 21 stories: `motor/posts/legendas_2026_11_09.py`.
+Travou: a sessão de 09/11 rodou sem as ferramentas do Chrome, então não mediu a semana de 02/11 nem agendou nada. Falta: medir no Analytics, criar os 4 carrosséis/posts únicos e 21 stories no Best Content (7B) e subir os 4 vídeos (2 motions + 2 reels).
+Série "Tríades que caem na prova": #2 Cushing.
+
 ## Decisões
+- 09/11/2026: 2 motions do produto por semana no feed (seg e sex 18:50, no lugar de 2 posts únicos), formato Reel 30 s a 1 min, telas reais com zoom e edição por cima, variando celular, tablet e computador. Print do produto liberado de novo (08/11).
 - 20/10/2026: cadência 3 feed (pelo menos 2 carrosséis) + 3 stories por dia. Matheus revisa segunda de manhã; primeiro post segunda à tarde.
 - 20/10/2026: print nunca solto; sempre em tablet ou celular com destaque ou lupa.
 - 20/10/2026: sem pessoa gerada por IA; só a Queen IA oficial (ilustração).
