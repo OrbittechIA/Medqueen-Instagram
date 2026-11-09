@@ -13,4 +13,4 @@
 - Memes: o Matheus gera 2 memes; o Claude faz 3 variações de cada (meme/variacoes.py) e agenda seg a sáb 15:13 alternando, + 1 repetido no domingo.
 - O que medir no domingo: views por formato de motion (flashcards x aula x prova x simulado), por matéria e por gancho de carrossel.
 - Meme A da semana 2 (09/11): ciclo de Krebs (Cláudia de scrub no corredor > sofá com notebook), trilha piseiro_01 (drop no corte, 3,8 s). Agendado 15:13: seg v1, qua v2, sex v3, dom v1 repetido. Ter, qui e sáb 15:13 ficam pro meme B.
-- Meme B da semana 2 (09/11): antibióticos (Cláudia de camiseta branca no auditório > CENARIO QUARTO de regata verde-oliva, braços cruzados), vende simulado, trilha pagode_03 (drop no corte, 4,0 s). Agendado 15:13: ter v1, qui v2, sáb v3.
+- Meme B da semana 2 (09/11): antibióticos (Cláudia de camiseta branca no auditório > CENARIO QUARTO de regata verde-oliva, braços cruzados), vende simulado, trilha audio_01 (drop no corte, 4,0 s; pagode_03 reprovado e banido). Agendado 15:13: ter v1, qui v2, sáb v3.
