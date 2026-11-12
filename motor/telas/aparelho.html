@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;background:transparent}
+#stage{display:inline-block;padding:40px}
+/* celular: a tela do banco já vem com cantos de celular; aqui só a moldura */
+.celular{width:560px;padding:18px;background:#1a1523;border-radius:78px;box-shadow:0 30px 70px rgba(58,29,143,.28)}
+.celular img{display:block;width:100%;border-radius:62px}
+.tablet{width:900px;padding:26px;background:#EDEAF2;border-radius:52px;box-shadow:0 36px 80px rgba(58,29,143,.25)}
+.tablet .scr{border-radius:26px;overflow:hidden;background:#f6f5f8}
+.tablet img{display:block;width:100%}
+.laptop{width:1200px}
+.laptop .tampa{padding:22px 22px 30px;background:#1a1523;border-radius:28px 28px 8px 8px}
+.laptop .scr{border-radius:6px;overflow:hidden;background:#f6f5f8;aspect-ratio:16/10}
+.laptop img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.laptop .base{height:34px;margin:0 -70px;background:linear-gradient(#D9D5E2,#B9B3C7);border-radius:0 0 30px 30px}
+.laptop .base:after{content:"";display:block;width:180px;height:12px;margin:0 auto;background:#A7A0B8;border-radius:0 0 12px 12px}
+</style></head><body><div id="stage"></div>
+<script>
+const q=new URLSearchParams(location.search), a=q.get('aparelho')||'celular', t=q.get('tela');
+const st=document.getElementById('stage');
+st.innerHTML = a==='celular' ? `<div class="celular"><img src="${t}"></div>`
+ : a==='tablet' ? `<div class="tablet"><div class="scr"><img src="${t}"></div></div>`
+ : `<div class="laptop"><div class="tampa"><div class="scr"><img src="${t}"></div></div><div class="base"></div></div>`;
+</script></body></html>
