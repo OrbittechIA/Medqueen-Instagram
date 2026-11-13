@@ -19,3 +19,4 @@ Atenção: eletronica_05 faz fade até o silêncio entre 16,3 s e 17,5 s (recome
 | 09/11 | meme Krebs v3 | memes/Eletrônica/eletronica_01 | drop 146,74 no corte (trecho diferente do motion de 10/11) |
 | 09/11 | meme antibióticos v2 | memes/Piseiro/piseiro_03 | drop 35,27 no corte |
 | 09/11 | meme antibióticos v3 | memes/Pagode - Samba/pagode_04 | drop 11,67 no corte |
+| 14/11 | Reel de venda da Queen (extra, 13:13), versão TikTok com zoom e barra de progresso | memes/Piseiro/piseiro_05 | de 15 s, -9 dB com ducking sob a voz |
