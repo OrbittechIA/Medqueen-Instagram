@@ -1,0 +1,80 @@
+{
+ "formato": "aula",
+ "gancho": [
+  "POV: pedi aula de",
+  "antidiabéticos",
+  "pra IA com o meu PDF"
+ ],
+ "pdf": "Aula 14 · Farmacologia do diabetes.pdf",
+ "pedido": "Me explica esse material como uma aula pra prova",
+ "queen": "44-sentada-tablet.png",
+ "legendas": [
+  "Quadro pronto pra <span class=\"grad\">revisar</span>",
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "linha_destaque": 1,
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Bora pra aula de <strong>antidiabéticos orais e injetáveis</strong>, montada direto do seu material."
+  },
+  {
+   "t": "h2",
+   "h": "1. Onde cada remédio age"
+  },
+  {
+   "t": "p",
+   "h": "No diabetes tipo 2, cada classe ataca a glicose alta por um caminho diferente: fígado, pâncreas, rim ou intestino."
+  },
+  {
+   "t": "h3",
+   "h": "Classe, mecanismo e efeito adverso"
+  },
+  {
+   "t": "table",
+   "head": [
+    "Classe",
+    "Mecanismo",
+    "Efeito adverso"
+   ],
+   "rows": [
+    [
+     "Metformina",
+     "Reduz a produção de glicose no fígado",
+     "Desconforto gastrointestinal"
+    ],
+    [
+     "Sulfonilureia",
+     "Estimula a secreção de insulina",
+     "Hipoglicemia"
+    ],
+    [
+     "Inibidor de SGLT2",
+     "Aumenta a perda de glicose na urina",
+     "Infecção genital"
+    ],
+    [
+     "Análogo de GLP-1",
+     "Aumenta a insulina dependente de glicose e reduz o apetite",
+     "Náusea"
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "h": "2. Pontos de prova"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "Metformina é a primeira escolha na maioria dos pacientes com diabetes tipo 2.",
+    "Sulfonilureia pode causar hipoglicemia e ganho de peso."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu monte um simulado disso?"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "formato": "simulado",
+ "gancho": [
+  "POV: a IA montou um",
+  "simulado de ombro",
+  "com o meu PDF"
+ ],
+ "pdf": "Aula 4 · Membro superior.pdf",
+ "pedido": "Monta um simulado desse material",
+ "queen": "22-comemorando-bracos-cima.png",
+ "legendas": [
+  "Questão no estilo da <span class=\"grad\">prova</span>",
+  "Correção na <span class=\"grad\">hora</span>",
+  "Explica o <span class=\"grad\">porquê</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Montei um <strong>simulado de 10 questões</strong> do seu material, no estilo da prova. Bora começar?"
+  }
+ ],
+ "simulado": {
+  "materia": "Membro superior",
+  "area": "Anatomia",
+  "enunciado": "Qual músculo do manguito rotador faz a rotação medial do ombro?",
+  "opcoes": [
+   "Supraespinal",
+   "Infraespinal",
+   "Redondo menor",
+   "Subescapular"
+  ],
+  "certa": 3,
+  "acertos": 9,
+  "porque": "O subescapular é o rotador medial do manguito. O supraespinal ajuda na abdução, e o infraespinal e o redondo menor fazem rotação lateral."
+ }
+}

@@ -20,3 +20,10 @@ Atenção: eletronica_05 faz fade até o silêncio entre 16,3 s e 17,5 s (recome
 | 09/11 | meme antibióticos v2 | memes/Piseiro/piseiro_03 | drop 35,27 no corte |
 | 09/11 | meme antibióticos v3 | memes/Pagode - Samba/pagode_04 | drop 11,67 no corte |
 | 14/11 | Reel de venda da Queen (extra, 13:13), versão TikTok com zoom e barra de progresso | memes/Piseiro/piseiro_04 | de 2,2 s, sob a voz separada (trilha original removida com demucs); piseiro_05 por cima da trilha original reprovado pelo Matheus |
+| 16/11 | aula anti-hipertensivos | biblioteca/050_ambiente_tech_media_60s | drop (18,24 s, depois da pausa de 17,7 s) no zoom da tabela |
+| 17/11 | flashcards nervos cranianos | biblioteca/023_eletronica_media_54s | drop (15,74 s, depois da pausa de 15,2 s) no surgimento dos flashcards |
+| 18/11 | simulado anemias | biblioteca/029_trap_media_53s | drop achado pelo mix.py, música a partir de 9,1 s |
+| 19/11 | aula antidiabéticos | biblioteca/059_synthwave_media_63s | do início (drop automático cai antes da tabela) |
+| 20/11 | flashcards ausculta cardíaca | biblioteca/053_rock_indie_media_64s | do início |
+| 21/11 | prova ácido-base | biblioteca/048_ambiente_tech_calma_60s | calma, a partir de 2 s |
+| 22/11 | simulado ombro (manguito rotador) | biblioteca/049_ambiente_tech_calma_79s | calma, a partir de 2 s |

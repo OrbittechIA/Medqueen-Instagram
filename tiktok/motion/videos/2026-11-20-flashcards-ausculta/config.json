@@ -1,0 +1,28 @@
+{
+ "formato": "flashcards",
+ "gancho": [
+  "POV: joguei o PDF de",
+  "ausculta cardíaca",
+  "na IA"
+ ],
+ "pdf": "Aula 8 · Semiologia cardiovascular.pdf",
+ "pedido": "Cria flashcards de ausculta cardíaca",
+ "queen": "35-estetoscopio.png",
+ "flashcards": {
+  "total": 16,
+  "cards": [
+   [
+    "Onde se ausculta o foco mitral?",
+    "No 5º espaço intercostal esquerdo, na linha hemiclavicular."
+   ],
+   [
+    "O que gera a primeira bulha (B1)?",
+    "O fechamento das valvas mitral e tricúspide."
+   ],
+   [
+    "Sopro sistólico no foco aórtico irradiando pro pescoço sugere o quê?",
+    "Estenose aórtica."
+   ]
+  ]
+ }
+}

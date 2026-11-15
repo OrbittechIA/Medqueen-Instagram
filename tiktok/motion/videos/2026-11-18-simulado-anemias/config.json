@@ -1,0 +1,36 @@
+{
+ "formato": "simulado",
+ "gancho": [
+  "POV: a IA montou um",
+  "simulado de anemias",
+  "com o meu PDF"
+ ],
+ "pdf": "Aula 6 · Anemias.pdf",
+ "pedido": "Monta um simulado desse material",
+ "queen": "23-joinha.png",
+ "legendas": [
+  "Questão no estilo da <span class=\"grad\">prova</span>",
+  "Correção na <span class=\"grad\">hora</span>",
+  "Explica o <span class=\"grad\">porquê</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Montei um <strong>simulado de 10 questões</strong> do seu material, no estilo da prova. Bora começar?"
+  }
+ ],
+ "simulado": {
+  "materia": "Anemias",
+  "area": "Hematologia",
+  "enunciado": "Anemia microcítica e hipocrômica com ferritina baixa sugere qual diagnóstico?",
+  "opcoes": [
+   "Anemia ferropriva",
+   "Anemia megaloblástica",
+   "Anemia falciforme",
+   "Anemia aplástica"
+  ],
+  "certa": 0,
+  "acertos": 8,
+  "porque": "Ferritina baixa mostra estoque de ferro reduzido. Sem ferro, a medula produz hemácias pequenas (microcíticas) e pálidas (hipocrômicas)."
+ }
+}

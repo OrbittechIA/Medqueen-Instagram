@@ -1,0 +1,28 @@
+{
+ "formato": "flashcards",
+ "gancho": [
+  "POV: joguei o PDF de",
+  "nervos cranianos",
+  "na IA"
+ ],
+ "pdf": "Aula 5 · Nervos cranianos.pdf",
+ "pedido": "Cria flashcards dos nervos cranianos",
+ "queen": "36-flashcards-leque.png",
+ "flashcards": {
+  "total": 24,
+  "cards": [
+   [
+    "Qual nervo craniano inerva o músculo reto lateral?",
+    "Nervo abducente (VI)."
+   ],
+   [
+    "Qual nervo inerva o músculo oblíquo superior?",
+    "Nervo troclear (IV)."
+   ],
+   [
+    "Qual nervo comanda os músculos da mímica facial?",
+    "Nervo facial (VII)."
+   ]
+  ]
+ }
+}

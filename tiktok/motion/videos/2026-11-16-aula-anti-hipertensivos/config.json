@@ -1,0 +1,80 @@
+{
+ "formato": "aula",
+ "gancho": [
+  "POV: pedi aula de",
+  "anti-hipertensivos",
+  "pra IA com o meu PDF"
+ ],
+ "pdf": "Aula 11 · Farmacologia cardiovascular.pdf",
+ "pedido": "Me explica esse material como uma aula pra prova",
+ "queen": "14-apresentando-direita.png",
+ "legendas": [
+  "Quadro pronto pra <span class=\"grad\">revisar</span>",
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "linha_destaque": 0,
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Bora pra aula de <strong>anti-hipertensivos</strong>, montada direto do seu material."
+  },
+  {
+   "t": "h2",
+   "h": "1. Cada classe age num ponto"
+  },
+  {
+   "t": "p",
+   "h": "A pressão depende do volume, do tônus dos vasos e da força do coração. Cada classe mexe num desses pontos."
+  },
+  {
+   "t": "h3",
+   "h": "Classe, mecanismo e exemplo"
+  },
+  {
+   "t": "table",
+   "head": [
+    "Classe",
+    "Mecanismo",
+    "Exemplo"
+   ],
+   "rows": [
+    [
+     "IECA",
+     "Inibe a enzima conversora de angiotensina",
+     "Captopril, enalapril"
+    ],
+    [
+     "BRA",
+     "Bloqueia o receptor AT1 da angiotensina II",
+     "Losartana"
+    ],
+    [
+     "Bloqueador de canal de cálcio",
+     "Bloqueia o canal de cálcio tipo L",
+     "Anlodipino"
+    ],
+    [
+     "Betabloqueador",
+     "Bloqueia o receptor beta-1",
+     "Atenolol"
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "h": "2. Efeitos que mais aparecem"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "IECA pode causar tosse seca e angioedema por acúmulo de bradicinina.",
+    "IECA e BRA são contraindicados na gestação."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu transforme isso em flashcards?"
+  }
+ ]
+}

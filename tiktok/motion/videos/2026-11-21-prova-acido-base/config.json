@@ -1,0 +1,33 @@
+{
+ "formato": "prova",
+ "gancho": [
+  "POV: perguntei pra IA",
+  "o que cai na prova",
+  "de ácido-base"
+ ],
+ "pdf": "Aula 12 · Equilíbrio ácido-base.pdf",
+ "pedido": "O que mais cai na prova desse material?",
+ "queen": "40-dedo-levantado-dica.png",
+ "legendas": [
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Separei do seu material o que mais aparece em prova de <strong>equilíbrio ácido-base</strong>:"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "Acidose metabólica tem pH e bicarbonato baixos; o pulmão compensa com hiperventilação.",
+    "Ânion gap aumentado aparece na cetoacidose diabética e na acidose lática.",
+    "Hiperventilação baixa a PaCO2 e causa alcalose respiratória."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu crie flashcards só desses pontos?"
+  }
+ ]
+}
