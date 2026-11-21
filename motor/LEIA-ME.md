@@ -1,5 +1,12 @@
 # Motor do Instagram da MedQueen IA (@medqueen.ia)
 
+> **21/11/2026: TODO VÍDEO NO FEED TEM CAPA (Matheus: "quem entra no perfil não sabe o que é").** Motion, Reel de questão, Reel extra, qualquer vídeo: sem capa o grid mostra o primeiro quadro, que nos nossos motions é fundo claro vazio (fade de entrada), e o perfil fica cheio de quadrado branco. O Best Content NÃO tem campo de capa no upload de vídeo (conferido em 21/11), então a capa vai DENTRO do vídeo:
+> 1. **Fazer a imagem da capa** (pode gastar crédito, autorizado): 1080x1920, mesmo fundo lilás claro para creme, título grande do assunto (o gancho do vídeo, 2 a 5 palavras) e um elemento visual forte (a Queen com a imagem de referência, o aparelho com a tela do HyperFrames ou um ícone grande do tema), logo MedQueen IA. Gerar no Best Content (Stories Único, Criar do Zero, uns 10 créditos) ou montar no motor. **Tudo que importa dentro do miolo 1080x1440** (o grid corta 3:4 no centro): nada de título nos 240 px de cima nem nos 240 px de baixo.
+> 2. **Colar a capa no começo do vídeo:** `python3 motor/capa_reel.py video.mp4 capa.png video-com-capa.mp4` (0,5 s de capa antes do vídeo; o áudio anda junto).
+> 3. **Conferir** o `-quadro0.jpg` que o script gera (tem que ser a capa) e só então subir no Best Content.
+> 4. Rotina de segunda: listar no resumo os vídeos da semana e confirmar que cada um subiu com capa.
+
+
 > **12/11/2026: produto liberado no conteúdo.** Tela do app pode aparecer em post, carrossel, story e Reel, sempre gerada pelo HyperFrames e sempre dentro de celular, tablet, computador ou laptop (regra completa na seção 1). Nunca print solto.
 
 Manual da tarefa semanal. Quem roda isto é uma sessão nova do Claude, sem memória da conversa anterior. Siga na ordem.
@@ -200,7 +207,7 @@ Tudo pelo Chrome principal (ferramentas claude-in-chrome). Nunca digitar senha. 
 - Finalizar > apagar a legenda que ele gerou e colar a NOSSA (padrão da seção 5) > Publicar > Instagram > Continuar > **Agendar** > dia (clicar o número do dia no calendário; conferir a linha "Publicar em DD de mês às HH:MM") > horário > Confirmar. Story não tem legenda no Instagram, pode deixar a dele.
 - Popup "O que achou do post?" e "Level up": fechar no X, nunca clicar nas estrelas.
 
-**Reel em vídeo pronto (nosso motor):** Calendário > **Nova Pauta** > **Upload** > título, vídeo (file_upload do mp4 copiado para o scratchpad), legenda, data, horário > Criar Pauta. Ela entra como "Ideia": abrir o card no calendário > **Agendar Publicação** > **Confirmar Agendamento**. Não adicionar áudio (a trilha é escolha do Matheus).
+**Reel em vídeo pronto (nosso motor):** antes de subir, capa colada no começo com `capa_reel.py` (regra de 21/11 no topo; o Best Content não tem campo de capa). Calendário > **Nova Pauta** > **Upload** > título, vídeo (file_upload do mp4 copiado para o scratchpad), legenda, data, horário > Criar Pauta. Ela entra como "Ideia": abrir o card no calendário > **Agendar Publicação** > **Confirmar Agendamento**. Não adicionar áudio (a trilha é escolha do Matheus).
 
 **Créditos:** 10 por imagem. Plano Max = 1.900 por mês.
 
