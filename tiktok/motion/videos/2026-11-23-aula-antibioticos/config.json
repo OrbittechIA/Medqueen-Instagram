@@ -1,0 +1,80 @@
+{
+ "formato": "aula",
+ "gancho": [
+  "POV: pedi aula de",
+  "antibióticos",
+  "pra IA com o meu PDF"
+ ],
+ "pdf": "Aula 9 · Antimicrobianos.pdf",
+ "pedido": "Me explica esse material como uma aula pra prova",
+ "queen": "38-caneta-explicando.png",
+ "legendas": [
+  "Quadro pronto pra <span class=\"grad\">revisar</span>",
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "linha_destaque": 0,
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Bora pra aula de <strong>antibióticos</strong>, montada direto do seu material."
+  },
+  {
+   "t": "h2",
+   "h": "1. Cada classe ataca um alvo"
+  },
+  {
+   "t": "p",
+   "h": "A bactéria precisa da parede celular, do ribossomo e do DNA. Cada classe de antibiótico ataca um desses alvos."
+  },
+  {
+   "t": "h3",
+   "h": "Classe, mecanismo e exemplo"
+  },
+  {
+   "t": "table",
+   "head": [
+    "Classe",
+    "Mecanismo",
+    "Exemplo"
+   ],
+   "rows": [
+    [
+     "Betalactâmicos",
+     "Inibem a síntese da parede celular",
+     "Amoxicilina, ceftriaxona"
+    ],
+    [
+     "Macrolídeos",
+     "Inibem a subunidade 50S do ribossomo",
+     "Azitromicina"
+    ],
+    [
+     "Aminoglicosídeos",
+     "Inibem a subunidade 30S do ribossomo",
+     "Gentamicina"
+    ],
+    [
+     "Fluoroquinolonas",
+     "Inibem a DNA girase",
+     "Ciprofloxacino"
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "h": "2. Efeitos que mais aparecem"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "Aminoglicosídeos podem causar nefrotoxicidade e ototoxicidade.",
+    "Fluoroquinolonas podem causar tendinite e ruptura de tendão."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu transforme isso em flashcards?"
+  }
+ ]
+}

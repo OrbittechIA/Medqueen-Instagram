@@ -1,0 +1,28 @@
+{
+ "formato": "flashcards",
+ "gancho": [
+  "POV: joguei o PDF de",
+  "hormônios da hipófise",
+  "na IA"
+ ],
+ "pdf": "Aula 6 · Hipotálamo e hipófise.pdf",
+ "pedido": "Cria flashcards dos hormônios da hipófise",
+ "queen": "47-lampada-ideia.png",
+ "flashcards": {
+  "total": 22,
+  "cards": [
+   [
+    "Qual hormônio da neuro-hipófise aumenta a reabsorção de água no rim?",
+    "ADH (vasopressina)."
+   ],
+   [
+    "Qual hormônio da adeno-hipófise estimula a produção de leite?",
+    "Prolactina."
+   ],
+   [
+    "Qual hormônio causa contração uterina e ejeção do leite?",
+    "Ocitocina, liberada pela neuro-hipófise."
+   ]
+  ]
+ }
+}

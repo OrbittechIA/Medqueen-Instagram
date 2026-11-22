@@ -1,0 +1,36 @@
+{
+ "formato": "simulado",
+ "gancho": [
+  "POV: a IA montou um",
+  "simulado de tireoide",
+  "com o meu PDF"
+ ],
+ "pdf": "Aula 7 · Tireoide.pdf",
+ "pedido": "Monta um simulado desse material",
+ "queen": "24-dois-joinhas.png",
+ "legendas": [
+  "Questão no estilo da <span class=\"grad\">prova</span>",
+  "Correção na <span class=\"grad\">hora</span>",
+  "Explica o <span class=\"grad\">porquê</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Montei um <strong>simulado de 10 questões</strong> do seu material, no estilo da prova. Bora começar?"
+  }
+ ],
+ "simulado": {
+  "materia": "Tireoide",
+  "area": "Endocrinologia",
+  "enunciado": "TSH alto com T4 livre baixo sugere qual diagnóstico?",
+  "opcoes": [
+   "Hipotireoidismo primário",
+   "Hipertireoidismo primário",
+   "Hipotireoidismo central",
+   "Hipertireoidismo subclínico"
+  ],
+  "certa": 0,
+  "acertos": 9,
+  "porque": "No hipotireoidismo primário a tireoide produz pouco T4. Sem o feedback negativo, a hipófise aumenta a liberação de TSH."
+ }
+}

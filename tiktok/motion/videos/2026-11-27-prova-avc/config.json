@@ -1,0 +1,33 @@
+{
+ "formato": "prova",
+ "gancho": [
+  "Tem prova de",
+  "AVC",
+  "essa semana? Salva"
+ ],
+ "pdf": "Aula 10 · Doença cerebrovascular.pdf",
+ "pedido": "O que mais cai na prova desse material?",
+ "queen": "35-estetoscopio.png",
+ "legendas": [
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Separei do seu material o que mais aparece em prova de <strong>AVC</strong>:"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "A maioria dos AVCs é isquêmica.",
+    "Primeiro exame: tomografia de crânio sem contraste, pra afastar hemorragia.",
+    "Trombólise com alteplase pode ser feita até 4,5 horas do início dos sintomas."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu crie flashcards só desses pontos?"
+  }
+ ]
+}

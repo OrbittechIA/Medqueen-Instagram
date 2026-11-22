@@ -1,0 +1,80 @@
+{
+ "formato": "aula",
+ "gancho": [
+  "Prova de farmaco amanhã?",
+  "anticoagulantes",
+  "num quadro só"
+ ],
+ "pdf": "Aula 13 · Anticoagulantes.pdf",
+ "pedido": "Me explica esse material como uma aula pra prova",
+ "queen": "33-livro-aberto-lendo.png",
+ "legendas": [
+  "Quadro pronto pra <span class=\"grad\">revisar</span>",
+  "Marca o que <span class=\"grad\">cai na prova</span>"
+ ],
+ "linha_destaque": 0,
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Bora pra aula de <strong>anticoagulantes</strong>, montada direto do seu material."
+  },
+  {
+   "t": "h2",
+   "h": "1. Cada classe age num ponto da cascata"
+  },
+  {
+   "t": "p",
+   "h": "A coagulação depende de fatores ativados em sequência. Cada classe bloqueia um ponto diferente dessa cascata."
+  },
+  {
+   "t": "h3",
+   "h": "Classe, mecanismo e exemplo"
+  },
+  {
+   "t": "table",
+   "head": [
+    "Classe",
+    "Mecanismo",
+    "Exemplo"
+   ],
+   "rows": [
+    [
+     "Heparina não fracionada",
+     "Potencializa a antitrombina (inativa trombina e fator Xa)",
+     "Heparina"
+    ],
+    [
+     "Heparina de baixo peso molecular",
+     "Potencializa a antitrombina, age mais no fator Xa",
+     "Enoxaparina"
+    ],
+    [
+     "Antagonista da vitamina K",
+     "Reduz a síntese dos fatores II, VII, IX e X",
+     "Varfarina"
+    ],
+    [
+     "Inibidor direto do fator Xa",
+     "Bloqueia o fator Xa",
+     "Rivaroxabana"
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "h": "2. Controle e antídoto"
+  },
+  {
+   "t": "call",
+   "lines": [
+    "<strong>O que cai na prova</strong>",
+    "Varfarina é monitorada pelo INR; heparina não fracionada, pelo TTPa.",
+    "Antídoto da heparina: protamina. Da varfarina: vitamina K."
+   ]
+  },
+  {
+   "t": "p",
+   "h": "Quer que eu transforme isso em flashcards?"
+  }
+ ]
+}

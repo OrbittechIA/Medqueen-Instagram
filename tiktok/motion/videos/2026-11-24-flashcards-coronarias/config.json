@@ -1,0 +1,28 @@
+{
+ "formato": "flashcards",
+ "gancho": [
+  "Meu PDF de",
+  "artérias coronárias",
+  "virou flashcard"
+ ],
+ "pdf": "Aula 4 · Anatomia do coração.pdf",
+ "pedido": "Cria flashcards das artérias coronárias",
+ "queen": "45-lupa.png",
+ "flashcards": {
+  "total": 18,
+  "cards": [
+   [
+    "Quais são os 2 ramos principais da coronária esquerda?",
+    "Descendente anterior e circunflexa."
+   ],
+   [
+    "Qual artéria irriga a maior parte da parede anterior do ventrículo esquerdo?",
+    "Descendente anterior (interventricular anterior)."
+   ],
+   [
+    "Na maioria das pessoas, de onde sai a artéria do nó sinoatrial?",
+    "Da coronária direita."
+   ]
+  ]
+ }
+}

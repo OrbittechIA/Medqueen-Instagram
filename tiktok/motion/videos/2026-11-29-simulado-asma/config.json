@@ -1,0 +1,36 @@
+{
+ "formato": "simulado",
+ "gancho": [
+  "Você acertaria essa de",
+  "asma",
+  "sem olhar a resposta?"
+ ],
+ "pdf": "Aula 8 · Farmacologia respiratória.pdf",
+ "pedido": "Monta um simulado desse material",
+ "queen": "21-comemorando-punho.png",
+ "legendas": [
+  "Questão no estilo da <span class=\"grad\">prova</span>",
+  "Correção na <span class=\"grad\">hora</span>",
+  "Explica o <span class=\"grad\">porquê</span>"
+ ],
+ "resposta": [
+  {
+   "t": "p",
+   "h": "Montei um <strong>simulado de 10 questões</strong> do seu material, no estilo da prova. Bora começar?"
+  }
+ ],
+ "simulado": {
+  "materia": "Asma",
+  "area": "Pneumologia",
+  "enunciado": "Na crise de asma, qual classe relaxa o músculo liso dos brônquios em minutos?",
+  "opcoes": [
+   "Beta-2 agonista de curta ação",
+   "Antagonista de leucotrienos",
+   "Anti-IgE",
+   "Corticoide inalatório"
+  ],
+  "certa": 0,
+  "acertos": 8,
+  "porque": "O salbutamol estimula receptores beta-2 do músculo liso brônquico e broncodilata em minutos. Corticoide inalatório trata a inflamação no controle a longo prazo."
+ }
+}

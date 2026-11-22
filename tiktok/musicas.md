@@ -27,3 +27,10 @@ Atenção: eletronica_05 faz fade até o silêncio entre 16,3 s e 17,5 s (recome
 | 20/11 | flashcards ausculta cardíaca | biblioteca/053_rock_indie_media_64s | do início |
 | 21/11 | prova ácido-base | biblioteca/048_ambiente_tech_calma_60s | calma, a partir de 2 s |
 | 22/11 | simulado ombro (manguito rotador) | biblioteca/049_ambiente_tech_calma_79s | calma, a partir de 2 s |
+| 23/11 | aula antibióticos | memes/Eletrônica/eletronica_01 | drop (7,75 s) no zoom da tabela |
+| 24/11 | flashcards artérias coronárias | memes/Eletrônica/eletronica_02 | drop (9,1 s) no surgimento dos flashcards |
+| 25/11 | simulado tireoide | biblioteca/050_ambiente_tech_media_60s | drop (18,24 s) no simulado |
+| 26/11 | aula anticoagulantes | biblioteca/060_synthwave_media_51s | drop achado pelo mix.py, música a partir de 24,9 s |
+| 27/11 | prova AVC | biblioteca/051_ambiente_tech_calma_67s | calma, a partir de 2 s |
+| 28/11 | flashcards hormônios da hipófise | biblioteca/024_eletronica_media_53s | drop achado pelo mix.py, música a partir de 6,0 s |
+| 29/11 | simulado asma | biblioteca/047_ambiente_tech_calma_158s | calma, a partir de 10 s |
