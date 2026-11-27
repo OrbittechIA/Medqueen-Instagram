@@ -1,5 +1,14 @@
 # Motor do Instagram da MedQueen IA (@medqueen.ia)
 
+> **27/11/2026 (Matheus): VÍDEO E MOTION NUNCA MAIS PELO BEST CONTENT.** Fica proibido gerar vídeo ou motion no gerador de vídeo do Best Content (gasta muito crédito). O padrão visual dos vídeos deles é referência, não ferramenta. Vídeo agora é assim:
+> 1. O Claude gera o conteúdo do produto no **HyperFrames** (telas do app em código, dentro de aparelho, motor em `motor/motion/` e `tiktok/motion/motor/`).
+> 2. Entrega ao Matheus o material do HyperFrames (clipes e PNGs) **mais um roteiro de edição** (gancho, ordem das cenas com tempo, zooms, legendas de destaque, efeitos, música da biblioteca, card final, capa).
+> 3. O Matheus joga isso no chat "editor de vídeo" (o que tem a pasta da skill de edição) e ele edita. O vídeo editado volta e sobe no Best Content por Nova Pauta > Upload, com capa (`capa_reel.py`).
+> Arte (carrossel, story, post único, capa) continua liberada no Best Content: **cada arte = 10 créditos**. Planejar a semana pela conta de créditos.
+>
+> **SEMANA 30/11 A 06/12/2026: ORÇAMENTO REDUZIDO, JÁ FEITA EM 27/11. A rotina semanal NÃO produz nada para essa semana: só mede e avisa.** Saldo era 197 créditos (19 artes) até o plano renovar em 03/12. Grade só dessa semana: 1 story por dia de seg a sex (15:50), nenhum story sáb e dom; feed 18:50 com motion seg e sex (HyperFrames + editor), carrossel de 5 ter e qui, post único qua, sáb e dom; Reel de questão qui 12:30 se o motor der conta (não gasta crédito). **A partir de 07/12 volta a grade de 09/11** (2 motions, 5 carrosséis, 1 Reel de questão, 3 stories por dia), com vídeo só no HyperFrames.
+
+
 > **21/11/2026: TODO VÍDEO NO FEED TEM CAPA (Matheus: "quem entra no perfil não sabe o que é").** Motion, Reel de questão, Reel extra, qualquer vídeo: sem capa o grid mostra o primeiro quadro, que nos nossos motions é fundo claro vazio (fade de entrada), e o perfil fica cheio de quadrado branco. O Best Content NÃO tem campo de capa no upload de vídeo (conferido em 21/11), então a capa vai DENTRO do vídeo:
 > 1. **Fazer a imagem da capa** (pode gastar crédito, autorizado): 1080x1920, mesmo fundo lilás claro para creme, título grande do assunto (o gancho do vídeo, 2 a 5 palavras) e um elemento visual forte (a Queen com a imagem de referência, o aparelho com a tela do HyperFrames ou um ícone grande do tema), logo MedQueen IA. Gerar no Best Content (Stories Único, Criar do Zero, uns 10 créditos) ou montar no motor. **Tudo que importa dentro do miolo 1080x1440** (o grid corta 3:4 no centro): nada de título nos 240 px de cima nem nos 240 px de baixo.
 > 2. **Colar a capa no começo do vídeo:** `python3 motor/capa_reel.py video.mp4 capa.png video-com-capa.mp4` (0,5 s de capa antes do vídeo; o áudio anda junto).
