@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:PJ;src:url(../www/fonts/PlusJakartaSans.ttf);font-weight:200 800}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;font-family:PJ;background:linear-gradient(160deg,#E6DCFB 0%,#F5EFFC 45%,#FFF6EA 100%);position:relative;color:#2A1460}
+.logo{position:absolute;top:270px;left:50%;transform:translateX(-50%);width:400px}
+h1{position:absolute;top:380px;left:60px;right:60px;text-align:center;font-weight:800;font-size:104px;line-height:1.02;letter-spacing:-2px}
+h1 span{background:linear-gradient(90deg,#7B3FE4,#E8488A);-webkit-background-clip:text;color:transparent}
+.ph{position:absolute;left:50%;transform:translateX(-50%);top:720px;height:960px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.6}
+</style></head><body>
+<div class="blob" style="left:80px;top:900px;width:500px;height:500px;background:#D9C8FF"></div>
+<div class="blob" style="left:560px;top:1100px;width:520px;height:520px;background:#FFD6E8"></div>
+<img class="logo" src="../www/marca/medqueen-ia-logo-horizontal.png">
+<h1 id="t"></h1><img class="ph" id="p">
+<script>const q=new URLSearchParams(location.search);document.getElementById('t').innerHTML=q.get('t');document.getElementById('p').src=q.get('p');</script>
+</body></html>
