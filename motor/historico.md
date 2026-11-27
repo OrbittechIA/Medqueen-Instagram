@@ -147,3 +147,5 @@ Conferido em 09/11 (rodada da manhã, com o Matheus): 29 agendados no Calendári
 - 24/10/2026: Queen IA dosada: 3 ou 4 dos 7 feeds (alternando dias) e 1 story por dia (7 de 21).
 - 24/10/2026: 2 Reels em vídeo por semana (ter e qui 12:30), com música de fundo baixa e efeitos sonoros (motor reel_video.py). Semana de 26/10: rv01 (simulado na semana de prova) ter 27/10 e rv02 (próxima tarefa + Queen IA) qui 29/10, feitos e agendados em 24/10.
 - 24/10/2026: Reels variam de formato (catálogo no LEIA-ME). Prontos: rv03 quiz tríade de Virchow (ter 03/11 12:30), rv04 mito ou verdade de método de estudo (qui 05/11 12:30), rv05 conversa com a Queen nefrótica x nefrítica (banco, semana de 09/11). Série 'Tríades que caem na prova' começou no #1 (Virchow).
+
+- 27/11/2026: semana 30/11 a 06/12 feita com orçamento reduzido (197 créditos): 5 stories seg a sex 15:50 + 2 carrosséis + 3 posts únicos 18:50, tudo agendado no Best Content só no Instagram. Sobram 17 créditos até 03/12. Motions de seg e sex vão por HyperFrames + editor do Matheus. Vídeo nunca mais no gerador do Best Content.
